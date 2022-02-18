@@ -23,13 +23,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3________________,                            __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_L3_SFTZ___________,                            __________________QWERTY_R3________________, KC_BSLS,
                                         THUMB_L1, THUMB_L2, THUMB_L3,       THUMB_R3, THUMB_R2, THUMB_R1
     ),
   [_BASE_NOMOD] = LAYOUT_crkbd_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_MINS,
-    KC_CAPS, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
+    KC_CAPS, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3________________,                            __________________QWERTY_R3________________, KC_BSLS,
                                         THUMB_L1, THUMB_L2,THUMB_L3,        THUMB_R3, THUMB_R2, THUMB_R1
     ),
@@ -37,8 +37,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_GRAVE,HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                             KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS, 
     MT_CAPS, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  HAEN_G,                             KC_RBRC, KC_4,    KC_5,    KC_6,    CLN_SPC, KC_DQUO, 
-    _______, _IPC_Z,   BRKT,   KC_UNDS, KC_SLSH, BOLDFACE,                           KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,                   
-                                        _______, _______, _______,          _______, LT(_NAV,KC_0), _______
+    _______, _IPC_Z,  BRKT,    KC_EQL,  KC_UNDS, BOLDFACE,                           KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,                   
+                                        _______, _______, _______,          A(KC_2), LT(_NAV,KC_0), _______
     ),
   [_NUM] = LAYOUT_crkbd_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
@@ -90,18 +90,70 @@ combo_t key_combos[COMBO_COUNT] = {
     [NM_KC_B]      = COMBO(nm_combo, KC_B),
 };
 
+// // Tapping term
+// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case THUMB_L2:
+//             return TAPPING_TERM - 100;
+//         case SFTT_F:
+//             if (record->event.key.col==1) return TAPPING_TERM + 100;
+//         case SFTT_Z:
+//             return TAPPING_TERM + 100;
+//         case SFTT_J:
+//         case GUIT_A:
+//         case GUIT_SCL:    
+//             return TAPPING_TERM + 50;
+//         default:
+//             return TAPPING_TERM;
+//     }
+// }
+// //Get hold on other key press
+// bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case THUMB_L2:
+//             return true;
+//         case SFTT_Z:    
+//             if (record->event.key.row==0 && record->event.key.col>2){return true;} else{return false;}
+//         default:
+//             return false;
+//     }
+// }
+// // Ignore mod tap interrupt
+// bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case SFTT_Z:
+//            if (record->event.key.row==0 && record->event.key.col>2){return false;} else {return true;}
+//         case SFTT_F:
+//         case SFTT_J:
+//         case ALTT_S:
+//         case CTLT_D:
+//         case GUIT_SCL:
+//         case ALTT_L:
+//         case CTLT_K:
+//         case GUIT_A:
+//         case LT(_NAV, KC_SPC):
+//         case LT(_NAV, KC_0):
+//             return true;
+//         default:
+//             return false;
+//     }
+// }
+
 // Tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
             return TAPPING_TERM - 100;
         case SFTT_F:
-            if (record->event.key.col==1) return TAPPING_TERM + 100;
+            if (record->event.key.row<4&&record->event.key.col==1) return TAPPING_TERM + 100;
         case SFTT_Z:
-            return TAPPING_TERM + 100;
+            return TAPPING_TERM + 500;
+        case SFTT_A:
+            if (record->event.key.row>=4) {return TAPPING_TERM + 500;}
+            else{return TAPPING_TERM + 100;}
         case SFTT_J:
         case GUIT_A:
-        case GUIT_SCL:    
+        case GUIT_SCL:   
             return TAPPING_TERM + 50;
         default:
             return TAPPING_TERM;
@@ -112,6 +164,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
             return true;
+//      case SFTT_A:
         case SFTT_Z:    
             if (record->event.key.row==0 && record->event.key.col>2){return true;} else{return false;}
         default:
@@ -123,6 +176,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
            if (record->event.key.row==0 && record->event.key.col>2){return false;} else {return true;}
+        case SFTT_A:
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:

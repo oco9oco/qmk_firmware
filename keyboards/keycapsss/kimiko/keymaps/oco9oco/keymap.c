@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS,
     KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3_SFTZ___________, _______,          KC_B,    __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_L3_SFTZ___________, TG(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
 ),
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_UNDS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                          C(KC_LBRC), _________NUM_789_________, _______, KC_PLUS, 
     _______, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  HAEN_G,                          C(KC_RBRC), _________NUM_456_________, CLN_SPC, KC_DQUO,
-    _______, _IPC_Z,  BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,XXXXXXX,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
+    _______, _IPC_Z,  BRKT,    KC_EQL,  KC_UNDS, BOLDFACE,KC_DOT,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
 ),
@@ -104,15 +104,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format on
 
 // COMBOS
-const uint16_t PROGMEM bm_combo[] = {KC_B, KC_M, COMBO_END};
-const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
 const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
-    [BM_NOMOD]     = COMBO(bm_combo, TO(_BASE)),
-    [BN_HMMOD]     = COMBO(bn_combo, TO(_BASE_NOMOD)),
     [WE_ONEHAND]   = COMBO(we_combo, TO(_ONEHAND)),
-    [NM_KC_B]      = COMBO(nm_combo, KC_B),
 };
 
 // Tapping term
