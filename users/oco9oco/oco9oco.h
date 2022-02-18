@@ -25,9 +25,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ALTT_L    LALT_T(KC_L)
 #define GUIT_SCL  LGUI_T(KC_SCLN)
 
-#define __TAPPED__ record->tap.count && record->event.pressed
-#define __HELD__   record->tap.count==0 && record->event.pressed
-#define __PRESSED__   record->event.pressed
 //NUMBER ROW MOD-TAP KEYS
 #define F1_1  LT(_BASE,KC_1)
 #define F2_2  LT(_BASE,KC_2)
