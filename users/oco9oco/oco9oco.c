@@ -23,7 +23,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case F1_1:
             if(__TAPPED__){tap_code(KC_1);} 
-            else if(__HELD__){tap_code16(A(KC_1));}
+            else if(__PRESSED__){tap_code16(A(KC_1));}
             return false;
             break;
         case F2_2:
