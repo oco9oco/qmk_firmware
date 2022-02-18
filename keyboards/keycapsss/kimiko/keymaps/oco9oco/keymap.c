@@ -104,9 +104,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format on
 
 // COMBOS
+const uint16_t PROGMEM bm_combo[] = {KC_B, KC_M, COMBO_END};
+const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
+const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
+    [BM_NOMOD]     = COMBO(bm_combo, TO(_BASE)),
+    [BN_HMMOD]     = COMBO(bn_combo, TO(_BASE_NOMOD)),
     [WE_ONEHAND]   = COMBO(we_combo, TO(_ONEHAND)),
+    [NM_KC_B]      = COMBO(nm_combo, KC_B),
 };
 
 // Tapping term

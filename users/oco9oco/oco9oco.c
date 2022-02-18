@@ -21,67 +21,6 @@ void haen_keycode(uint16_t keycode){
 // process_record_user
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case F1_1:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_1));
-                return false;
-            }
-            return true;
-        case F2_2:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_2));
-                return false;
-            }
-            return true;
-        case F3_3:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_3));
-                return false;
-            }
-            return true;
-        case F4_4:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_4));
-                return false;
-            }
-            return true;
-        case F5_5:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_5));
-                return false;
-            }
-            return true;
-        case F6_6:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_6));
-                return false;
-            }
-            return true;
-        case F7_7:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_7));
-                return false;
-            }
-            return true;
-        case F8_8:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_8));
-                return false;
-            }
-            return true;
-        case F9_9:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_9));
-                return false;
-            }
-            return true;
-        case F0_0:
-            if(!record->tap.count && record->event.pressed){
-                tap_code16(A(KC_0));
-                return false;
-            }
-            return true;
-
 // HAEN_A ... HAEN_G
         case HAEN_A:
             if (record->event.pressed) {
