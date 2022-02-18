@@ -123,7 +123,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case SFTT_F:
             if (record->event.key.col==1) return TAPPING_TERM + 100;
         case SFTT_Z:
-            return TAPPING_TERM + 300;
+            return TAPPING_TERM + 500;
+        case SFTT_A:
+            if (record->event.key.row>=5) {return TAPPING_TERM + 500;}
+            else{return TAPPING_TERM + 100;}
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -137,7 +140,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
             return true;
-        case SFTT_A:
+//      case SFTT_A:
         case SFTT_Z:    
             if (record->event.key.row==1 && record->event.key.col>2){return true;} else{return false;}
         default:
@@ -147,10 +150,9 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case SFTT_A:
-            if (record->event.key.row==1 && record->event.key.col>2){return false;} else {clear_mods();return true;}
         case SFTT_Z:
            if (record->event.key.row==1 && record->event.key.col>2){return false;} else {return true;}
+        case SFTT_A:
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:

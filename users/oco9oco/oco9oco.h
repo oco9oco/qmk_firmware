@@ -55,7 +55,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define __________________QWERTY_L2________________ KC_A, KC_S, KC_D, KC_F, KC_G
 #define __________________QWERTY_L3_SFTZ___________ SFTT_Z, KC_X, KC_C, KC_V, KC_B
 
-#define __________________QWERTY_L2_SFTA___________ SFTT_A, KC_S, KC_D, KC_F, KC_G
+#define __________________QWERTY_L2_SFTA___________ SFTT_A, KC_S, KC_D, SFTT_F, KC_G
 #define __________________QWERTY_L3________________ KC_Z, KC_X, KC_C, KC_V, KC_B
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_R1________________ KC_Y, KC_U, KC_I, KC_O, KC_P
