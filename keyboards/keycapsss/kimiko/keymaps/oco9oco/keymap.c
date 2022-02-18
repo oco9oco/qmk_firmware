@@ -138,7 +138,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case THUMB_L2:
             return true;
         case SFTT_A:
-            if (record->event.key.row==1 && record->event.key.col>2){return true;} else{clear_mods();return false;}
         case SFTT_Z:    
             if (record->event.key.row==1 && record->event.key.col>2){return true;} else{return false;}
         default:
