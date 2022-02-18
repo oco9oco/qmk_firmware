@@ -22,85 +22,65 @@ void haen_keycode(uint16_t keycode){
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case F1_1:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_1);
-            } else if(record->event.pressed){
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_1));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F2_2:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_2);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_2));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F3_3:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_3);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_3));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F4_4:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_4);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_4));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F5_5:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_5);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_5));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F6_6:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_6);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_6));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F7_7:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_7);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_7));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F8_8:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_8);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_8));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F9_9:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_9);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_9));
+                return false;
             }
-            return false;
-            break;
+            return true;
         case F0_0:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_0);
-            }else if(record->event.pressed) {
+            if(!record->tap.count && record->event.pressed){
                 tap_code16(A(KC_0));
+                return false;
             }
-            return false;
-            break;
+            return true;
 
 // HAEN_A ... HAEN_G
         case HAEN_A:
@@ -154,7 +134,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed && prns_pressed) {
                 num_in_prns = true;
             } return true;
-            
+        break;
 // Intercept mod-tap
         case _IPC_A:
             if(record->tap.count && record->event.pressed){
@@ -196,7 +176,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 register_code(KC_LSFT);
             } else {unregister_code(KC_LSFT);}
             return false;
-
+            break;
         case BRKT:
             if (record->event.pressed) {
                 SEND_STRING("[]" SS_TAP(X_LEFT));

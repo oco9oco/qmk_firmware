@@ -7,4 +7,4 @@ RGB_MATRIX_ENABLE = no
 # This does not affect QMK Macros and Layers
 LTO_ENABLE = yes
 
-BOOTLOADER = caterina
+# BOOTLOADER = caterina
