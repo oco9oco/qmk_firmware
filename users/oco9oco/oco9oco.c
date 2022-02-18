@@ -22,18 +22,15 @@ void haen_keycode(uint16_t keycode){
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case F1_1:
-            if(record->tap.count && record->event.pressed){
-                tap_code(KC_1);
-            }else if(record->event.pressed) {
-                tap_code16(C(KC_F1));
-            }
+            if      (__TAPPED__)    {tap_code(KC_1);} 
+            else if (__HELD__)      {tap_code16(A(KC_1));}
             return false;
             break;
         case F2_2:
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_2);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F2));
+                tap_code16(A(KC_2));
             }
             return false;
             break;
@@ -41,7 +38,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_3);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F3));
+                tap_code16(A(KC_3));
             }
             return false;
             break;
@@ -49,7 +46,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_4);
             }else if(record->event.pressed) {
-                tap_code16(C(A(KC_F4)));
+                tap_code16(A(KC_4));
             }
             return false;
             break;
@@ -57,7 +54,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_5);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F5));
+                tap_code16(A(KC_5));
             }
             return false;
             break;
@@ -65,7 +62,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_6);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F6));
+                tap_code16(A(KC_6));
             }
             return false;
             break;
@@ -73,7 +70,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_7);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F7));
+                tap_code16(A(KC_7));
             }
             return false;
             break;
@@ -81,7 +78,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_8);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F8));
+                tap_code16(A(KC_8));
             }
             return false;
             break;
@@ -89,7 +86,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_9);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F9));
+                tap_code16(A(KC_9));
             }
             return false;
             break;
@@ -97,7 +94,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(record->tap.count && record->event.pressed){
                 tap_code(KC_0);
             }else if(record->event.pressed) {
-                tap_code16(C(KC_F10));
+                tap_code16(A(KC_0));
             }
             return false;
             break;

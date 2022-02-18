@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_UNDS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                          C(KC_LBRC), _________NUM_789_________, _______, KC_PLUS, 
     _______, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  HAEN_G,                          C(KC_RBRC), _________NUM_456_________, CLN_SPC, KC_DQUO,
-    _______, _IPC_Z, BRKT,    KC_UNDS, KC_SLSH, BOLDFACE,XXXXXXX,           KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
+    _______, _IPC_Z,  BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,XXXXXXX,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
 ),
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,                              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
     _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-    _______, _IPC_Z, C(KC_X), C(KC_C), C(KC_V), C(KC_B), XXXXXXX,          XXXXXXX, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_DEL,
+    _______, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B), XXXXXXX,          XXXXXXX, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_DEL,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, KC_BSPC, KC_DEL,          _______, KC_TRNS, _______, _______, _______
 ),
