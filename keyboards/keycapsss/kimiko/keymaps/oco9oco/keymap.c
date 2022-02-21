@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
+                      MO(_SETTINGS), KC_LALT, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
 ),
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
     XXXXXXX, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              _____________FUNC_2789____________, XXXXXXX, XXXXXXX,
     XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              _____________FUNC_1456____________, XXXXXXX, XXXXXXX,
-    XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F7, XXXXXXX,            XXXXXXX, _____________FUNC_0123____________, XXXXXXX, RGB_TOG,
+    XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F7, XXXXXXX,            XXXXXXX, _____________FUNC_0123____________, XXXXXXX, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, _______, KC_TRNS, _______, _______ 
 ),
@@ -88,16 +88,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LSFT, UNDO,    CUT,     COPY,    PASTE,   BOLDFACE, KC_ENT,          XXXXXXX, _______, KC_1,    KC_2,    KC_3,    KC_LCTL, KC_LALT, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_BSPC, KC_LALT,  KC_SPC,  KC_BTN3, _______,          _______, LT_NAV_0,_______, _______, _______
-)//,
-// [_SETTINGS] = LAYOUT(
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-//  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-//  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-//  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-//  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-//                    _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, 
-// )
+),
+[_SETTINGS] = LAYOUT(
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+ RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+ RGB_TOG, A(KC_S), C(KC_W), XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+                   KC_TRNS, _______, _______, _______, _______,          _______, _______, _______, _______, _______, 
+)
 };
 
 
