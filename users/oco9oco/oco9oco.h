@@ -114,7 +114,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //NUMROW
 
 
-// HOLD-TAP CONFIG CONDITIONS
+// TAP-HOLD CONFIG CONDITIONS
 //ROW INDEX
 #if PRODUCT == Crkbd
   #define ALPHA_QWERT 0 //AFTER NUMBER ROW
