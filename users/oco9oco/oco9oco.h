@@ -100,16 +100,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LT_NAV_0 LT(_NAV,KC_0)
 #define MT_CAPS  LALT_T(KC_CAPS)
 #define SFT_CAPS  LSFT_T(KC_CAPS)
+
 //NUMPAD
 #define _________NUM_789_________ KC_7, KC_8, KC_9
 #define _________NUM_456_________ KC_4, KC_5, KC_6
 #define _________NUM_123_________ KC_1, KC_2, KC_3
+
 //FUNCPAD
-        
 #define _____________FUNC_2789____________ KC_F12, KC_F7, KC_F8, KC_F9
 #define _____________FUNC_1456____________ KC_F11, KC_F4, KC_F5, KC_F6 
 #define _____________FUNC_0123____________ KC_F10, KC_F1, KC_F2, KC_F3
+
 //NUMROW
+
+
+// HOLD-TAP CONFIG CONDITIONS
+//ROW INDEX
+#if PRODUCT == Crkbd
+  #define ALPHA_QWERT 0 //AFTER NUMBER ROW
+  #define ALPHA_ASDFG 1 //AFTER NUMBER ROW
+  #define ALPHA_ZXCVB 2 //AFTER NUMBER ROW
+#else
+  #define NUMBR_12345 0 //NO NUMBER ROW
+  #define ALPHA_QWERT 1 //NO NUMBER ROW
+  #define ALPHA_ASDFG 2 //NO NUMBER ROW
+  #define ALPHA_ZXCVB 3 //NO NUMBER ROW
+#endif
+
+//COLUMN INDEX
+#define MOD_COL   0
+#define ALPHA_QAZ 1
+#define ALPHA_WSX 2
+#define ALPHA_EDC 3
+#define ALPHA_RFV 4
+#define ALPHA_TGB 5
+
+#define KEY_ROW record->event.key.row
+#define KEY_COL record->event.key.col
 
 
 //wrapper layout
@@ -156,5 +183,9 @@ enum combos {
 uint16_t COMBO_LEN = COMBO_LENGTH;
 
 // Korean
+
+
+
+
 bool prns_pressed; // 괄호입력상태
 bool num_in_prns; // 괄호 치고 번호를 입력한 경우

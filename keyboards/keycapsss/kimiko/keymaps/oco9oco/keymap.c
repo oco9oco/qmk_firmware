@@ -122,9 +122,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 100;
         case SFTT_F:
             return TAPPING_TERM + 100;
-        case SFTT_Z:
-            return TAPPING_TERM + 500;
         case SFTT_A:
+        case SFTT_Z:
+            return TAPPING_TERM + 200;
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -138,9 +138,8 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
             return true;
-//      case SFTT_A:
         case SFTT_Z:    
-            if (record->event.key.row==1 && record->event.key.col>2){return true;} else{return false;}
+            if (KEY_ROW==1 && KEY_COL>2){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
@@ -149,7 +148,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
-           if (record->event.key.row==1){return false;} else {return true;}
+           if (KEY_ROW==1){return false;} else {return true;}
         case SFTT_A:
         case SFTT_F:
         case SFTT_J:
