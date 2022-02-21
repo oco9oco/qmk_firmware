@@ -37,12 +37,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define F9_9  LT(_BASE,KC_9)
 #define F0_0  LT(_BASE,KC_0)
 
-
-//Mod-tap macro
-//#define LGACS_T(A,B,C,D,E) LGUI_T(A), LALT_T(B), LCTL_T(C), LSFT_T(D), E
-//#define RGACS_T(A,B,C,D,E) RGUI_T(A), LALT_T(B), RCTL_T(C), RSFT_T(D), E
-// LAYOUT WRAPPER
-
 //QWERTY
 //     |--------|--------|--------|--------|--------|
 #define __________________NUMROW_L_________________ KC_1, KC_2, KC_3, KC_4, F5_5
@@ -102,13 +96,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ALT_F4    A(KC_F4)
 #define SCRNSHOT  LSG(KC_S)
 #define TO_BASE   TO(_BASE)
-//NAV ROWS
-// #define NAV_L1    
-// #define NAV_L2
-// #define NAV_L3
-// #define NAV_R1
-// #define NAV_R2
-// #define NAV_R3
+
 #define LT_NAV_0 LT(_NAV,KC_0)
 #define MT_CAPS  LALT_T(KC_CAPS)
 #define SFT_CAPS  LSFT_T(KC_CAPS)
@@ -163,7 +151,9 @@ enum combos {
     BN_HMMOD,
     WE_ONEHAND,
     NM_KC_B,
+    COMBO_LENGTH
 };
+uint16_t COMBO_LEN = COMBO_LENGTH;
 
 // Korean
 bool prns_pressed; // 괄호입력상태
