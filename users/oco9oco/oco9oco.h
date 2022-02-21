@@ -180,7 +180,7 @@ enum combos {
     NM_KC_B,
     COMBO_LENGTH
 };
-uint16_t COMBO_LEN = COMBO_LENGTH;
+
 
 // Korean
 
