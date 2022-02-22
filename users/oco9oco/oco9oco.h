@@ -176,7 +176,7 @@ enum layer_index{
 enum combos {
     BM_NOMOD,
     BN_HMMOD,
-    WE_ONEHAND,
+    N23_ONEHAND,
     NM_KC_B,
     COMBO_LENGTH
 };
