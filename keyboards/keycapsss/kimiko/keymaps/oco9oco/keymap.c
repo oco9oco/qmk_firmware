@@ -114,9 +114,6 @@ const uint16_t PROGMEM n23_combo[] = {KC_2, KC_3, COMBO_END};
 
 combo_t key_combos[] = {
     [N23_ONEHAND]   = COMBO(n23_combo, TO(_ONEHAND)),
-//    [BM_NOMOD]     = COMBO(bm_combo, TO(_BASE)),
-//    [BN_HMMOD]     = COMBO(bn_combo, TO(_BASE_NOMOD)),
-//    [NM_KC_B]      = COMBO(nm_combo, KC_B),
 };
 
 // Tapping term
