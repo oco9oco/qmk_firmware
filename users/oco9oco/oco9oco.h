@@ -174,10 +174,10 @@ enum layer_index{
 
 // COMBOS
 enum combos {
-    BM_NOMOD,
-    BN_HMMOD,
-    N23_ONEHAND,
+    N23_ONEHAND=SAFE_RANGE,
     NM_KC_B,
+    BM_NOMOD,
+    BN_HMMOD,    
     COMBO_LENGTH
 };
 
