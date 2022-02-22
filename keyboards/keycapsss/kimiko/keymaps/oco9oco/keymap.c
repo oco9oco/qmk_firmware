@@ -106,12 +106,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format on
 
 // COMBOS
+enum combos {
+    N23_ONEHAND, 
+    COMBO_LENGTH
+};
 uint16_t COMBO_LEN = COMBO_LENGTH;
-//const uint16_t PROGMEM bm_combo[] = {KC_B, KC_M, COMBO_END};
-//const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
-//const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM n23_combo[] = {KC_2, KC_3, COMBO_END};
-
 combo_t key_combos[] = {
     [N23_ONEHAND]   = COMBO(n23_combo, TO(_ONEHAND)),
 };

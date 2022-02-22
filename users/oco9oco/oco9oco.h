@@ -172,15 +172,8 @@ enum layer_index{
   _SETTINGS,
 };
 
-// COMBOS
-enum combos {
-    N23_ONEHAND=SAFE_RANGE,
-    NM_KC_B,
-    BM_NOMOD,
-    BN_HMMOD,    
-    COMBO_LENGTH
-};
 
+//MOVED COMBO TO EACH KEYBOARDS
 
 // Korean
 
