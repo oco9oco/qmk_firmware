@@ -162,7 +162,8 @@ enum custom_keycodes{
 
 enum layer_index{
   _BASE=0,      // QWERTY with home row mods
-  _BASE_NOMOD,  // Just QWERTY
+  _BASE_NOMOD,   // Just QWERTY
+  _SORIZAVA_3BEOL  // SORIZAVA STENO 3-BEOL LAYOUT
   _NUM,         // No use ==> HWP 전용으로 사용예정
   _NAV,         // Arrows
   _IPC,         // 
