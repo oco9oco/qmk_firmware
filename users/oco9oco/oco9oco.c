@@ -22,6 +22,12 @@ void haen_keycode(uint16_t keycode){
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 // HAEN_A ... HAEN_G
+        case PDF_HL:
+            if(__PRESSED__){
+                tap_code(KC_APP);
+                tap_code(KC_H);
+            }
+            break;
         case HAEN_A:
             if (record->event.pressed) {
                 haen_keycode(KC_A);

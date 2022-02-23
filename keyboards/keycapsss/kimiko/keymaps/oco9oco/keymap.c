@@ -27,8 +27,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      MO(_SETTINGS), KC_LALT, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
+                      PDF_HL,  KC_LALT, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
 ),
+
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
@@ -43,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     TO_BASE, __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, _______, 
     _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______, 
-    _______, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, _______, 
-    _______, __________________QWERTY_L3________________, XXXXXXX,          _______, __________________QWERTY_R3________________, _______, 
+    _______, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, KC_SPC, 
+    _______, __________________QWERTY_L3________________, KC_BSPC,          KC_COMM, __________________QWERTY_R3________________, KC_ENT, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, KC_1,    KC_2,    KC_3,             KC_4,    KC_5,    KC_6,    _______, _______ 
 ),
@@ -92,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ONEHAND] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     TO_BASE, CTRL_F1, KC_F2,   KC_ENT,   ALT_F4,  KC_F5,                             _______, _______, _______, _______, _______, _______,
-    KC_TAB,  KC_LGUI, KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,                           BRKT,    KC_7,    KC_8,    KC_9,    _______, _______, 
+    PDF_HL,  KC_LGUI, KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,                           BRKT,    KC_7,    KC_8,    KC_9,    _______, _______, 
     KC_LALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, GUI_RGHT,                           PRNS,    KC_4,    KC_5,    KC_6,    KC_LGUI, KC_LSFT, 
     KC_LSFT, UNDO,    CUT,     COPY,    PASTE,   BOLDFACE, KC_ENT,          XXXXXXX, _______, KC_1,    KC_2,    KC_3,    KC_LCTL, KC_LALT, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -122,7 +123,7 @@ enum combos {
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM N23_combo[] = {KC_2, KC_3, COMBO_END};
-const uint16_t PROGMEM STENO_combo[] = {KC_Z, KC_B, COMBO_END};
+const uint16_t PROGMEM STENO_combo[] = {SFTT_Z, KC_B, COMBO_END};
 combo_t key_combos[] = {
     [N23_ONEHAND]   = COMBO(N23_combo, TO(_ONEHAND)),
     [ZB_STENO]   = COMBO(STENO_combo, TO(_SORIZAVA_3BEOL)),

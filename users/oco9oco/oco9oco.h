@@ -137,6 +137,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define KEY_ROW record->event.key.row
 #define KEY_COL record->event.key.col
+#define __PRESSED__ record->event.pressed
 
 
 //wrapper layout
@@ -158,6 +159,7 @@ enum custom_keycodes{
   HAEN_E,
   HAEN_F,
   HAEN_G,
+  PDF_HL, // ADOBE PDF HIGHLIGHT MACRO
 };
 
 enum layer_index{
