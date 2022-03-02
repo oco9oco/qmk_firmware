@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      PDF_HL,  KC_LALT, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
+               MO(_SETTINGS),  KC_LALT, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
 ),
 
 
@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TO_BASE, KC_WH_D, KC_BTN2, KC_BTN3, KC_BTN1, KC_WH_U,                            __________________NUMROW_R_________________, _______, 
     _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______, 
     _______, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, _______, 
-    _______, __________________QWERTY_L3________________, XXXXXXX,          _______, __________________QWERTY_R3________________, _______, 
+    _______, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______ 
 ),
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5), KC_UNDS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                          C(KC_LBRC), _________NUM_789_________, _______, KC_PLUS, 
     _______, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  HAEN_G,                          C(KC_RBRC), _________NUM_456_________, CLN_SPC, KC_DQUO,
-    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,KC_DOT,           KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
+    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE, KC_DOT,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          A(KC_1), LT_NAV_0, _______, _______, _______
 ),
@@ -117,16 +117,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // COMBOS
 enum combos {
-    N23_ONEHAND,
-    ZB_STENO, 
+    COMBO_ONEHAND,
+    //ZB_STENO, 
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
-const uint16_t PROGMEM N23_combo[] = {KC_2, KC_3, COMBO_END};
-const uint16_t PROGMEM STENO_combo[] = {SFTT_Z, KC_B, COMBO_END};
+const uint16_t PROGMEM onehand_combo[] = {KC_Q, KC_W, COMBO_END};
+//const uint16_t PROGMEM STENO_combo[] = {SFTT_Z, KC_B, COMBO_END};
 combo_t key_combos[] = {
-    [N23_ONEHAND]   = COMBO(N23_combo, TO(_ONEHAND)),
-    [ZB_STENO]   = COMBO(STENO_combo, TO(_SORIZAVA_3BEOL)),
+    [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
+//    [ZB_STENO]   = COMBO(STENO_combo, TO(_SORIZAVA_3BEOL)),
 };
 
 // Tapping term
@@ -138,7 +138,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM + 100;
         case SFTT_A:
         case SFTT_Z:
-            return TAPPING_TERM + 200;
+            return TAPPING_TERM + 100;
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -162,8 +162,8 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
-           if (KEY_ROW==1){return false;} else {return true;}
         case SFTT_A:
+           if (KEY_ROW==1){return false;} else {return true;}
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:
