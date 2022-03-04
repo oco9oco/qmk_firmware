@@ -39,8 +39,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //QWERTY
 //     |--------|--------|--------|--------|--------|
-#define __________________NUMROW_L_________________ KC_1, KC_2, KC_3, KC_4, F5_5
+#define __________________NUMROW_L_________________ KC_1, KC_2, KC_3, KC_4, KC_5
 #define __________________NUMROW_R_________________ KC_6, KC_7, KC_8, KC_9, KC_0
+#define __________________FN_ROW_L_________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define __________________FN_ROW_R_________________ KC_F6, KC_F7, KC_F8, KC_F9, KC_F0
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_L1________________ KC_Q, KC_W, KC_E, KC_R, KC_T 
 #define __________________QWERTY_L2________________ KC_A, KC_S, KC_D, KC_F, KC_G
