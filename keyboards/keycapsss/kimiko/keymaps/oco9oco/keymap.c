@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-               MO(_SETTINGS),  KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LALT, KC_LGUI
+               MO(_SETTINGS),  KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_HANJA, MO(_SETTINGS)
 ),
 
 
@@ -183,10 +183,10 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 
 // Key overrides
 
-// const key_override_t tilde_esc_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_GRAVE));   // Shift + esc = ~
+// const key_override_t haen_hanja_override = ko_make_basic(MOD_MASK_SHIFT, KC_HAEN, KC_HANJA);   
 // const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
 // const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
-//     &tilde_esc_override, &grave_esc_override,
-//     NULL                                                                                        // Null terminate the array of overrides!
+    // &haen_hanja_override,
+    // NULL                                                                                        // Null terminate the array of overrides!
 // };
 
