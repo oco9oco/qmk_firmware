@@ -53,9 +53,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5), KC_UNDS,
-    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                          C(KC_LBRC), _________NUM_789_________, _______, KC_PLUS, 
-    _______, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  HAEN_G,                          C(KC_RBRC), _________NUM_456_________, CLN_SPC, KC_DQUO,
-    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE, KC_DOT,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
+    _______, XXXXXXX, HAEN_C,  HAEN_E,  HAEN_D,  XXXXXXX,                            KC_LBRC, _________NUM_789_________, _______, KC_PLUS, 
+    HAEN_B,  _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
+    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          A(KC_1), LT_NAV_0, _______, _______, _______
 ),
