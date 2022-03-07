@@ -138,27 +138,6 @@ combo_t key_combos[] = {
 //             return false;
 //     }
 // }
-
-// Tapping term
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-            return TAPPING_TERM - 100;
-        case SFTT_F:
-            if (record->event.key.row<4&&record->event.key.col==1) return TAPPING_TERM + 100;
-        case SFTT_Z:
-            return TAPPING_TERM + 500;
-        case SFTT_A:
-            if (record->event.key.row>=4) {return TAPPING_TERM + 500;}
-            else{return TAPPING_TERM + 100;}
-        case SFTT_J:
-        case GUIT_A:
-        case GUIT_SCL:   
-            return TAPPING_TERM + 50;
-        default:
-            return TAPPING_TERM;
-    }
-}
 // Tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
