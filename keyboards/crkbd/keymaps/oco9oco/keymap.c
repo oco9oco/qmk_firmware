@@ -90,54 +90,6 @@ combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(qw_combo, TO(_ONEHAND)),
 };
 
-// // Tapping term
-// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case THUMB_L2:
-//             return TAPPING_TERM - 100;
-//         case SFTT_F:
-//             if (record->event.key.col==1) return TAPPING_TERM + 100;
-//         case SFTT_Z:
-//             return TAPPING_TERM + 100;
-//         case SFTT_J:
-//         case GUIT_A:
-//         case GUIT_SCL:    
-//             return TAPPING_TERM + 50;
-//         default:
-//             return TAPPING_TERM;
-//     }
-// }
-// //Get hold on other key press
-// bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case THUMB_L2:
-//             return true;
-//         case SFTT_Z:    
-//             if (record->event.key.row==0 && record->event.key.col>2){return true;} else{return false;}
-//         default:
-//             return false;
-//     }
-// }
-// // Ignore mod tap interrupt
-// bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case SFTT_Z:
-//            if (record->event.key.row==0 && record->event.key.col>2){return false;} else {return true;}
-//         case SFTT_F:
-//         case SFTT_J:
-//         case ALTT_S:
-//         case CTLT_D:
-//         case GUIT_SCL:
-//         case ALTT_L:
-//         case CTLT_K:
-//         case GUIT_A:
-//         case LT(_NAV, KC_SPC):
-//         case LT(_NAV, KC_0):
-//             return true;
-//         default:
-//             return false;
-//     }
-// }
 // Tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -162,7 +114,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case THUMB_L2:
             return true;
         case SFTT_Z:    
-            if (KEY_ROW==1 && KEY_COL>2){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
+            if (KEY_ROW==0 && KEY_COL>2){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
@@ -172,7 +124,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
         case SFTT_A:
-           if (KEY_ROW==1){return false;} else {return true;}
+           if (KEY_ROW==0){return false;} else {return true;}
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:
