@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_IPC] = LAYOUT_split_3x6_3(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_GRAVE,HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                             KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS, 
-    MT_CAPS, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, KC_4,    KC_5,    KC_6,    CLN_SPC, KC_DQUO, 
+    MT_CAPS, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_BSLS,                             KC_RBRC, KC_4,    KC_5,    KC_6,    CLN_SPC, KC_DQUO, 
     _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,                           KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,                   
                                         _______, _______, _______,          A(KC_2), LT(_NAV,KC_0), _______
     ),
