@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     TO_BASE, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, _______, 
-    _______, __________________QWERTY_L1________________,                             __________________QWERTY_R1________________, _______, 
+    _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______, 
 SFT_T(KC_Q), __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, _______, 
     _______, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -198,7 +198,7 @@ const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 // Light LEDs 9 & 10 in cyan when keyboard layer 1 is active
 const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {9, 2, HSV_CYAN}
+    {9, 2, HSV_OFF}
 );
 // Light LEDs 11 & 12 in purple when keyboard layer 2 is active
 const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -228,11 +228,11 @@ bool led_update_user(led_t led_state) {
 }
 
 layer_state_t default_layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(1, layer_state_cmp(state, _BASE_NOMOD));
+    rgblight_set_layer_state(1, layer_state_cmp(state, _BASE));
     return state;
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    rgblight_set_layer_state(2, layer_state_cmp(state, _FN));
+    rgblight_set_layer_state(2, layer_state_cmp(state, _BASE_NOMOD));
     rgblight_set_layer_state(3, layer_state_cmp(state, _ONEHAND));
     return state;
