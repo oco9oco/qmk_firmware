@@ -36,6 +36,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define F8_8  LT(_BASE,KC_8)
 #define F9_9  LT(_BASE,KC_9)
 #define F0_0  LT(_BASE,KC_0)
+/* REGIONS
+
+N N N N N N E  E N N N N N N
+L X X X X X E  E X X X X X R
+L X X X X X E  E X X X X X R
+L X X X X X      X X X X X R
+m m m m m   T  T   m m m m m
+        T T T  T T T
+N
+L,R 
+E
+X Base row
+T Thumb row
+m Modifier row
+
+X = (
+Q W E R T  Y U I O P
+A S D F G  H J K L ;
+Z X C V B  N M , . /
+)
+*/
+
 
 //QWERTY
 //     |--------|--------|--------|--------|--------|
