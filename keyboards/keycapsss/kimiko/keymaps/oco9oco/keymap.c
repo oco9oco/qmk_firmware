@@ -139,7 +139,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM + 100;
         case SFTT_A:
         case SFTT_Z:
-             return TAPPING_TERM + 100;
+          return TAPPING_TERM + 200;
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -155,7 +155,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return true;
         case SFTT_A:
         case SFTT_Z:    
-            if (KEY_ROW==1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
+            if (KEY_ROW == 1 && KEY_COL >= 1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
