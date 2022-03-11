@@ -137,8 +137,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 100;
         case SFTT_F:
             return TAPPING_TERM + 100;
+        case SFTT_A:
         case SFTT_Z:
-            return TAPPING_TERM + 100;
+             return TAPPING_TERM + 100;
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -164,7 +165,8 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
         case SFTT_A:
-           if (KEY_ROW==1){return false;} else {return true;}
+               return false;
+           }
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:

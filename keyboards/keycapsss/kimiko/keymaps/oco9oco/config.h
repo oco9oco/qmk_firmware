@@ -92,8 +92,8 @@
 /*== all animations enable ==*/
 //#   define RGBLIGHT_ANIMATIONS
 /*== or choose animations to save space ==*/
-#   define RGBLIGHT_EFFECT_BREATHING
-// #   define RGBLIGHT_EFFECT_RAINBOW_MOOD
+// #   define RGBLIGHT_EFFECT_BREATHING
+#   define RGBLIGHT_EFFECT_RAINBOW_MOOD
 // #   define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 // #   define RGBLIGHT_EFFECT_SNAKE
 // #   define RGBLIGHT_EFFECT_KNIGHT
