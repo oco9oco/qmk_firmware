@@ -137,7 +137,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM - 100;
         case SFTT_F:
             return TAPPING_TERM + 100;
-        case SFTT_A:
         case SFTT_Z:
             return TAPPING_TERM + 100;
         case SFTT_J:
