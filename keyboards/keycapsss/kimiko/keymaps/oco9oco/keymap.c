@@ -149,14 +149,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
-        case THUMB_R1:
-        case THUMB_R2:
-        case THUMB_R3:
             return true;
         case SFTT_A:
         //case SFTT_Z:    
         case SFTT_Z:    
-            if (record->event.key.row == 1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
+            if (record->event.key.row == 1){return true;} else {return false;}// KEY_ROW, KEY_COL: look for oco9oco.h 
         default:
             return false;
     }
