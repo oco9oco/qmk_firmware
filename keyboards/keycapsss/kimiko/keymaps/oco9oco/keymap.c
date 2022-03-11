@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     HAEN_B,  _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
     _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          KC_LPRN, KC_RPRN, _________NUM_123_________, _______, KC_PIPE,                   
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, KC_TRNS, _______, _______, _______,          A(KC_1), LT_NAV_0, _______, _______, _______
+                      _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
 ),
  
 [_NAV] = LAYOUT_kimiko_wrapper(
@@ -152,6 +152,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
+        case THUMB_R1:
+        case THUMB_R2:
+        case THUMB_R3:
             return true;
         case SFTT_A:
         case SFTT_Z:    
@@ -163,6 +166,10 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case THUMB_L2:
+        case THUMB_R2:
+        case THUMB_R1:
+        case THUMB_R3:
         case SFTT_A:
         case SFTT_Z:
         case SFTT_F:
