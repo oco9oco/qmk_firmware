@@ -155,9 +155,8 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return true;
         case SFTT_A:
         //case SFTT_Z:    
-            if (record->event.key.row == 1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         case SFTT_Z:    
-            return true;
+            if (record->event.key.row == 1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
