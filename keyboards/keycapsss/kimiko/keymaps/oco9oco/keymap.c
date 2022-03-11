@@ -22,8 +22,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    KC_ESC,__________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, KC_MINS,
-    KC_GRAVE,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
+    KC_ESC,  __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, KC_MINS,
+    KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -163,9 +163,9 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case SFTT_Z:
         case SFTT_A:
-               if (record->event.key.row ==1) {return false;} else {return true;}
+        case SFTT_Z:
+            return false;
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:
