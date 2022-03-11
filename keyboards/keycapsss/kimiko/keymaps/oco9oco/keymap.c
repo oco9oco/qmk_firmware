@@ -155,7 +155,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return true;
         case SFTT_A:
         case SFTT_Z:    
-            if (KEY_ROW == 1 && KEY_COL >= 1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
+            if (record->event.key.row == 1 && record->event.key.col >= 1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
@@ -165,7 +165,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
         case SFTT_A:
-               if (KEY_ROW==1) {return false;} else {return true;}
+               if (record->event.key.row ==1) {return false;} else {return true;}
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:
