@@ -166,7 +166,6 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case SFTT_Z:
         case SFTT_A:
                return false;
-           }
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:
