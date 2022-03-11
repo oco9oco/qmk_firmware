@@ -167,8 +167,8 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
-        case THUMB_R2:
         case THUMB_R1:
+        case THUMB_R2:
         case THUMB_R3:
         case SFTT_A:
         case SFTT_Z:
@@ -180,7 +180,6 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case ALTT_L:
         case CTLT_K:
         case GUIT_A:
-        case LT(_NAV, KC_SPC):
         case LT(_NAV, KC_0):
             return true;
         default:
