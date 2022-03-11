@@ -154,7 +154,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             return true;
         case SFTT_A:
         case SFTT_Z:    
-            if (KEY_ROW==1 && KEY_COL>2){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
+            if (KEY_ROW==1){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
