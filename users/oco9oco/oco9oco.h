@@ -36,11 +36,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define F8_8  LT(_BASE,KC_8)
 #define F9_9  LT(_BASE,KC_9)
 #define F0_0  LT(_BASE,KC_0)
+/* REGIONS
+
+N N N N N N E  E N N N N N N
+L X X X X X E  E X X X X X R
+L X X X X X E  E X X X X X R
+L X X X X X      X X X X X R
+m m m m m   T  T   m m m m m
+        T T T  T T T
+N
+L,R 
+E
+X Base row
+T Thumb row
+m Modifier row
+
+X = (
+Q W E R T  Y U I O P
+A S D F G  H J K L ;
+Z X C V B  N M , . /
+)
+*/
+
 
 //QWERTY
 //     |--------|--------|--------|--------|--------|
-#define __________________NUMROW_L_________________ KC_1, KC_2, KC_3, KC_4, F5_5
+#define __________________NUMROW_L_________________ KC_1, KC_2, KC_3, KC_4, KC_5
 #define __________________NUMROW_R_________________ KC_6, KC_7, KC_8, KC_9, KC_0
+#define __________________FN_ROW_L_________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define __________________FN_ROW_R_________________ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_L1________________ KC_Q, KC_W, KC_E, KC_R, KC_T 
 #define __________________QWERTY_L2________________ KC_A, KC_S, KC_D, KC_F, KC_G
@@ -79,7 +103,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Thumb keys 
 #define THUMB_L1  LCTL_T(KC_TAB)
 #define THUMB_L2  LT(_IPC,KC_BSPC)
-#define THUMB_L3  LT(_ONEHAND,KC_DEL)
+#define THUMB_L3  LT(_SETTINGS,KC_DEL)
 #define THUMB_R3  LT(_MOUSE,KC_ENT)
 #define THUMB_R2  LT(_NAV,KC_SPC)
 #define THUMB_R1  LT(_FUNC,KC_HAEN)
