@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
     KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_BSPC,
-    KC_TAB,    __________________QWERTY_L1________________,      _________NUM_789_________,       __________________QWERTY_R1________________   KC_QUOT,
+    KC_TAB,    __________________QWERTY_L1________________,      _________NUM_789_________,       __________________QWERTY_R1________________,  KC_QUOT,
     KC_CAPS,   __________________QWERTY_L2________________,      _________NUM_456_________,       __________________QWERTY_R2________________,  KC_ENT,
     KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      _________NUM_123_________,       __________________QWERTY_R3________________,  KC_RSFT,
     KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     KC_0,    KC_LANG2,KC_LANG1,      THUMB_R3,THUMB_R2,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
