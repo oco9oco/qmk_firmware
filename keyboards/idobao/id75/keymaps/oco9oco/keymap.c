@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,       XXXXXXX, XXXXXXX, KC_LBRC,       KC_RBRC, _________NUM_789_________, XXXXXXX,  KC_PLUS,
     KC_CAPS,   _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F, KC_SLSH,       XXXXXXX, XXXXXXX, KC_LT,         KC_GT,   _________NUM_456_________, CLN_SPC,  KC_DQUO,
     KC_LSFT,   _IPC_Z,  BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,     XXXXXXX, XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_123_________, _______,  KC_PIPE,
-    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     XXXXXXX, _______, _______,       _______, LT_NAV_0,_______, _______, _______,  _______, 
+    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     XXXXXXX, _______, _______,       _______, LT_NAV_0,_______, _______, _______,  _______ 
  ),
  
 [_NAV] = LAYOUT_ID75_wrapper(
@@ -74,6 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    RGB_TOG,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX,  XXXXXXX,
    XXXXXXX,    _______, _______, _______, _______, KC_TRNS,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX 
 )
+};
 //clang-format on
 
 // COMBOS
