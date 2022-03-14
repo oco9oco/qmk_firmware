@@ -136,10 +136,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case THUMB_L2:
             return TAPPING_TERM - 100;
         case SFTT_F:
-        case SFTT_A:
-        case SFTT_Z:
-            return TAPPING_TERM + 100;
-
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -156,7 +152,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         //case SFTT_A:
         //case SFTT_Z:    
         case SFTT_Z:    
-            if (record->event.key.row == 1) return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
+            if (record->event.key.row == 1 && record->event.key.col >= 2) return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
         default:
             return false;
     }
