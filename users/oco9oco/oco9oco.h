@@ -165,10 +165,10 @@ Z X C V B  N M , . /
 
 
 //wrapper layout
-#define LAYOUT_crkbd_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
-#define LAYOUT_moonlander_wrapper(...) LAYOUT_MOONLANDER(__VA_ARGS__)
-#define LAYOUT_kimiko_wrapper(...) LAYOUT(__VA_ARGS__)
-
+#define LAYOUT_crkbd_wrapper(...)       LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_moonlander_wrapper(...)  LAYOUT_MOONLANDER(__VA_ARGS__)
+#define LAYOUT_kimiko_wrapper(...)      LAYOUT(__VA_ARGS__)
+#define LAYOUT_ID75_wrapper(...)        LAYOUT_ortho_5x15(__VA_ARGS__)
 enum custom_keycodes{
   PRNS = SAFE_RANGE,
   BRKT,
