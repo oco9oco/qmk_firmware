@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    __________________QWERTY_L1________________,      _________NUM_789_________,       __________________QWERTY_R1________________,  KC_QUOT,
     KC_CAPS,   __________________QWERTY_SACS_L2___________,      _________NUM_456_________,       __________________QWERTY_R2________________,  KC_ENT,
     KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      _________NUM_123_________,       __________________QWERTY_R3________________,  KC_RSFT,
-    KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,KC_0,   THUMB_R1,       THUMB_R2,THUMB_R3,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
+    KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,KC_0,   THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
  ),
 
  [_IPC] = LAYOUT_ID75_wrapper( /* QWERTY */
