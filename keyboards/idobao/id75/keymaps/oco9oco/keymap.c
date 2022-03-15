@@ -141,6 +141,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case ALTT_L:
         case CTLT_K:
         case GUIT_A:
+        case LGUI_T(KC_Z):
         case LT(_NAV, KC_0):
             return true;
         default:
