@@ -21,10 +21,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
     KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_MINS,
-    KC_TAB,    __________________QWERTY_L1________________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R1________________,  KC_EQL,
-    KC_CAPS,   __________________QWERTY_SACS_L2___________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R2________________,  KC_QUOT,
-    KC_LSFT,   LGUI_T(KC_Z),KC_X,KC_C,    KC_V,    KC_B,         XXXXXXX, XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,KC_0,   THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
+    KC_TAB,    __________________QWERTY_L1________________,      KC_DEL,  KC_END,  KC_PGDN,       __________________QWERTY_R1________________,  KC_EQL,
+    KC_CAPS,   __________________QWERTY_SACS_L2___________,      KC_F6,   XXXXXXX, KC_GRAVE,      __________________QWERTY_R2________________,  KC_QUOT,
+    KC_LSFT,   LGUI_T(KC_Z),KC_X,KC_C,    KC_V,    KC_B,         KC_F7,   XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
+    KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,XXXXXXX, THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
  ),
 
  [_IPC] = LAYOUT_ID75_wrapper( /* QWERTY */
