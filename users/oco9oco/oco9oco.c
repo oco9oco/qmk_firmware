@@ -114,6 +114,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             break;
+
         case _IPC_Z:
             if (record->tap.count && record->event.pressed) {
                 tap_code16(C(KC_Z));
@@ -122,6 +123,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {unregister_code(KC_LSFT);}
             return false;
             break;
+        case _IPC_C:
+        if(record->tap.count && record->event.pressed){
+            tap_code16(KC_UNDS));
+        }else if(record->event.pressed) {
+            tap_code16(KC_EQL);
+        }
+        return false;
+        break;
         case BRKT:
             if (record->event.pressed) {
                 SEND_STRING("[]" SS_TAP(X_LEFT));

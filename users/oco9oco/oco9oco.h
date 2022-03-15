@@ -86,6 +86,7 @@ Z X C V B  N M , . /
 #define _IPC_A    LT(_IPC,KC_A)
 #define _IPC_S    LT(_IPC,KC_S)
 #define _IPC_D    LT(_IPC,KC_D)
+#define _IPC_C    LT(_IPC,KC_C)
 #define _IPC_F    LT(_IPC,KC_F)
 #define _IPC_Z    LT(_IPC,KC_Z)
 #define _IPC_MIN  LCTL_T(KC_MINS)

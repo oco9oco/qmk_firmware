@@ -20,10 +20,10 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
-    KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_BSPC,
-    KC_TAB,    __________________QWERTY_L1________________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R1________________,  KC_QUOT,
-    KC_CAPS,   __________________QWERTY_SACS_L2___________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R2________________,  KC_ENT,
-    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      XXXXXXX, XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_RSFT,
+    KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_MINS,
+    KC_TAB,    __________________QWERTY_L1________________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R1________________,  KC_EQL,
+    KC_CAPS,   __________________QWERTY_SACS_L2___________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R2________________,  KC_QUOT,
+    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      XXXXXXX, XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
     KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,KC_0,   THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
  ),
 
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,    CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        KC_F6,   KC_F7,   KC_F8,         A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5),  KC_UNDS,
     KC_TAB,    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,       XXXXXXX, XXXXXXX, KC_LBRC,       KC_RBRC, _________NUM_789_________, XXXXXXX,  KC_PLUS,
     KC_CAPS,   _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F, KC_SLSH,       XXXXXXX, XXXXXXX, KC_LT,         KC_GT,   _________NUM_456_________, CLN_SPC,  KC_DQUO,
-    KC_LSFT,   _IPC_Z,  BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,     XXXXXXX, XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_123_________, _______,  KC_PIPE,
+    KC_LSFT,   _IPC_Z,  BRKT,    _IPC_C,  KC_DOT,  BOLDFACE,     XXXXXXX, XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_123_________, _______,  KC_PIPE,
     KC_LCTL,   KC_LGUI, KC_LALT, _______, _______, _______,      _______, _______, _______,       LT_NAV_0,_______, _______, _______, _______,  _______ 
  ),
  
