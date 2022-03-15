@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    __________________QWERTY_L1________________,      _________NUM_789_________,       __________________QWERTY_R1________________,  KC_QUOT,
     KC_CAPS,   __________________QWERTY_L2________________,      _________NUM_456_________,       __________________QWERTY_R2________________,  KC_ENT,
     KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      _________NUM_123_________,       __________________QWERTY_R3________________,  KC_RSFT,
-    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     KC_0,    KC_LANG2,KC_LANG1,      THUMB_R3,THUMB_R2,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
+    KC_LCTL,   KC_LGUI, KC_LALT, XXXXXXX, THUMB_L1,THUMB_L2,     THUMB_L3,KC_0,   THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
  ),
 
  [_IPC] = LAYOUT_ID75_wrapper( /* QWERTY */
@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,       XXXXXXX, XXXXXXX, KC_LBRC,       KC_RBRC, _________NUM_789_________, XXXXXXX,  KC_PLUS,
     KC_CAPS,   _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F, KC_SLSH,       XXXXXXX, XXXXXXX, KC_LT,         KC_GT,   _________NUM_456_________, CLN_SPC,  KC_DQUO,
     KC_LSFT,   _IPC_Z,  BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,     XXXXXXX, XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_123_________, _______,  KC_PIPE,
-    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     XXXXXXX, _______, _______,       _______, LT_NAV_0,_______, _______, _______,  _______ 
+    KC_LCTL,   KC_LGUI, KC_LALT, _______, _______, _______,      _______, _______, _______,       LT_NAV_0,_______, _______, _______, _______,  _______ 
  ),
  
 [_NAV] = LAYOUT_ID75_wrapper(
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,        XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_F12,
     PDF_HL,    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,        XXXXXXX, XXXXXXX, XXXXXXX,       KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,  KC_ENT,
     _______,   _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B),      XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_DEL,
-    XXXXXXX,   _______, _______, _______, KC_BSPC, KC_DEL,       XXXXXXX, _______, _______,       _______, KC_TRNS, _______, _______, _______,  _______
+    XXXXXXX,   _______, _______, _______, KC_DEL,  KC_BSPC,      _______, _______, _______,       _______, KC_TRNS, _______, _______, _______,  _______
 ),
 
 [_MOUSE] = LAYOUT_ID75_wrapper(
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_U,      XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, KC_ACL2, KC_ACL1, XXXXXXX, XXXXXXX,  XXXXXXX,    
     KC_P,      XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,   KC_ENT,  
     KC_X,      UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,     XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,    KC_DEL,
-    _______,   _______, _______, _______, _______, _______,      XXXXXXX, _______, _______,       _______, _______, _______, _______, _______,  _______                   
+    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______                   
 ),
 
 [_FUNC] = LAYOUT_ID75_wrapper(
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        XXXXXXX, XXXXXXX, XXXXXXX,       _____________FUNC_2789____________, XXXXXXX,  XXXXXXX,
     XXXXXXX,   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,        XXXXXXX, XXXXXXX, XXXXXXX,       _____________FUNC_1456____________, XXXXXXX,  XXXXXXX,
     XXXXXXX,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F7,        XXXXXXX, XXXXXXX, XXXXXXX,       _____________FUNC_0123____________, XXXXXXX,  XXXXXXX,
-    _______,   _______, _______, _______, _______, _______,      XXXXXXX, _______, _______,       _______, _______, _______, _______, _______,  _______                   
+    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______                   
 ),
 
 [_ONEHAND] = LAYOUT_ID75_wrapper(
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     GUI_RGHT,  KC_LGUI, KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,     XXXXXXX, XXXXXXX, XXXXXXX,       BRKT,    KC_WH_D, KC_MS_U, KC_WH_U, _______,  _______,
     KC_LALT,   KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, PDF_HL,       XXXXXXX, XXXXXXX, XXXXXXX,       PRNS,    KC_MS_L, KC_MS_D, KC_MS_R, _______,  _______,
     KC_LSFT,   UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,     XXXXXXX, XXXXXXX, XXXXXXX,       _______, _______, _______, KC_LCTL, _______,  _______,
-    XXXXXXX,   KC_BSPC, KC_LALT, KC_SPC,  KC_BTN3, KC_ENT,       XXXXXXX, XXXXXXX, XXXXXXX,       _______, _______, _______, _______, _______,  _______
+    XXXXXXX,   KC_BSPC, KC_LALT, KC_SPC,  KC_BTN3, KC_ENT,       _______, _______, _______,       _______, _______, _______, _______, _______,  _______
 ),
 
 [_SETTINGS] = LAYOUT_ID75_wrapper(
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, 
    XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, 
    RGB_TOG,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX,  XXXXXXX,
-   XXXXXXX,    _______, _______, _______, _______, KC_TRNS,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX 
+   XXXXXXX,    _______, _______, _______, _______, KC_TRNS,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______ 
 )
 };
 //clang-format on
