@@ -22,8 +22,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
     KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_MINS,
     KC_TAB,    __________________QWERTY_L1________________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R1________________,  KC_EQL,
-    KC_CAPS,   __________________QWERTY_SACS_L2___________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R2________________,  KC_QUOT,
-    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      XXXXXXX, XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
+    KC_CAPS,   __________________QWERTY_SACG_L2___________,      XXXXXXX, XXXXXXX, XXXXXXX,       __________________QWERTY_R2________________,  KC_QUOT,
+    KC_LSFT,   LGUI_T(KC_Z),KC_X,KC_C,    KC_V,    KC_B,         XXXXXXX, XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
     KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,KC_0,   THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
  ),
 
@@ -96,11 +96,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
             return TAPPING_TERM - 100;
+      case LGUI_T(KC_F):
+         return TAPPING_TERM + 200;
         case SFTT_F:
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
             return TAPPING_TERM + 50;
+         case SFTT_A:
+         case SFTT_Z:
+            return TAPPING_TERM - 100;
         default:
             return TAPPING_TERM;
     }
@@ -125,6 +130,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case THUMB_R1:
         case THUMB_R2:
         case THUMB_R3:
+        case LGUI_T(KC_F):
         case SFTT_A:
         case SFTT_Z:
         case SFTT_F:
