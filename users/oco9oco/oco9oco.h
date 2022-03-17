@@ -121,7 +121,7 @@ Z X C V B  N M , . /
 #define ALT_F4    A(KC_F4)
 #define SCRNSHOT  LSG(KC_S)
 #define TO_BASE   TO(_BASE)
-
+#define TO_NOMOD  TG(_BASE_NOMOD)
 #define LT_NAV_0 LT(_NAV,KC_0)
 #define MT_CAPS  LALT_T(KC_CAPS)
 #define SFT_CAPS  LSFT_T(KC_CAPS)

@@ -21,18 +21,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
     KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_MINS,
-    KC_TAB,    __________________QWERTY_L1________________,      KC_DEL,  KC_END,  KC_PGDN,       __________________QWERTY_R1________________,  KC_EQL,
-    KC_CAPS,   __________________QWERTY_HOME_L2___________,      KC_F6,   XXXXXXX, KC_GRAVE,      __________________QWERTY_HOME_R2___________,  KC_QUOT,
-    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      KC_F7,   XXXXXXX, KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT, KC_LGUI, THUMB_L1,THUMB_L2,     THUMB_L3,KC_LANG2, THUMB_R3,       THUMB_R2,THUMB_R1,KC_LEFT, KC_DOWN, KC_UP,    KC_RGHT
+    KC_GRAVE,  __________________QWERTY_L1________________,      KC_DEL,  KC_END,  KC_PGDN,       __________________QWERTY_R1________________,  KC_EQL,
+    KC_CAPS,   __________________QWERTY_HOME_L2___________,      XXXXXXX, TO_NOMOD,XXXXXXX,__________________QWERTY_HOME_R2___________,  KC_QUOT,
+    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      XXXXXXX, KC_UP,   KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
+    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     KC_LEFT, KC_DOWN, KC_RGHT,       THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG2, KC_LBRC, KC_RBRC
+ ),
+
+ [_BASE_NOMOD] = LAYOUT_ID75_wrapper( /* QWERTY */
+    KC_ESC,    __________________NUMROW_L_________________,      _______, _______, _______,       __________________NUMROW_R_________________,  KC_MINS,
+    KC_GRAVE,  __________________QWERTY_L1________________,      _______, _______, _______,       __________________QWERTY_R1________________,  KC_EQL,
+    KC_CAPS,   __________________QWERTY_L2________________,      _______, TO_BASE, _______,       __________________QWERTY_R2________________,  KC_QUOT,
+    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      _______, _______, _______,       __________________QWERTY_R3________________,  KC_BSLS,
+    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     _______, _______, _______,       THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG2, KC_LBRC, KC_RBRC
  ),
 
  [_IPC] = LAYOUT_ID75_wrapper( /* QWERTY */
-    KC_ESC,    CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        KC_F6,   KC_F7,   KC_F8,         A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5),  KC_UNDS,
-    KC_TAB,    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,       XXXXXXX, XXXXXXX, KC_LBRC,       KC_RBRC, _________NUM_789_________, XXXXXXX,  KC_PLUS,
-    KC_CAPS,   _IPC_A,  _IPC_S,  CTL_T(KC_MINS), _IPC_F,   KC_DOT,       XXXXXXX, XXXXXXX, KC_LT,         KC_GT,   _________NUM_456_________, CLN_SPC,  KC_DQUO,
-    KC_LSFT,   _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  KC_SLSH,      XXXXXXX, XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_123_________, _______,  KC_PIPE,
-    KC_LCTL,   KC_LGUI, KC_LALT, _______, _______, _______,      _______, _______, LSFT_T(KC_ENT),LT_NAV_0,_______, _______, _______, _______,  _______ 
+    KC_ESC,    CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        KC_F6,   XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_UNDS,
+    KC_TAB,    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,       KC_F7,   XXXXXXX, KC_LBRC,       KC_RBRC, _________NUM_789_________, XXXXXXX,  KC_PLUS,
+    KC_CAPS,   _IPC_A,  _IPC_S,  CTL_T(KC_MINS), _IPC_F,KC_DOT,  KC_F8,   XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_456_________, CLN_SPC,  KC_DQUO,
+    KC_LSFT,   _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  KC_SLSH,      XXXXXXX, XXXXXXX, KC_LT,         KC_GT,   _________NUM_123_________, _______,  KC_PIPE,
+    KC_LCTL,   KC_LGUI, KC_LALT, _______, _______, _______,      _______, _______, _______, LSFT_T(KC_ENT),LT_NAV_0,_______, _______, _______,  _______ 
  ),
  
 [_NAV] = LAYOUT_ID75_wrapper(
