@@ -22,9 +22,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
     KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_MINS,
     KC_GRAVE,  __________________QWERTY_L1________________,      KC_DEL,  KC_END,  KC_PGDN,       __________________QWERTY_R1________________,  KC_EQL,
-    KC_CAPS,   __________________QWERTY_HOME_L2___________,      XXXXXXX, TO_NOMOD,XXXXXXX,__________________QWERTY_HOME_R2___________,  KC_QUOT,
+    KC_CAPS,   __________________QWERTY_HOME_L2___________,      XXXXXXX, TO_NOMOD,XXXXXXX,       __________________QWERTY_HOME_R2___________,  KC_QUOT,
     KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      XXXXXXX, KC_UP,   KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,     KC_LEFT, KC_DOWN, KC_RGHT,       THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG2, KC_LBRC, KC_RBRC
+    KC_LCTL,   KC_LGUI, KC_LALT, THUMB_L3,THUMB_L1,THUMB_L2,     KC_LEFT, KC_DOWN, KC_RGHT,       THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG2, KC_LBRC, KC_RBRC
  ),
 
  [_BASE_NOMOD] = LAYOUT_ID75_wrapper( /* QWERTY */
