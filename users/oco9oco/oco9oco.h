@@ -204,9 +204,5 @@ enum layer_index{
 //MOVED COMBO TO EACH KEYBOARDS
 
 // Korean
-
-
-
-
 bool prns_pressed; // 괄호입력상태
 bool num_in_prns; // 괄호 치고 번호를 입력한 경우
