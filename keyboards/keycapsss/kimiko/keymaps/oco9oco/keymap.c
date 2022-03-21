@@ -55,8 +55,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5), KC_UNDS,
-    _______, XXXXXXX, HAEN_C,  HAEN_E,  HAEN_D,  XXXXXXX,                            KC_LBRC, _________NUM_789_________, _______, KC_PLUS, 
-    HAEN_B,  _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
+    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_F6,                              KC_LBRC, _________NUM_789_________, _______, KC_PLUS, 
+    KC_LNG1, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
     _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          KC_LT,   KC_GT,   _________NUM_123_________, _______, KC_PIPE,                   
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,                              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
+    _______, C(KC_0), C(KC_7), C(KC_8), C(KC_9), KC_F6,                              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
     PDF_HL,  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
     _______, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B), XXXXXXX,          XXXXXXX, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_DEL,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -162,6 +162,7 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
+        case SFTT_Z:
             return TAPPING_TERM - 100;
         case SFTT_F:
         case SFTT_J:
@@ -175,9 +176,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 //Get hold on other key press
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case THUMB_L2:
-        case THUMB_R3:
-            return true;
         //case SFTT_A:
         //case SFTT_Z:    
         case SFTT_Z:    
@@ -189,8 +187,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case THUMB_L2:
-        case THUMB_R1:
         case THUMB_R2:
         case THUMB_R3:
 //        case SFTT_A:
