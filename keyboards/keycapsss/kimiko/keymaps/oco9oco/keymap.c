@@ -37,8 +37,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, _______, 
     _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______, 
-    KC_LANG1,__________________QWERTY_L2________________,                            __________________QWERTY_R2________________, _______, 
-    _______, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______, 
+    KC_LANG1,__________________QWERTY_L2_SACS___________,                            __________________QWERTY_R2________________, _______, 
+    KC_LGUI, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______ 
 ),
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, KC_BSPC, 
     _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_DEL, 
-    _______, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, KC_ENT, 
+    _______, __________________QWERTY_L2_SACS___________,                            __________________QWERTY_R2________________, KC_ENT, 
     _______, __________________QWERTY_L3________________, TO_BASE,          KC_COMM, __________________QWERTY_R3________________, KC_SPC, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, KC_F13,  KC_F14,  KC_F15,           KC_F16,  KC_F17,  KC_F18,  KC_COMM, KC_DOT
@@ -162,6 +162,7 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
+        case SFTT_A:
         case SFTT_Z:
             return TAPPING_TERM - 100;
         case SFTT_F:
@@ -176,10 +177,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 //Get hold on other key press
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        //case SFTT_A:
-        //case SFTT_Z:    
+        case SFTT_A:
         case SFTT_Z:    
-            if (record->event.key.row == 1 && record->event.key.col >= 2) return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
+            return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
         default:
             return false;
     }
@@ -189,7 +189,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_R2:
         case THUMB_R3:
-//        case SFTT_A:
+        case SFTT_A:
         case SFTT_Z:
         case SFTT_F:
         case SFTT_J:
