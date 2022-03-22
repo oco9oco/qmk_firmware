@@ -55,10 +55,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              XXXXXXX, KC_LPRN, KC_RPRN, KC_LT,   KC_GT,   KC_UNDS,
-    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
+    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              XXXXXXX, KC_LT,   KC_GT,   KC_LPRN, KC_RPRN, KC_UNDS,
+    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_GRAVE,KC_PLUS,
     KC_LNG1, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
-    _______, KC_LSFT, BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          KC_LT,   KC_GT,   _________NUM_123_________, _______, KC_PIPE,
+    _______, KC_LSFT, BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
 ),
