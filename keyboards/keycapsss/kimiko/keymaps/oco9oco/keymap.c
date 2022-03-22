@@ -162,9 +162,7 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
-        case SFTT_A:
-        case SFTT_Z:
-            return TAPPING_TERM - 100;
+            return TAPPING_TERM  100;
         case SFTT_F:
         case SFTT_J:
         case GUIT_A:
