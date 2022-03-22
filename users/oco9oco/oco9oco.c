@@ -74,7 +74,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     SEND_STRING(SS_TAP(X_RGHT));
                 }
             }
-            break;            
+            break;
         case KC_1 ... KC_0:
             if (record->event.pressed && prns_pressed) {
                 num_in_prns = true;
@@ -83,7 +83,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // Intercept mod-tap
         case _IPC_A:
             if(record->tap.count && record->event.pressed){
-                SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
+                // SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
+                tap_code(KC_A);
             }else if(record->event.pressed) {
                 register_code(KC_LGUI);
             }else{
@@ -103,7 +104,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             break;
-       
+
         case _IPC_F:
             if(record->tap.count && record->event.pressed){
                 SEND_STRING(", ");

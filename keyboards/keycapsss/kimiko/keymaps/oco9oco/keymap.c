@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
 
 [_BASE] = LAYOUT_kimiko_wrapper(
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
+// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS,
     KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
@@ -34,37 +34,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, _______, 
-    _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______, 
-    KC_LANG1,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, _______, 
-    KC_LGUI, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______ 
+    _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, _______,
+    _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______,
+    KC_LANG1,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, _______,
+    KC_LGUI, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______,
+// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+                      _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______
 ),
 
 [_SORIZAVA_3BEOL] = LAYOUT_kimiko_wrapper(
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, KC_BSPC, 
-    _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_DEL, 
-    _______, __________________QWERTY_SACS_L2___________,                            __________________QWERTY_R2________________, KC_ENT, 
-    _______, __________________QWERTY_L3________________, TO_BASE,          KC_COMM, __________________QWERTY_R3________________, KC_SPC, 
+// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+    _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, KC_BSPC,
+    _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_DEL,
+    _______, __________________QWERTY_SACS_L2___________,                            __________________QWERTY_R2________________, KC_ENT,
+    _______, __________________QWERTY_L3________________, TO_BASE,          KC_COMM, __________________QWERTY_R3________________, KC_SPC,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, KC_F13,  KC_F14,  KC_F15,           KC_F16,  KC_F17,  KC_F18,  KC_COMM, KC_DOT
 ),
 
 [_IPC] = LAYOUT_kimiko_wrapper(
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
+// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5), KC_UNDS,
-    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_F6,                              KC_LBRC, _________NUM_789_________, _______, KC_PLUS, 
+    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, _______, KC_PLUS,
     KC_LNG1, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
-    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          KC_LT,   KC_GT,   _________NUM_123_________, _______, KC_PIPE,                   
+    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          KC_LT,   KC_GT,   _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
 ),
- 
+
 [_NAV] = LAYOUT_kimiko_wrapper(
-// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
+// |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     _______, C(KC_0), C(KC_7), C(KC_8), C(KC_9), KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
     PDF_HL,  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
@@ -76,21 +76,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_MOUSE] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  RESET,
-    KC_U,    XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                            XXXXXXX, KC_ACL2, KC_ACL1, XXXXXXX, XXXXXXX, XXXXXXX,    
-    KC_P,    XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                            KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,  KC_ENT,  
+    KC_U,    XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                            XXXXXXX, KC_ACL2, KC_ACL1, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_P,    XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                            KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,  KC_ENT,
     KC_X,    UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,XXXXXXX,          KC_PWR,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_DEL,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, _______, _______, _______, _______,          KC_TRNS, _______, _______, _______, _______    
+                      _______, _______, _______, _______, _______,          KC_TRNS, _______, _______, _______, _______
 ),
 
 [_FUNC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     XXXXXXX, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              _____________FUNC_2789____________, XXXXXXX, XXXXXXX,
     XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              _____________FUNC_1456____________, XXXXXXX, XXXXXXX,
     XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F7,   XXXXXXX,          XXXXXXX, _____________FUNC_0123____________, XXXXXXX, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, _______, _______, _______, _______,          _______, _______, KC_TRNS, _______, _______ 
+                      _______, _______, _______, _______, _______,          _______, _______, KC_TRNS, _______, _______
 ),
 
 [_ONEHAND] = LAYOUT_kimiko_wrapper(
@@ -105,13 +105,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_SETTINGS] = LAYOUT(
 //|-------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-   _______,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-//|             |----------------USER MACRO------------------|   
-   XXXXXXX,/*|*/ S(KC_Q), S(KC_W), S(KC_E), S(KC_R), S(KC_T),                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-   XXXXXXX,/*|*/ C(KC_0), C(KC_7), C(KC_8), C(KC_9), XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+   _______,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+//|             |----------------USER MACRO------------------|
+   XXXXXXX,/*|*/ S(KC_Q), S(KC_W), S(KC_E), S(KC_R), S(KC_T),                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX,/*|*/ C(KC_0), C(KC_7), C(KC_8), C(KC_9), XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    RGB_TOG,/*|*/ XXXXXXX, XXXXXXX, C(KC_U), C(KC_B), XXXXXXX, PDF_HL,           XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                     _______, RESET, _______, _______, KC_TRNS,          _______, _______, _______, _______, KC_TRNS 
+                     _______, RESET, _______, _______, KC_TRNS,          _______, _______, _______, _______, KC_TRNS
 )
 
 };
@@ -122,11 +122,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // COMBOS
 enum combos {
     COMBO_ONEHAND,
-    SHIFT_Q, 
-    SHIFT_W, 
-    SHIFT_E, 
-    SHIFT_R, 
-    SHIFT_T, 
+    SHIFT_Q,
+    SHIFT_W,
+    SHIFT_E,
+    SHIFT_R,
+    SHIFT_T,
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
@@ -167,7 +167,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case SFTT_F:
         case SFTT_J:
         case GUIT_A:
-        case GUIT_SCL:   
+        case GUIT_SCL:
             return TAPPING_TERM + 50;
         default:
             return TAPPING_TERM;
@@ -177,8 +177,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_A:
-        case SFTT_Z:    
-            return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
+        case SFTT_Z:
+            return true;// KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
@@ -207,7 +207,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 
 // Key overrides
 
-// const key_override_t haen_hanja_override = ko_make_basic(MOD_MASK_SHIFT, KC_HAEN, KC_LANG2);   
+// const key_override_t haen_hanja_override = ko_make_basic(MOD_MASK_SHIFT, KC_HAEN, KC_LANG2);
 // const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
 // const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     // &haen_hanja_override,
