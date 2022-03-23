@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, _______, _______, _______, _______, _______,                            KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_DLR, KC_GRAVE, 
     KC_CAPS, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______,
-    KC_LCTL, __________________QWERTY_R2________________,                            __________________QWERTY_R2________________, _______,
+    KC_LCTL, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, _______,
     KC_LALT, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_LGUI, _______, _______, _______,          _______, _______, _______, _______, _______
@@ -109,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //|             |----------------USER MACRO------------------|
    XXXXXXX,/*|*/ C(KC_0), C(KC_7), C(KC_8), C(KC_9), XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    XXXXXXX,/*|*/ XXXXXXX, KC_X,    KC_P,    PDF_HL,  XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   RGB_TOG,/*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,
+   RGB_TOG,/*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, RESET, _______, _______, KC_TRNS,          _______, _______, _______, _______, KC_TRNS
 )
