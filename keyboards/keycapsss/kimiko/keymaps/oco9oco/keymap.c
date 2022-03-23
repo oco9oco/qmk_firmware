@@ -119,20 +119,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //clang-format on
 //keyboard-specific process
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case TO_NOMOD:
-            if(__PRESSED__){
-                rgblight_setrgb(RGB_ORANGE);
-            }
-            return true;
-        case TO_BASE:
-            if(__PRESSED__){
-                rgblight_setrgb(RGB_OFF);
-            }
-            return true;
-    }
-
 // COMBOS
 enum combos {
     COMBO_ONEHAND,

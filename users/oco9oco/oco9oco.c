@@ -22,6 +22,18 @@ void haen_keycode(uint16_t keycode){
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 // HAEN_A ... HAEN_G
+#ifdef RGBLIGHT_ENABLE
+        case TO_NOMOD:
+            if(__PRESSED__){
+                rgblight_setrgb(RGB_ORANGE);
+            }
+            return true;
+        case TO_BASE:
+            if(__PRESSED__){
+                rgblight_setrgb(RGB_OFF);
+            }
+            return true;
+#endif
         case PDF_HL:
             if(__PRESSED__){
                 tap_code(KC_APP);
