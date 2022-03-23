@@ -35,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, __________________FN_ROW_L_________________,                            __________________FN_ROW_R_________________, _______,
+    _______, _______, _______, _______, _______, _______,                            KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_DLR, KC_GRAVE, 
     _______, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______,
-    KC_LANG1,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, _______,
+    KC_LANG1,__________________QWERTY_R2________________,                            __________________QWERTY_R2________________, _______,
     KC_LGUI, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______
@@ -56,8 +56,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              XXXXXXX, KC_LT,   KC_GT,   KC_LPRN, KC_RPRN, KC_UNDS,
-    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_GRAVE,KC_PLUS,
-    KC_LNG1, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, CLN_SPC, KC_DQUO,
+    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_GRV,  KC_PLUS,
+    KC_LNG1, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, KC_LSFT, BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
@@ -216,12 +216,12 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 
 // Key overrides
 
-//d const key_override_t haen_hanja_override = ko_make_basic(MOD_MASK_SHIFT, KC_HAEN, KC_LANG2);
+ const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
 // const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
-// const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
-    // &haen_hanja_override,
-    // NULL                                                                                        // Null terminate the array of overrides!
-// };
+const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
+    &DLR_0_override,
+    NULL                                                                                        // Null terminate the array of overrides!
+ };
 
 // //RGBLIGHT LAYERS
 // // Light LEDs 6 to 9 and 12 to 15 red when caps lock is active. Hard to ignore!
