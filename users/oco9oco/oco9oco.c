@@ -22,6 +22,18 @@ void haen_keycode(uint16_t keycode){
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 // HAEN_A ... HAEN_G
+#ifdef RGBLIGHT_ENABLE
+        case TO_NOMOD:
+            if(__PRESSED__){
+                rgblight_setrgb(RGB_ORANGE);
+            }
+            return true;
+        case TO_BASE:
+            if(__PRESSED__){
+                rgblight_setrgb(RGB_OFF);
+            }
+            return true;
+#endif
         case PDF_HL:
             if(__PRESSED__){
                 tap_code(KC_APP);
@@ -74,7 +86,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     SEND_STRING(SS_TAP(X_RGHT));
                 }
             }
-            break;            
+            break;
         case KC_1 ... KC_0:
             if (record->event.pressed && prns_pressed) {
                 num_in_prns = true;
@@ -83,7 +95,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // Intercept mod-tap
         case _IPC_A:
             if(record->tap.count && record->event.pressed){
-                SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
+                // SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
+                tap_code(KC_A);
             }else if(record->event.pressed) {
                 register_code(KC_LGUI);
             }else{
@@ -103,7 +116,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             break;
-       
+
         case _IPC_F:
             if(record->tap.count && record->event.pressed){
                 SEND_STRING(", ");
@@ -114,6 +127,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             break;
+
         case _IPC_Z:
             if (record->tap.count && record->event.pressed) {
                 tap_code16(C(KC_Z));
@@ -122,6 +136,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {unregister_code(KC_LSFT);}
             return false;
             break;
+        case _IPC_C:
+        if(record->tap.count && record->event.pressed){
+            tap_code16(KC_UNDS);
+        }else if(record->event.pressed) {
+            tap_code16(KC_EQL);
+        }
+        return false;
+        break;
         case BRKT:
             if (record->event.pressed) {
                 SEND_STRING("[]" SS_TAP(X_LEFT));

@@ -66,7 +66,7 @@ Z X C V B  N M , . /
 #define __________________FN_ROW_L_________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
 #define __________________FN_ROW_R_________________ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
 //     |--------|--------|--------|--------|--------|
-#define __________________QWERTY_L1________________ KC_Q, KC_W, KC_E, KC_R, KC_T 
+#define __________________QWERTY_L1________________ KC_Q, KC_W, KC_E, KC_R, KC_T
 #define __________________QWERTY_L2________________ KC_A, KC_S, KC_D, KC_F, KC_G
 #define __________________QWERTY_L3_SFTZ___________ SFTT_Z, KC_X, KC_C, KC_V, KC_B
 
@@ -77,15 +77,16 @@ Z X C V B  N M , . /
 #define __________________QWERTY_R2________________ KC_H, KC_J, KC_K, KC_L, KC_SCLN
 #define __________________QWERTY_R3________________ KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH
 //     |--------|--------|--------|--------|--------|
-#define __________________QWERTY_HOME_L2___________ GUIT_A,  ALTT_S,  CTLT_D,  SFTT_F,  KC_G
-#define __________________QWERTY_HOME_R2___________ KC_H,    SFTT_J,  CTLT_K,  ALTT_L,  GUIT_SCL
+#define __________________QWERTY_HOME_L2___________ GUIT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
+#define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, GUIT_SCL
 // different layout 
-#define __________________QWERTY_SACS_L2___________ SFTT_A,  ALTT_S,  CTLT_D,  SFTT_F,  KC_G
-
+#define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
+#define __________________QWERTY_SACG_L2___________ SFTT_A, ALTT_S, CTLT_D, LGUI_T(KC_F), KC_G
 //process-intercepted keys
 #define _IPC_A    LT(_IPC,KC_A)
 #define _IPC_S    LT(_IPC,KC_S)
 #define _IPC_D    LT(_IPC,KC_D)
+#define _IPC_C    LT(_IPC,KC_C)
 #define _IPC_F    LT(_IPC,KC_F)
 #define _IPC_Z    LT(_IPC,KC_Z)
 #define _IPC_MIN  LCTL_T(KC_MINS)
@@ -120,7 +121,7 @@ Z X C V B  N M , . /
 #define ALT_F4    A(KC_F4)
 #define SCRNSHOT  LSG(KC_S)
 #define TO_BASE   TO(_BASE)
-
+#define TO_NOMOD  TG(_BASE_NOMOD)
 #define LT_NAV_0 LT(_NAV,KC_0)
 #define MT_CAPS  LALT_T(KC_CAPS)
 #define SFT_CAPS  LSFT_T(KC_CAPS)
@@ -165,10 +166,10 @@ Z X C V B  N M , . /
 
 
 //wrapper layout
-#define LAYOUT_crkbd_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
-#define LAYOUT_moonlander_wrapper(...) LAYOUT_MOONLANDER(__VA_ARGS__)
-#define LAYOUT_kimiko_wrapper(...) LAYOUT(__VA_ARGS__)
-
+#define LAYOUT_crkbd_wrapper(...)       LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_moonlander_wrapper(...)  LAYOUT_MOONLANDER(__VA_ARGS__)
+#define LAYOUT_kimiko_wrapper(...)      LAYOUT(__VA_ARGS__)
+#define LAYOUT_ID75_wrapper(...)        LAYOUT_ortho_5x15(__VA_ARGS__)
 enum custom_keycodes{
   PRNS = SAFE_RANGE,
   BRKT,
@@ -203,9 +204,5 @@ enum layer_index{
 //MOVED COMBO TO EACH KEYBOARDS
 
 // Korean
-
-
-
-
 bool prns_pressed; // 괄호입력상태
 bool num_in_prns; // 괄호 치고 번호를 입력한 경우
