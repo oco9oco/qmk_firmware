@@ -24,14 +24,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________,                            __________________QWERTY_R3________________, KC_BSLS,
-                                        THUMB_L1, THUMB_L2, THUMB_L3,       THUMB_R3, THUMB_R2, THUMB_R1
+                                        THUMB_L1, THUMB_L2, LSFT_T(KC_DEL),       THUMB_R3, THUMB_R2, THUMB_R1
     ),
   [_BASE_NOMOD] = LAYOUT_crkbd_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________,                            __________________QWERTY_R3________________, KC_BSLS,
-                                        THUMB_L1, THUMB_L2,THUMB_L3,        THUMB_R3, THUMB_R2, THUMB_R1
+                                        THUMB_L1, THUMB_L2, LSFT_T(KC_DEL),        THUMB_R3, THUMB_R2, THUMB_R1
     ),
   [_IPC] = LAYOUT_split_3x6_3(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
@@ -49,9 +49,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_NAV] = LAYOUT_split_3x6_3(          //Navigations
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    _______, C(KC_F1),KC_F2,   KC_F3,   A(KC_F4),KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_BSPC,
-    _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              KC_INS, KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_ENT,
-    _______, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            KC_APP, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_DEL,
+    _______, C(KC_F1),KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  A(KC_F4),
+    _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              KC_INS, KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_F11,
+    _______, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            KC_APP, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_F12,
                                         _______, KC_BSPC, KC_DEL,          _______, _______, _______
     ),
   [_FUNC] = LAYOUT_crkbd_wrapper(       //Functions
@@ -81,13 +81,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // COMBOS
 enum combos {
     COMBO_ONEHAND,
+    COMBO_VIM,
     //ZB_STENO, 
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM hl_combo[] = {KC_H, KC_SCLN, COMBO_END};
+
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(qw_combo, TO(_ONEHAND)),
+    [COMBO_VIM]	      = COMBO(hl_combo, TO(_BASE_NOMOD)) 
 };
 
 // Tapping term
