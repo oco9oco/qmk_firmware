@@ -25,7 +25,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef RGBLIGHT_ENABLE
         case TO_NOMOD:
             if(__PRESSED__){
-                rgblight_setrgb(50, 50, 0);
+                rgblight_setrgb(0, 0, 50);
             }
             return true;
         case TO_BASE:
