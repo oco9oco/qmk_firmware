@@ -147,17 +147,17 @@ combo_t key_combos[] = {
 };
 // COMBO_TERM
 
-uint16_t get_combo_term(uint16_t index, combo_t *combo) {
-	switch (index){
-		case SHIFT_Q:
-		case SHIFT_W:
-		case SHIFT_E:
-		case SHIFT_R:
-		case SHIFT_T:
-			return 200;
-	}
-	return COMBO_TERM;
-}
+// uint16_t get_combo_term(uint16_t index, combo_t *combo) {
+// 	switch (index){
+// 		case SHIFT_Q:
+// 		case SHIFT_W:
+// 		case SHIFT_E:
+// 		case SHIFT_R:
+// 		case SHIFT_T:
+// 			return 200;
+// 	}
+// 	return COMBO_TERM;
+// }
 
 // Tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
