@@ -57,21 +57,21 @@ A S D F G  H J K L ;
 Z X C V B  N M , . /
 )
 */
-
+발명 가만히 
 
 //QWERTY
 //     |--------|--------|--------|--------|--------|
-#define __________________NUMROW_L_________________ KC_1, KC_2, KC_3, KC_4, KC_5
-#define __________________NUMROW_R_________________ KC_6, KC_7, KC_8, KC_9, KC_0
+#define __________________NUMROW_L_________________ KC_1,  KC_2,  KC_3,  KC_4,  KC_5
+#define __________________NUMROW_R_________________ KC_6,  KC_7,  KC_8,  KC_9,  KC_0
 #define __________________FN_ROW_L_________________ KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
 #define __________________FN_ROW_R_________________ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
 //     |--------|--------|--------|--------|--------|
-#define __________________QWERTY_L1________________ KC_Q, KC_W, KC_E, KC_R, KC_T
-#define __________________QWERTY_L2________________ KC_A, KC_S, KC_D, KC_F, KC_G
-#define __________________QWERTY_L3_SFTZ___________ SFTT_Z, KC_X, KC_C, KC_V, KC_B
+#define __________________QWERTY_L1________________ KC_Q,  KC_W,  KC_E,  KC_R,  KC_T
+#define __________________QWERTY_L2________________ KC_A,  KC_S,  KC_D,  KC_F,  KC_G
+#define __________________QWERTY_L3_SFTZ___________ SFTT_Z,KC_X,  KC_C,  KC_V,  KC_B
 
-#define __________________QWERTY_L2_SFTA___________ SFTT_A, KC_S, KC_D, SFTT_F, KC_G
-#define __________________QWERTY_L3________________ KC_Z, KC_X, KC_C, KC_V, KC_B
+#define __________________QWERTY_L2_SFTA___________ SFTT_A,KC_S, KC_D, SFTT_F, KC_G
+#define __________________QWERTY_L3________________ KC_Z,  KC_X, KC_C, KC_V, KC_B
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_R1________________ KC_Y, KC_U, KC_I, KC_O, KC_P
 #define __________________QWERTY_R2________________ KC_H, KC_J, KC_K, KC_L, KC_SCLN
@@ -83,6 +83,7 @@ Z X C V B  N M , . /
 #define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 #define __________________QWERTY_SACG_L2___________ SFTT_A, ALTT_S, CTLT_D, LGUI_T(KC_F), KC_G
 //process-intercepted keys
+
 #define _IPC_A    LT(_IPC,KC_A)
 #define _IPC_S    LT(_IPC,KC_S)
 #define _IPC_D    LT(_IPC,KC_D)
@@ -91,12 +92,18 @@ Z X C V B  N M , . /
 #define _IPC_Z    LT(_IPC,KC_Z)
 #define _IPC_MIN  LCTL_T(KC_MINS)
 
+
+#define IPC(X)    LT(_IPC,KC_##x)
+#define IPC_MIN  _IPC_MIN
+
 #define _NUM_A    LT(_NUM,KC_A)
 #define _NUM_S    LT(_NUM,KC_S)
 #define _NUM_D    LT(_NUM,KC_D)
 #define _NUM_F    LT(_NUM,KC_F)
 #define _NUM_MIN  LCTL_T(KC_MINS)
 
+#define NUM(x)    LT(_NUM, KC_##x)
+ 
 #define BULLET_U  C(S(KC_LBRC))
 #define BULLET_D  C(S(KC_RBRC))
 
