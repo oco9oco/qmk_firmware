@@ -35,12 +35,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, _______, _______, _______, _______, _______,                            KC_LBRC, KC_RBRC, KC_MINS, KC_EQL,  KC_DLR, KC_GRAVE, 
-    KC_CAPS, __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______,
-    KC_LCTL, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, _______,
-    KC_LALT, __________________QWERTY_L3_SFTZ___________, TO_BASE,          _______, __________________QWERTY_R3________________, _______,
+    KC_GRV,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS, 
+    KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
+    KC_LCTL, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_ENT,
+    KC_LSFT, __________________QWERTY_L3________________, TO_BASE,          KC_BSLS, __________________QWERTY_R3________________, KC_RSFT,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, KC_LGUI, _______, _______, _______,          _______, _______, _______, _______, _______
+                      KC_LGUI, KC_LALT, _______, _______, LSFT_T(KC_BSPC),  _______, _______, _______, _______, _______
 ),
 
 [_SORIZAVA_3BEOL] = LAYOUT_kimiko_wrapper(
@@ -55,10 +55,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              XXXXXXX, KC_LT,   KC_GT,   KC_LPRN, KC_RPRN, KC_UNDS,
-    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_GRV,  KC_PLUS,
-    KC_LNG1, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, KC_LSFT, BRKT,    KC_UNDS, KC_EQL,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
+    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_GRV,  KC_LT,   KC_GT,   KC_LPRN, KC_RPRN, KC_UNDS,
+    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
+    _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_SLSH,                            KC_RBRC, _________NUM_456_________, KC_COLN, KC_DQUO,
+    _______, KC_LSFT, BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
 ),
@@ -86,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_FUNC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              _____________FUNC_2789____________, XXXXXXX, XXXXXXX,
-    XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              _____________FUNC_1456____________, XXXXXXX, XXXXXXX,
-    XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F7,   XXXXXXX,          XXXXXXX, _____________FUNC_0123____________, XXXXXXX, XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX,
+    XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                            XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, _______, KC_TRNS, _______, _______
 ),
@@ -122,28 +122,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // COMBOS
 enum combos {
     COMBO_ONEHAND,
-    SHIFT_Q,
-    SHIFT_W,
-    SHIFT_E,
-    SHIFT_R,
-    SHIFT_T,
+    // SHIFT_Q,
+    // SHIFT_W,
+    // SHIFT_E,
+    // SHIFT_R,
+    // SHIFT_T,
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
-const uint16_t PROGMEM onehand_combo[] = {KC_Q, KC_W, COMBO_END};
-const uint16_t PROGMEM shift_Q[] = {KC_A, KC_Q, COMBO_END};
-const uint16_t PROGMEM shift_W[] = {KC_A, KC_W, COMBO_END};
-const uint16_t PROGMEM shift_E[] = {KC_A, KC_E, COMBO_END};
-const uint16_t PROGMEM shift_R[] = {KC_A, KC_R, COMBO_END};
-const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
+const uint16_t PROGMEM onehand_combo[] = {KC_1, KC_2, COMBO_END};
+// const uint16_t PROGMEM shift_Q[] = {KC_A, KC_Q, COMBO_END};
+// const uint16_t PROGMEM shift_W[] = {KC_A, KC_W, COMBO_END};
+// const uint16_t PROGMEM shift_E[] = {KC_A, KC_E, COMBO_END};
+// const uint16_t PROGMEM shift_R[] = {KC_A, KC_R, COMBO_END};
+// const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
-    [SHIFT_Q]   = COMBO(shift_Q,S(KC_Q)),
-    [SHIFT_W]   = COMBO(shift_W,S(KC_W)),
-    [SHIFT_E]   = COMBO(shift_E,S(KC_E)),
-    [SHIFT_R]   = COMBO(shift_R,S(KC_R)),
-    [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
+    // [SHIFT_Q]   = COMBO(shift_Q,S(KC_Q)),
+    // [SHIFT_W]   = COMBO(shift_W,S(KC_W)),
+    // [SHIFT_E]   = COMBO(shift_E,S(KC_E)),
+    // [SHIFT_R]   = COMBO(shift_R,S(KC_R)),
+    // [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
 };
 // COMBO_TERM
 

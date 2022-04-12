@@ -57,7 +57,6 @@ A S D F G  H J K L ;
 Z X C V B  N M , . /
 )
 */
-발명 가만히 
 
 //QWERTY
 //     |--------|--------|--------|--------|--------|
@@ -78,7 +77,7 @@ Z X C V B  N M , . /
 #define __________________QWERTY_R3________________ KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_HOME_L2___________ GUIT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
-#define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, GUIT_SCL
+#define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, KC_SCLN
 // different layout 
 #define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 #define __________________QWERTY_SACG_L2___________ SFTT_A, ALTT_S, CTLT_D, LGUI_T(KC_F), KC_G
