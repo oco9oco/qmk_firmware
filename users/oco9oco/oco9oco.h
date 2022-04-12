@@ -92,7 +92,7 @@ Z X C V B  N M , . /
 #define _IPC_MIN  LCTL_T(KC_MINS)
 
 
-#define IPC(X)    LT(_IPC,KC_##x)
+#define IPC(x)    LT(_IPC,KC_##x)
 #define IPC_MIN  _IPC_MIN
 
 #define _NUM_A    LT(_NUM,KC_A)
