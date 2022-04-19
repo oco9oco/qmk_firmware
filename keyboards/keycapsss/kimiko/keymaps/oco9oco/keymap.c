@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO_NOMOD,         KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-               MO(_SETTINGS),  KC_LANG2, THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
+               MO(_SETTINGS),  KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
 ),
 
 
@@ -55,9 +55,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_GRV,  KC_LT,   KC_GT,   KC_LPRN, KC_RPRN, KC_UNDS,
+    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
     _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
-    _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_SLSH,                            KC_RBRC, _________NUM_456_________, KC_COLN, KC_DQUO,
+    _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_SLSH,                            KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, KC_LSFT, BRKT,    IPC(C),  KC_EQL,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, KC_LPRN, KC_RPRN
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-    _______, C(KC_0), C(KC_7), C(KC_8), C(KC_9), KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
+    _______, KC_LPRN, KC_RPRN, KC_LBRC, KC_RBRC, KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
     PDF_HL,  KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
     _______, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B), XXXXXXX,          XXXXXXX, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_DEL,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
