@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_GRV,  KC_LT,   KC_GT,   KC_LPRN, KC_RPRN, KC_UNDS,
     _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_SLSH,                            KC_RBRC, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, KC_LSFT, BRKT,    KC_EQL,  KC_DOT,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
+    _______, KC_LSFT, BRKT,    IPC(C),  KC_EQL,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, _______, _______
+                      _______, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, KC_LPRN, KC_RPRN
 ),
 
 [_NAV] = LAYOUT_kimiko_wrapper(
@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                            XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, _______, _______, _______, _______,          _______, _______, KC_TRNS, _______, _______
+                      _______, _______, _______, _______, _______,          _______, _______, KC_TRNS, KC_GT, KC_LT
 ),
 
 [_ONEHAND] = LAYOUT_kimiko_wrapper(
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    XXXXXXX,/*|*/ XXXXXXX, KC_X,    KC_P,    PDF_HL,  XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    RGB_TOG,/*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                     _______, RESET, _______, _______, KC_TRNS,          _______, _______, _______, _______, KC_TRNS
+                     _______, RESET, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
 )
 
 };
@@ -130,7 +130,7 @@ enum combos {
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
-const uint16_t PROGMEM onehand_combo[] = {KC_1, KC_2, COMBO_END};
+const uint16_t PROGMEM onehand_combo[] = {KC_ESC, KC_1, COMBO_END};
 // const uint16_t PROGMEM shift_Q[] = {KC_A, KC_Q, COMBO_END};
 // const uint16_t PROGMEM shift_W[] = {KC_A, KC_W, COMBO_END};
 // const uint16_t PROGMEM shift_E[] = {KC_A, KC_E, COMBO_END};
@@ -193,7 +193,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case THUMB_L2:
         case THUMB_L3:
         case THUMB_R2:
         case THUMB_R3:

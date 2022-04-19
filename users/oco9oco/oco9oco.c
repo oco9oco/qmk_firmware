@@ -93,7 +93,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } return true;
         break;
 // Intercept mod-tap
-        case _IPC_A:
+        case IPC(A):
             if(record->tap.count && record->event.pressed){
                 // SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
                 tap_code(KC_A);
@@ -105,7 +105,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 
-        case _IPC_S:
+        case IPC(S):
             if(record->tap.count && record->event.pressed){
                 SEND_STRING("()" SS_TAP(X_LEFT));
                 prns_pressed = true;
@@ -117,7 +117,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 
-        case _IPC_F:
+        case IPC(F):
             if(record->tap.count && record->event.pressed){
                 SEND_STRING(", ");
             }else if(record->event.pressed) {
@@ -128,7 +128,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 
-        case _IPC_Z:
+        case IPC(Z):
             if (record->tap.count && record->event.pressed) {
                 tap_code16(C(KC_Z));
             } else if (record->event.pressed) {
@@ -136,7 +136,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {unregister_code(KC_LSFT);}
             return false;
             break;
-        case _IPC_C:
+        case IPC(C):
         if(record->tap.count && record->event.pressed){
             tap_code16(KC_UNDS);
         }else if(record->event.pressed) {
