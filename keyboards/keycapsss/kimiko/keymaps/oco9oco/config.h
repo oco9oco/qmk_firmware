@@ -16,15 +16,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* Select hand configuration */
-#define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
-
-// #define OLED_FONT_H "keyboards/keycapsss/kimiko/keymaps/default/glcdfont.c"
-// #define OLED_FONT_WIDTH 5
-// #define OLED_FONT_HEIGHT 7   
-
 // #undef RGBLIGHT_ANIMATIONS
 // #undef RGBLIGHT_EFFECT_BREATHING
 // #undef RGBLIGHT_EFFECT_RAINBOW_MOOD
@@ -81,6 +72,7 @@
 // #undef ENABLE_RGB_MATRIX_MULTISPLASH
 // #undef ENABLE_RGB_MATRIX_SOLID_SPLASH
 // #undef ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+
 #define NO_AUTO_SHIFT_ALPHA
 
 #ifdef RGBLIGHT_ENABLE

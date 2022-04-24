@@ -136,6 +136,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {unregister_code(KC_LSFT);}
             return false;
             break;
+
         case IPC(C):
         if(record->tap.count && record->event.pressed){
             tap_code16(KC_UNDS);
