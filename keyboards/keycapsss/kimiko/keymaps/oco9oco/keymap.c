@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_SLSH,                            KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, KC_LSFT, BRKT,    IPC(C),  KC_EQL,  BOLDFACE,XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, _______, _______, _______, _______,          _______, LT_NAV_0, _______, KC_LPRN, KC_RPRN
+                      _______, _______, _______, _______, _______,          _______, KC_0, _______, KC_LPRN, KC_RPRN
 ),
 [_NUM] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, KC_LPRN, KC_MINS, KC_RPRN, KC_COMM,                            KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, KC_LSFT, KC_LBRC, KC_UNDS, KC_RBRC, KC_DOT, XXXXXXX,         XXXXXXX, XXXXXXX, _________NUM_123_________,   KC_QUES, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_TRNS, KC_TRNS, _______, _______, _______,          _______, LT_NAV_0, _______, KC_LPRN, KC_RPRN
+                      KC_TRNS, KC_TRNS, _______, _______, _______,          _______, KC_0, _______, KC_LPRN, KC_RPRN
 ),
 
 [_NAV] = LAYOUT_kimiko_wrapper(
