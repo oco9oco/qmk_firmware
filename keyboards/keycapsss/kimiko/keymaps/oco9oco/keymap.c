@@ -138,7 +138,7 @@ const uint16_t PROGMEM tobase_combo[] = {KC_ESC, KC_TAB, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
-    [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_NOMOD)),
+    [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_BASE_NOMOD)),
     [COMBO_TOBASE]   = COMBO(tobase_combo,TO(_BASE)),
     // [SHIFT_E]   = COMBO(shift_E,S(KC_E)),
     // [SHIFT_R]   = COMBO(shift_R,S(KC_R)),
