@@ -26,10 +26,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS,
     KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
-    KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3_SFTZ___________, TO_NOMOD,         KC_B,    __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
+    KC_CAPS, __________________QWERTY_L3_SFTZ___________, KC_ENT,           KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-               MO(_SETTINGS),  KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
+               TO_NOMOD,  KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
 ),
 
 
@@ -37,8 +37,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS, 
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
-    KC_LCTL, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3________________, TO_BASE,          BRKT,    __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
+    KC_CAPS, __________________QWERTY_L3________________, KC_ENT,          TO_BASE,  __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LGUI, KC_LALT, _______, LT(_NUM, KC_BSPC), LSFT_T(KC_DEL),  _______, _______, _______, _______, _______
 ),
@@ -121,8 +121,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // COMBOS
 enum combos {
     COMBO_ONEHAND,
-    // SHIFT_Q,
-    // SHIFT_W,
+    COMBO_NOMOD,
+    COMBO_TOBASE,
     // SHIFT_E,
     // SHIFT_R,
     // SHIFT_T,
@@ -130,16 +130,16 @@ enum combos {
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM onehand_combo[] = {KC_ESC, KC_1, COMBO_END};
-// const uint16_t PROGMEM shift_Q[] = {KC_A, KC_Q, COMBO_END};
-// const uint16_t PROGMEM shift_W[] = {KC_A, KC_W, COMBO_END};
+const uint16_t PROGMEM nomod_combo[] = {KC_ESC, KC_GRV, COMBO_END};
+const uint16_t PROGMEM tobase_combo[] = {KC_ESC, KC_TAB, COMBO_END};
 // const uint16_t PROGMEM shift_E[] = {KC_A, KC_E, COMBO_END};
 // const uint16_t PROGMEM shift_R[] = {KC_A, KC_R, COMBO_END};
 // const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
-    // [SHIFT_Q]   = COMBO(shift_Q,S(KC_Q)),
-    // [SHIFT_W]   = COMBO(shift_W,S(KC_W)),
+    [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_NOMOD)),
+    [COMBO_TOBASE]   = COMBO(tobase_combo,TO(_BASE)),
     // [SHIFT_E]   = COMBO(shift_E,S(KC_E)),
     // [SHIFT_R]   = COMBO(shift_R,S(KC_R)),
     // [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
