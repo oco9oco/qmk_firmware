@@ -35,12 +35,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    KC_GRV,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS, 
+    KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS, 
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_LCTL, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3________________, TO_BASE,          BRKT,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_LGUI, KC_LALT, _______, LT(_NUM, KC_BSPC), LSFT_T(KC_BSPC),  _______, _______, _______, _______, _______
+                      KC_LGUI, KC_LALT, _______, LT(_NUM, KC_BSPC), LSFT_T(KC_DEL),  _______, _______, _______, _______, _______
 ),
 
 [_IPC] = LAYOUT_kimiko_wrapper(
@@ -161,16 +161,16 @@ combo_t key_combos[] = {
 // Tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case SFTT_Z:
+            return TAPPING_TERM-150;
         case THUMB_L2:
         case SFTT_A:
-        case SFTT_Z:
             return TAPPING_TERM-100;
         case SFTT_F:
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:
             return TAPPING_TERM + 50;
-        
         default:
             return TAPPING_TERM;
     }
@@ -214,7 +214,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 
 // Key overrides
 
- const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
+const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
 // const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     &DLR_0_override,
