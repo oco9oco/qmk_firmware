@@ -123,7 +123,7 @@ enum combos {
     COMBO_ONEHAND,
     COMBO_NOMOD,
     COMBO_TOBASE,
-    // SHIFT_E,
+    COMBO_HAEN,
     // SHIFT_R,
     // SHIFT_T,
     COMBO_LENGTH
@@ -132,7 +132,7 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM onehand_combo[] = {KC_ESC, KC_1, COMBO_END};
 const uint16_t PROGMEM nomod_combo[] = {KC_ESC, KC_GRV, COMBO_END};
 const uint16_t PROGMEM tobase_combo[] = {KC_ESC, KC_TAB, COMBO_END};
-// const uint16_t PROGMEM shift_E[] = {KC_A, KC_E, COMBO_END};
+const uint16_t PROGMEM haen_combo[] = {KC_CAPS, KC_LSFT, COMBO_END};
 // const uint16_t PROGMEM shift_R[] = {KC_A, KC_R, COMBO_END};
 // const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
 
@@ -140,7 +140,7 @@ combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
     [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_BASE_NOMOD)),
     [COMBO_TOBASE]   = COMBO(tobase_combo,TO(_BASE)),
-    // [SHIFT_E]   = COMBO(shift_E,S(KC_E)),
+    [COMBO_HAEN]   = COMBO(haen_combo,KC_LANG1),
     // [SHIFT_R]   = COMBO(shift_R,S(KC_R)),
     // [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
 };
