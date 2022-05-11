@@ -121,7 +121,7 @@ Z X C V B  N M , . /
 #define COPY      C(KC_C)
 #define PASTE     C(KC_V)
 #define BOLDFACE  C(KC_B)
-#define GUI_RGHT G(KC_RGHT)
+#define GUI_RGHT  LSG(KC_RGHT)
 
 #define CTRL_F1   C(KC_F1)
 #define ALT_F4    A(KC_F4)
