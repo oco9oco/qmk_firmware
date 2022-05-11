@@ -94,12 +94,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ONEHAND] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    TO_BASE, CTRL_F1, KC_F2,   KC_ENT,   ALT_F4, KC_F5,                              _______, _______, _______, _______, _______, _______,
-    GUI_RGHT,KC_LGUI, KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,                           BRKT,    KC_WH_D, KC_MS_U, KC_WH_U, _______, _______,
-    KC_LALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, PDF_HL,                             PRNS,    KC_MS_L, KC_MS_D, KC_MS_R, _______, _______,
-    KC_LSFT, UNDO,    CUT,     COPY,    PASTE,   BOLDFACE, KC_ENT,          XXXXXXX, _______, _______, _______, KC_LCTL, _______, _______,
+    KC_ESC,  A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5),                            _______, _______, _______, _______, _______, _______,
+    KC_TAB,  XXXXXXX, KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,                           BRKT,    KC_WH_D, KC_MS_U, KC_WH_U, _______, _______,
+    XXXXXXX, A(KC_6), KC_LEFT, KC_DOWN, KC_RGHT, PDF_HL,                             PRNS,    KC_MS_L, KC_MS_D, KC_MS_R, _______, _______,
+    KC_LSFT, UNDO,    A(KC_7), A(KC_8), PASTE,   KC_ENT,  TO_BASE,          XXXXXXX, _______, _______, _______, KC_LCTL, _______, _______,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_BSPC, KC_LALT, KC_SPC,  KC_BTN3, _______,          _______, _______, _______, _______, _______
+                      KC_BSPC, KC_LALT, KC_LCTL, KC_BTN3, THUMB_L3,          _______, _______, _______, _______, _______
 ),
 
 [_SETTINGS] = LAYOUT(
