@@ -137,7 +137,7 @@ const uint16_t PROGMEM haen_combo[] = {KC_CAPS, KC_LSFT, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
-    [COMBO_ONEHAND_END]   = COMBO(onehande_end_combo,TO(_BASE)),
+    [COMBO_ONEHAND_END]   = COMBO(onehand_end_combo,TO(_BASE)),
     [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_BASE_NOMOD)),
     [COMBO_NOMOD_END]   = COMBO(nomod_end_combo,TO(_BASE)),
     [COMBO_HAEN]   = COMBO(haen_combo,KC_LANG1),
