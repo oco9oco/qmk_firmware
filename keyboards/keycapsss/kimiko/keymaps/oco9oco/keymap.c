@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______,      A(KC_1), A(KC_2), A(KC_3), A(KC_4), A(KC_5),                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    XXXXXXX,/*|*/ A(KC_6), A(KC_7), A(KC_8), A(KC_9), A(KC_0),                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    XXXXXXX,/*|*/ A(KC_F4),KC_X,    KC_P,    PDF_HL,  KC_ENT,                             RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   XXXXXXX,/*|*/ XXXXXXX, XXXXXXX, XXXXXXX, KC_A,    GUI_RGHT, XXXXXXX,          XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
+   XXXXXXX,/*|*/ XXXXXXX, XXXXXXX, XXXXXXX, C(KC_H), GUI_RGHT, XXXXXXX,          XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, RESET, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
 )
