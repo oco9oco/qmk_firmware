@@ -20,83 +20,23 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
  [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
-    KC_ESC,    __________________NUMROW_L_________________,      KC_INS,  KC_HOME, KC_PGUP,       __________________NUMROW_R_________________,  KC_MINS,
-
-    KC_GRAVE,  __________________QWERTY_L1________________,      KC_DEL,  KC_END,  KC_PGDN,       __________________QWERTY_R1________________,  KC_EQL,
-    KC_CAPS,   __________________QWERTY_HOME_L2___________,      XXXXXXX, TO_NOMOD,XXXXXXX,       __________________QWERTY_HOME_R2___________,  KC_QUOT,
-    KC_LSFT,   __________________QWERTY_L3_SFTZ___________,      XXXXXXX, KC_UP,   KC_B,          __________________QWERTY_R3________________,  KC_BSLS,
-
-    KC_LCTL,   TG(_SETTINGS), KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,      THUMB_L3,KC_DOWN, THUMB_R3,      THUMB_R2,THUMB_R1,KC_LANG2,TG(_SETTINGS), KC_LBRC, KC_RBRC
+    KC_ESC,    __________________NUMROW_L_________________, __________________NUMROW_R_________________, KC_MINS, KC_EQL,  KC_INS,  KC_HOME,
+    KC_GRAVE,  __________________QWERTY_L1________________, __________________QWERTY_R1________________, KC_LBRC, KC_RBRC, KC_DEL,  KC_END,
+    KC_CAPS,   __________________QWERTY_HOME_L2___________, __________________QWERTY_HOME_R2___________, KC_QUOT, XXXXXXX, XXXXXXX, KC_PGUP,
+    KC_LSFT,   __________________QWERTY_L3_SFTZ___________, __________________QWERTY_R3________________, KC_BSLS, XXXXXXX, XXXXXXX, KC_PGDN,
+    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG2,TG(_SETTINGS), KC_LEFT, KC_DOWN, KC_UP, KC_RGHT 
  ),
 
  [_BASE_NOMOD] = LAYOUT_ID75_wrapper( /* QWERTY */
-    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______, 
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,  _______, _______, _______,
 
-    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______, 
-    _______,   __________________QWERTY_L2_SACS___________,      _______, TO_BASE, _______,       __________________QWERTY_HOME_R2___________,  _______, 
-    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______, 
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,  _______, _______, _______,
+    _______,   __________________QWERTY_L2________________, __________________QWERTY_R2________________,  _______,  _______, TO_BASE, _______,
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,  _______, _______, _______,
     
-    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______  
- ),
-
- [_IPC] = LAYOUT_ID75_wrapper( /* QWERTY */
-    _______,   CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        KC_F6,   XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_UNDS,
- 
-    _______,   HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,       KC_F7,   XXXXXXX, KC_LBRC,       KC_RBRC, _________NUM_789_________, XXXXXXX,  KC_PLUS,
-    _______,   _IPC_A,  _IPC_S,  CTL_T(KC_MINS), _IPC_F,KC_DOT,  KC_F8,   XXXXXXX, KC_LPRN,       KC_RPRN, _________NUM_456_________, CLN_SPC,  KC_DQUO,
-    _______,   _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  KC_SLSH,      XXXXXXX, XXXXXXX, KC_LT,         KC_GT,   _________NUM_123_________, _______,  KC_PIPE,
-
-    KC_LANG1,   KC_LGUI, KC_LALT, _______, _______, _______,      _______, _______, LSFT_T(KC_ENT),LT_NAV_0,KC_0, _______, _______, _______,  _______ 
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______   _______, _______, _______
  ),
  
-[_NAV] = LAYOUT_ID75_wrapper(
-    _______,   CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        XXXXXXX, XXXXXXX, XXXXXXX,       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,
-
-    _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,        XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_F12,
-    PDF_HL,    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,        XXXXXXX, XXXXXXX, XXXXXXX,       KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,  KC_ENT,
-    _______,   _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B),      XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_DEL,
-
-    XXXXXXX,   _______, _______, _______, KC_DEL,  KC_BSPC,      _______, _______, _______,       _______, KC_TRNS, _______, _______, _______,  _______
-),
-
-[_MOUSE] = LAYOUT_ID75_wrapper(
-    _______,   CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        XXXXXXX, XXXXXXX, XXXXXXX,       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   RESET,
-
-    KC_U,      XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, KC_ACL2, KC_ACL1, XXXXXXX, XXXXXXX,  XXXXXXX,    
-    KC_P,      XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,  KC_ENT,  
-    KC_X,      UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,     XXXXXXX, XXXXXXX, XXXXXXX,       KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_DEL,
-
-    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______                   
-),
-
-[_FUNC] = LAYOUT_ID75_wrapper(
-    _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, 
-
-    XXXXXXX,   CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,        XXXXXXX, XXXXXXX, XXXXXXX,       _____________FUNC_2789____________, XXXXXXX,  XXXXXXX,
-    XXXXXXX,   KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,        XXXXXXX, XXXXXXX, XXXXXXX,       _____________FUNC_1456____________, XXXXXXX,  XXXXXXX,
-    XXXXXXX,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_F7,        XXXXXXX, XXXXXXX, XXXXXXX,       _____________FUNC_0123____________, XXXXXXX,  XXXXXXX,
-
-    _______,   _______, _______, _______, _______, _______,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______                   
-),
-
-[_ONEHAND] = LAYOUT_ID75_wrapper(
-    TO_BASE,   CTRL_F1, KC_F2,   KC_ENT,   ALT_F4, KC_F5,        XXXXXXX, XXXXXXX, XXXXXXX,       _______, _______, _______, _______, _______,  _______,
-
-    GUI_RGHT,  KC_LGUI, KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,     XXXXXXX, XXXXXXX, XXXXXXX,       BRKT,    KC_WH_D, KC_MS_U, KC_WH_U, _______,  _______,
-    KC_LALT,   KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, PDF_HL,       XXXXXXX, XXXXXXX, XXXXXXX,       PRNS,    KC_MS_L, KC_MS_D, KC_MS_R, _______,  _______,
-    KC_LSFT,   UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,     XXXXXXX, XXXXXXX, XXXXXXX,       _______, _______, _______, KC_LCTL, _______,  _______,
-
-    XXXXXXX,   KC_BSPC, KC_LALT, KC_SPC,  KC_BTN3, KC_ENT,       _______, _______, _______,       _______, _______, _______, _______, _______,  _______
-),
-
-[_SETTINGS] = LAYOUT_ID75_wrapper(
-   RESET,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, 
-
-   XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, 
-   XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, 
-   RGB_TOG,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX,       RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX,  XXXXXXX,
-
-   XXXXXXX,    _______, _______, _______, _______, KC_TRNS,      _______, _______, _______,       _______, _______, _______, _______, _______,  _______ 
 )
 };
 //clang-format on

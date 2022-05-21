@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
-    _______, KC_B,    KC_C,    KC_E,    KC_D,    KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
+    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_SLSH,                            KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, KC_LSFT, BRKT,    IPC(C),  KC_EQL,  BOLDFACE, XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
