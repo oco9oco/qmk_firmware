@@ -95,8 +95,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // Intercept mod-tap
         case IPC(A):
             if(record->tap.count && record->event.pressed){
-                // SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
-                tap_code(KC_A);
+                SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
+                //tap_code(KC_A);
             }else if(record->event.pressed) {
                 register_code(KC_LGUI);
             }else{
