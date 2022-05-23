@@ -18,10 +18,26 @@ void haen_keycode(uint16_t keycode){
     tap_code(keycode);
     tap_code(KC_HAEN);
 }
+void appcmd(uint16_t keycode){
+    tap_code(KC_APP);
+    tap_code(keycode);
+}
 // process_record_user
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-// HAEN_A ... HAEN_G
+// appcmd function
+        case JOINTBL:
+            if(__PRESSED__){
+                appcmd(KC_J);
+            }
+            break;
+
+        case PDF_HL:
+            if(__PRESSED__){
+                appcmd(KC_H);
+            }
+            break;
+
 #ifdef RGBLIGHT_ENABLE
         case TO_NOMOD:
             if(__PRESSED__){
@@ -34,12 +50,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
 #endif
-        case PDF_HL:
-            if(__PRESSED__){
-                tap_code(KC_APP);
-                tap_code(KC_H);
-            }
-            break;
+
         case HAEN_A:
             if (record->event.pressed) {
                 haen_keycode(KC_A);

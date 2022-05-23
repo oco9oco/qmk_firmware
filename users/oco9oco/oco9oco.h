@@ -131,7 +131,7 @@ Z X C V B  N M , . /
 #define LT_NAV_0 LT(_NAV,KC_0)
 #define MT_CAPS  LALT_T(KC_CAPS)
 #define SFT_CAPS  LSFT_T(KC_CAPS)
-
+ 
 //NUMPAD
 #define _________NUM_789_________ KC_7, KC_8, KC_9
 #define _________NUM_456_________ KC_4, KC_5, KC_6
