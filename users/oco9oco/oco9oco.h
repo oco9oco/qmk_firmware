@@ -190,7 +190,8 @@ enum custom_keycodes{
   HAEN_E,
   HAEN_F,
   HAEN_G,
-  PDF_HL, // ADOBE PDF HIGHLIGHT MACRO
+  PDF_HL,// ADOBE PDF HIGHLIGHT MACRO
+  JOINTBL, 
 };
 
 enum layer_index{
