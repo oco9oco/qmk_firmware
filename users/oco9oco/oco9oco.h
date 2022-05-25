@@ -179,6 +179,7 @@ Z X C V B  N M , . /
 enum custom_keycodes{
   PRNS = SAFE_RANGE,
   BRKT,
+  ABRK,
   CMM_SPC,
   CLN_SPC,
   SLSH_LL,
@@ -192,6 +193,9 @@ enum custom_keycodes{
   HAEN_G,
   PDF_HL,// ADOBE PDF HIGHLIGHT MACRO
   JOINTBL, 
+  A62B18,
+  E05C,
+  E05B,
 };
 
 enum layer_index{

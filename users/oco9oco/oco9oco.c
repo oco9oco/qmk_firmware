@@ -52,44 +52,44 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #endif
 
         case HAEN_A:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_A);
             }
             break;
         case HAEN_B:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_B);
             }
             break;
         case HAEN_C:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_C);
             }
             break;
         case HAEN_D:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_D);
             }
             break;
         case HAEN_E:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_E);
             }
             break;
         case HAEN_F:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_F);
             }
             break;
         case HAEN_G:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 haen_keycode(KC_G);
             }
             break;
 // 괄호 커서이동 기능
         case LT(_IPC, KC_BSPC):
         case LT(_NUM, KC_DEL):
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 prns_pressed = false;
                 num_in_prns  = false;
             } else {
@@ -99,16 +99,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
         case KC_1 ... KC_0:
-            if (record->event.pressed && prns_pressed) {
+            if (__PRESSED__ && prns_pressed) {
                 num_in_prns = true;
             } return true;
         break;
 // Intercept mod-tap
         case IPC(A):
-            if(record->tap.count && record->event.pressed){
+            if(record->tap.count && __PRESSED__){
                 SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
                 //tap_code(KC_A);
-            }else if(record->event.pressed) {
+            }else if(__PRESSED__) {
                 register_code(KC_LGUI);
             }else{
                 unregister_code(KC_LGUI);
@@ -117,10 +117,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case IPC(S):
-            if(record->tap.count && record->event.pressed){
+            if(record->tap.count && __PRESSED__){
                 SEND_STRING("()" SS_TAP(X_LEFT));
                 prns_pressed = true;
-            }else if(record->event.pressed) {
+            }else if(__PRESSED__) {
                 register_code(KC_LALT);
             }else{
                 unregister_code(KC_LALT);
@@ -129,9 +129,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case IPC(F):
-            if(record->tap.count && record->event.pressed){
+            if(record->tap.count && __PRESSED__){
                 SEND_STRING(", ");
-            }else if(record->event.pressed) {
+            }else if(__PRESSED__) {
                 register_code(KC_LSFT);
             }else{
                 unregister_code(KC_LSFT);
@@ -140,40 +140,64 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case IPC(Z):
-            if (record->tap.count && record->event.pressed) {
+            if (record->tap.count && __PRESSED__) {
                 tap_code16(C(KC_Z));
-            } else if (record->event.pressed) {
+            } else if (__PRESSED__) {
                 register_code(KC_LSFT);
             } else {unregister_code(KC_LSFT);}
             return false;
             break;
 
         case IPC(C):
-        if(record->tap.count && record->event.pressed){
+        if(record->tap.count && __PRESSED__){
             tap_code16(KC_UNDS);
-        }else if(record->event.pressed) {
+        }else if(__PRESSED__) {
             tap_code16(KC_EQL);
         }
         return false;
         break;
+        case A62B18:
+        if(__PRESSED__){
+            SEND_STRING("A62B18");
+        }
+        break;
+        case E05C:
+        if(__PRESSED__){
+            SEND_STRING("E05C");
+        }
+        break;
+        case E05B:
+        if(__PRESSED__){
+            SEND_STRING("E05B");
+        }
+        break;
+
+        //CLOSING BRACKET PAIRS
         case BRKT:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 SEND_STRING("[]" SS_TAP(X_LEFT));
                 prns_pressed = true;  // 괄호입력상태
             }
-            break;
+            break; 
+        case ABRK:
+            if (__PRESSED__) {
+                SEND_STRING("<>" SS_TAP(X_LEFT));
+                prns_pressed = true;  // 괄호입력상태
+            }
+            break; 
+                        
         case CMM_SPC:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 SEND_STRING(", ");
             }
             break;
         case CLN_SPC:
-            if (record->event.pressed) {
+            if (__PRESSED__) {
                 SEND_STRING(": ");
             }
             break;
         // case SLSH_LL:
-        //     if (record->event.pressed) {
+        //     if (__PRESSED__) {
         //         SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_SLSH) SS_TAP(X_RGHT) SS_TAP(X_RGHT));
         //     }
         //     break;
