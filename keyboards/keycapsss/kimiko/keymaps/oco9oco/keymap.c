@@ -66,9 +66,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     _______, XXXXXXX, KC_X,    KC_P,    PDF_HL,  KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
     _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-    _______, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), JOINTBL,          TO_BASE, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  TO(_NAV),
+    _______, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TO(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      _______, _______, _______, KC_BSPC, KC_DEL,           _______, KC_TRNS, _______, _______, _______
+                      _______, _______, JOINTBL, KC_BSPC, KC_DEL,           _______, KC_TRNS, _______, _______, _______
 ),
 
 [_MOUSE] = LAYOUT_kimiko_wrapper(
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  RESET,
     KC_U,    XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                            XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     KC_P,    KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                            KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3, KC_ENT,
-    KC_X,    UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,XXXXXXX,          TO_BASE, KC_APP,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, TO(_MOUSE),
+    KC_X,    UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,TO_BASE,        TO(_MOUSE),KC_APP,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, KC_LCTL, KC_SPC,  KC_ENT,           KC_TRNS, _______, _______, _______, _______
 ),
