@@ -44,10 +44,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, A62B18,  E05C,    E05B,    ALT_F4,  KC_F5,                              KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
-    PDF_HL,  HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_F6,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
+    _______, A62B18,  E05C,    E05B,    KC_SLSH, XXXXXXX,                              KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
+    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, XXXXXXX, BRKT,    IPC(C),  KC_EQL,  KC_SLSH, TO(_NAV),          TO_BASE, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
+    _______, XXXXXXX, BRKT,    IPC(C),  KC_EQL,  KC_COLN, TG(_NAV),          TO_BASE, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, 
     _______, XXXXXXX, KC_LT,   KC_EQL,  KC_GT,   XXXXXXX,                            XXXXXXX, _________NUM_789_________, XXXXXXX, KC_PLUS,
     _______, XXXXXXX, KC_LPRN, KC_MINS, KC_RPRN, KC_COMM,                            KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, KC_LSFT, KC_LBRC, KC_UNDS, KC_RBRC, KC_DOT, TO(_NUM),           TO_BASE, XXXXXXX, _________NUM_123_________,   KC_QUES, KC_PIPE,
+    _______, KC_LSFT, KC_LBRC, KC_UNDS, KC_RBRC, KC_DOT, TG(_NUM),           TO_BASE, XXXXXXX, _________NUM_123_________,   KC_QUES, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_TRNS, KC_TRNS, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     _______, XXXXXXX, KC_X,    KC_P,    PDF_HL,  KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
     _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-    _______, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TO(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
+    _______, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TG(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, JOINTBL, KC_BSPC, KC_DEL,           _______, KC_TRNS, _______, _______, _______
 ),
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  RESET,
     KC_U,    XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                            XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     KC_P,    KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                            KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3, KC_ENT,
-    KC_X,    UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,TO_BASE,        TO(_MOUSE),KC_APP,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
+    KC_X,    UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,TO_BASE,        TG(_MOUSE),KC_APP,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, KC_LCTL, KC_SPC,  KC_ENT,           KC_TRNS, _______, _______, _______, _______
 ),
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______,      XXXXXXX, XXXXXXX, A(KC_0), A(KC_F4),KC_ENT,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
    XXXXXXX,/*|*/ XXXXXXX, A(KC_7), A(KC_8), A(KC_9), PDF_HL,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    XXXXXXX,/*|*/ SCRNSHOT,A(KC_4), A(KC_5), A(KC_6), KC_P,                               RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   XXXXXXX,/*|*/ XXXXXXX, A(KC_1), A(KC_2), A(KC_3), KC_X, TO(_SETTINGS),  TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
+   XXXXXXX,/*|*/ XXXXXXX, A(KC_1), A(KC_2), A(KC_3), KC_X, TG(_SETTINGS),  TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, _______, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
 )
