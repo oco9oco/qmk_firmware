@@ -176,10 +176,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 //Get hold on other key press
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-            case THUMB_L2:
-            case THUMB_L3:
-            case THUMB_R2:
-            case THUMB_R3:
             case SFT_CAPS:
         // case SFTT_A:
         // case SFTT_Z:
