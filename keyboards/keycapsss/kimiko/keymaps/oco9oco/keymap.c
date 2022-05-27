@@ -180,9 +180,10 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
             case THUMB_L3:
             case THUMB_R2:
             case THUMB_R3:
+            case SFT_CAPS:
         // case SFTT_A:
         // case SFTT_Z:
-        //     return true;// KEY_ROW, KEY_COL: look for oco9oco.h
+            return true;// KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
@@ -204,6 +205,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case CTLT_K:
         case GUIT_A:
         case LT(_NAV, KC_0):
+        case SFT_CAPS:
             return true;
         default:
             return false;
