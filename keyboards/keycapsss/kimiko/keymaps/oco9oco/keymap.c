@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, A62B18,  E05C,    E05B,    KC_SLSH, XXXXXXX,                              KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                              KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, SCRNSHOT, BRKT,    IPC(C),  KC_EQL,  KC_COLN, TG(_NAV),          TO_BASE, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
+    _______, SCRNSHOT, BRKT,    IPC(C),  KC_EQL,  KC_COLN, TG(_IPC),          TO_BASE, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
