@@ -104,9 +104,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SETTINGS] = LAYOUT(
 //|-------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
    _______,      XXXXXXX, XXXXXXX, A(KC_0), A(KC_F4),KC_ENT,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
-   XXXXXXX,/*|*/ XXXXXXX, A(KC_7), A(KC_8), A(KC_9), PDF_HL,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   XXXXXXX,/*|*/ SCRNSHOT,A(KC_4), A(KC_5), A(KC_6), KC_P,                               RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   XXXXXXX,/*|*/ XXXXXXX, A(KC_1), A(KC_2), A(KC_3), KC_X, TG(_SETTINGS),  TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
+   XXXXXXX,/*|*/ XXXXXXX, A(KC_4), A(KC_5), A(KC_6), KC_X,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX,/*|*/ SCRNSHOT,A(KC_1), A(KC_2), A(KC_3), PDF_HL,                               RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX,/*|*/ XXXXXXX, A(KC_7), A(KC_8), A(KC_9), KC_P, TG(_SETTINGS),  TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, _______, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
 )
