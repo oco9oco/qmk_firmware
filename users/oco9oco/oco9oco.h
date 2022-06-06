@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define GUIT_A    LGUI_T(KC_A)
 #define SFTT_A    LSFT_T(KC_A)
 #define SFTT_Z    LSFT_T(KC_Z)
+#define GUIT_Z    LGUI_T(KC_Z)
 #define ALTT_S    LALT_T(KC_S)
 #define CTLT_D    LCTL_T(KC_D)
 #define SFTT_F    LSFT_T(KC_F)

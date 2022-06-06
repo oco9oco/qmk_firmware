@@ -159,8 +159,8 @@ combo_t key_combos[] = {
 // Tapping term
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case SFTT_Z:
-            return TAPPING_TERM-150;
+        case GUIT_Z:
+            return TAPPING_TERM+200;
         case THUMB_L2:
         case SFTT_A:
             return TAPPING_TERM-100;
@@ -192,6 +192,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case THUMB_R3:
         case SFTT_A:
         case SFTT_Z:
+        case GUIT_Z:
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:

@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_GUIZ_L3___________,                            __________________QWERTY_R3________________, KC_BSLS,
-                                        THUMB_L1, THUMB_L2, THUMB_L3,       THUMB_R3, THUMB_R2, THUMB_R1
+                                        THUMB_L1, THUMB_L2, LSFT_T(KC_DEL),       THUMB_R3, THUMB_R2, THUMB_R1
     ),
   [_BASE_NOMOD] = LAYOUT_crkbd_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
@@ -103,7 +103,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM + 100;
         case SFTT_A:
         case SFTT_Z:
-            return TAPPING_TERM + 100;
+        case GUIT_Z:
+            return TAPPING_TERM + 200;
         case SFTT_J:
         case GUIT_A:
         case GUIT_SCL:   
@@ -127,6 +128,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFTT_Z:
+        case GUIT_Z:
         case SFTT_A:
            if (KEY_ROW==0){return false;} else {return true;}
         case SFTT_F:
