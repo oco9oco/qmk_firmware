@@ -68,6 +68,7 @@ Z X C V B  N M , . /
 #define __________________QWERTY_L1________________ KC_Q,  KC_W,  KC_E,  KC_R,  KC_T
 #define __________________QWERTY_L2________________ KC_A,  KC_S,  KC_D,  KC_F,  KC_G
 #define __________________QWERTY_L3_SFTZ___________ SFTT_Z,KC_X,  KC_C,  KC_V,  KC_B
+#define __________________QWERTY_GUIZ_L3___________ LGUI_T(KC_Z),KC_X,  KC_C,  KC_V,  KC_B
 
 #define __________________QWERTY_L2_SFTA___________ SFTT_A,KC_S, KC_D, SFTT_F, KC_G
 #define __________________QWERTY_L3________________ KC_Z,  KC_X, KC_C, KC_V, KC_B
@@ -80,7 +81,6 @@ Z X C V B  N M , . /
 #define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, KC_SCLN
 // different layout 
 #define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
-#define __________________QWERTY_SACG_L2___________ SFTT_A, ALTT_S, CTLT_D, LGUI_T(KC_F), KC_G
 //process-intercepted keys
 
 #define _IPC_A    LT(_IPC,KC_A)

@@ -22,9 +22,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_crkbd_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
-    KC_CAPS, __________________QWERTY_HOME_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3_SFTZ___________,                            __________________QWERTY_R3________________, KC_BSLS,
-                                        THUMB_L1, THUMB_L2, LSFT_T(KC_DEL),       THUMB_R3, THUMB_R2, THUMB_R1
+    KC_CAPS, __________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
+    KC_LSFT, __________________QWERTY_GUIZ_L3___________,                            __________________QWERTY_R3________________, KC_BSLS,
+                                        THUMB_L1, THUMB_L2, THUMB_L3,       THUMB_R3, THUMB_R2, THUMB_R1
     ),
   [_BASE_NOMOD] = LAYOUT_crkbd_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
