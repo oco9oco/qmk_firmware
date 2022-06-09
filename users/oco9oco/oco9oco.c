@@ -156,6 +156,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
         break;
+
+case NAV(W):
+            if(__PRESSED__){
+                tap_code16(A(KC_7));
+            }return false;
+            break;
+case NAV(E):
+            if(__PRESSED__){
+                tap_code16(A(KC_8));
+            }return false;
+            break;
+case NAV(R):
+            if(__PRESSED__){
+                tap_code16(A(KC_9));
+            }return false;
+            break;
+
+case NAV(S):
+            if(__TAPPED__&&__PRESSED__){
+                tap_code16(A(KC_1));
+            }else if(__PRESSED__){
+                register_code(KC_LALT);
+            } else {unregister_code(KC_LALT);}
+            return false;
+            break;
+case NAV(D):
+            if(__TAPPED__&&__PRESSED__){
+                tap_code16(A(KC_2));
+            }else if(__PRESSED__){
+                register_code(KC_LCTL);
+            } else {unregister_code(KC_LCTL);}
+            return false;
+            break;
+case NAV(F):
+            if(__TAPPED__&&__PRESSED__){
+                tap_code16(A(KC_3));
+            }else if(__PRESSED__){
+                register_code(KC_LSFT);
+            } else {unregister_code(KC_LSFT);}
+            return false;
+            break;
+
+
         case A62B18:
         if(__PRESSED__){
             SEND_STRING("A62B18");

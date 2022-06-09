@@ -94,6 +94,7 @@ Z X C V B  N M , . /
 
 
 #define IPC(x)    LT(_IPC,KC_##x)
+#define NAV(x)    LT(_NAV,KC_##x)
 #define IPC_MIN  _IPC_MIN
 
 #define _NUM_A    LT(_NUM,KC_A)
@@ -170,7 +171,7 @@ Z X C V B  N M , . /
 #define KEY_ROW record->event.key.row
 #define KEY_COL record->event.key.col
 #define __PRESSED__ record->event.pressed
-
+#define __TAPPED__ record->tap.count
 
 //wrapper layout
 #define LAYOUT_crkbd_wrapper(...)       LAYOUT_split_3x6_3(__VA_ARGS__)
