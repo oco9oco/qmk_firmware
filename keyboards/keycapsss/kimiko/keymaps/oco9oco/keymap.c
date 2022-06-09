@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-    _______, XXXXXXX, NAV(W),  NAV(E),  NAV(R),  KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
+    _______, XXXXXXX, A(KC_7), A(KC_8), A(KC_9),  KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
     _______, KC_LGUI, NAV(S),  NAV(D),  NAV(F),  KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
     _______, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TG(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -169,6 +169,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case GUIT_A:
         case GUIT_SCL:
             return TAPPING_TERM + 50;
+        case NAV(S):
+        case NAV(D):
+        case NAV(F):
+            return TAPPING_TERM -100;
         default:
             return TAPPING_TERM;
     }
@@ -176,7 +180,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 //Get hold on other key press
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-            case SFT_CAPS:
+        case SFT_CAPS:
+        case NAV(S):
+        case NAV(D):
+        case NAV(F):
         // case SFTT_A:
         // case SFTT_Z:
             return true;// KEY_ROW, KEY_COL: look for oco9oco.h
@@ -187,6 +194,9 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case NAV(S):
+        case NAV(D):
+        case NAV(F):
         case THUMB_L3:
         case THUMB_R2:
         case THUMB_R3:
