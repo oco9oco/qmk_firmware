@@ -64,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAV] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
-    _______, XXXXXXX, A(KC_7), A(KC_8), A(KC_9),  KC_F6,                              C(KC_B), C(KC_U), C(KC_I), XXXXXXX, XXXXXXX, KC_F12,
-    _______, KC_LGUI, NAV(S),  NAV(D),  NAV(F),  KC_F7,                              KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-    _______, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TG(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
+    _______, XXXXXXX, A(KC_7), A(KC_8), A(KC_9),  KC_F6,                             XXXXXXX, A(KC_1), A(KC_2), A(KC_3), XXXXXXX, KC_F12,
+    _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,  KC_F7,                             KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
+    _______, NAV(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TG(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, BRKT, KC_BSPC, KC_DEL,           _______, KC_TRNS, _______, _______, _______
 ),
@@ -157,67 +157,67 @@ combo_t key_combos[] = {
 // }
 
 // Tapping term
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case GUIT_Z:
-            return TAPPING_TERM+200;
-        case THUMB_L2:
-        case SFTT_A:
-            return TAPPING_TERM-100;
-        case SFTT_F:
-        case SFTT_J:
-        case GUIT_A:
-        case GUIT_SCL:
-            return TAPPING_TERM + 50;
-        case NAV(S):
-        case NAV(D):
-        case NAV(F):
-            return TAPPING_TERM -100;
-        default:
-            return TAPPING_TERM;
-    }
-}
-//Get hold on other key press
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case SFT_CAPS:
-        case NAV(S):
-        case NAV(D):
-        case NAV(F):
-        // case SFTT_A:
-        // case SFTT_Z:
-            return true;// KEY_ROW, KEY_COL: look for oco9oco.h
-        default:
-            return false;
-    }
-}
-// Ignore mod tap interrupt
-bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case NAV(S):
-        case NAV(D):
-        case NAV(F):
-        case THUMB_L3:
-        case THUMB_R2:
-        case THUMB_R3:
-        case SFTT_A:
-        case SFTT_Z:
-        case GUIT_Z:
-        case SFTT_F:
-        case SFTT_J:
-        case ALTT_S:
-        case CTLT_D:
-        case GUIT_SCL:
-        case ALTT_L:
-        case CTLT_K:
-        case GUIT_A:
-        case LT(_NAV, KC_0):
-        case SFT_CAPS:
-            return true;
-        default:
-            return false;
-    }
-}
+// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case GUIT_Z:
+//             return TAPPING_TERM+200;
+//         case THUMB_L2:
+//         case SFTT_A:
+//             return TAPPING_TERM-100;
+//         case SFTT_F:
+//         case SFTT_J:
+//         case GUIT_A:
+//         case GUIT_SCL:
+//             return TAPPING_TERM + 50;
+//         case NAV(S):
+//         case NAV(D):
+//         case NAV(F):
+//             return TAPPING_TERM -100;
+//         default:
+//             return TAPPING_TERM;
+//     }
+// }
+// //Get hold on other key press
+// bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case SFT_CAPS:
+//         case NAV(S):
+//         case NAV(D):
+//         case NAV(F):
+//         // case SFTT_A:
+//         // case SFTT_Z:
+//             return true;// KEY_ROW, KEY_COL: look for oco9oco.h
+//         default:
+//             return false;
+//     }
+// }
+// // Ignore mod tap interrupt
+// bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case NAV(S):
+//         case NAV(D):
+//         case NAV(F):
+//         case THUMB_L3:
+//         case THUMB_R2:
+//         case THUMB_R3:
+//         case SFTT_A:
+//         case SFTT_Z:
+//         case GUIT_Z:
+//         case SFTT_F:
+//         case SFTT_J:
+//         case ALTT_S:
+//         case CTLT_D:
+//         case GUIT_SCL:
+//         case ALTT_L:
+//         case CTLT_K:
+//         case GUIT_A:
+//         case LT(_NAV, KC_0):
+//         case SFT_CAPS:
+//             return true;
+//         default:
+//             return false;
+//     }
+// }
 
 // Key overrides
 

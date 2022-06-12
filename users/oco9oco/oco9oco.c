@@ -157,31 +157,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
         break;
 
-case NAV(S):
+case NAV(Z):
             if(__TAPPED__&&__PRESSED__){
-                tap_code16(A(KC_1));
+                tap_code16(C(KC_Z));
             }else if(__PRESSED__){
-                register_code(KC_LALT);
-            } else {unregister_code(KC_LALT);}
+                register_code(KC_LGUI);
+            } else {unregister_code(KC_LGUI);}
             return false;
             break;
-case NAV(D):
-            if(__TAPPED__&&__PRESSED__){
-                tap_code16(A(KC_2));
-            }else if(__PRESSED__){
-                register_code(KC_LCTL);
-            } else {unregister_code(KC_LCTL);}
-            return false;
-            break;
-case NAV(F):
-            if(__TAPPED__&&__PRESSED__){
-                tap_code16(A(KC_3));
-            }else if(__PRESSED__){
-                register_code(KC_LSFT);
-            } else {unregister_code(KC_LSFT);}
-            return false;
-            break;
-
 
         case A62B18:
         if(__PRESSED__){
@@ -231,3 +214,60 @@ case NAV(F):
     }
     return true;
 };
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case GUIT_Z:
+            return TAPPING_TERM+200;
+        case THUMB_L2:
+        case SFTT_A:
+            return TAPPING_TERM-100;
+        case SFTT_F:
+        case SFTT_J:
+        case GUIT_A:
+        case GUIT_SCL:
+            return TAPPING_TERM + 50;
+        case NAV(S):
+        case NAV(D):
+        case NAV(F):
+            return TAPPING_TERM -100;
+        default:
+            return TAPPING_TERM;
+    }
+}
+//Get hold on other key press
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_CAPS:
+        // case SFTT_A:
+        // case SFTT_Z:
+            return true;// KEY_ROW, KEY_COL: look for oco9oco.h
+        default:
+            return false;
+    }
+}
+// Ignore mod tap interrupt
+bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case NAV(Z):
+        case THUMB_L3:
+        case THUMB_R2:
+        case THUMB_R3:
+        case SFTT_A:
+        case SFTT_Z:
+        case GUIT_Z:
+        case SFTT_F:
+        case SFTT_J:
+        case ALTT_S:
+        case CTLT_D:
+        case GUIT_SCL:
+        case ALTT_L:
+        case CTLT_K:
+        case GUIT_A:
+        case LT(_NAV, KC_0):
+        case SFT_CAPS:
+            return true;
+        default:
+            return false;
+    }
+}
