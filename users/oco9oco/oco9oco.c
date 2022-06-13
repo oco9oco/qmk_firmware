@@ -131,7 +131,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case IPC(F):
             if(__TAPPED__ && __PRESSED__){
                 SEND_STRING(", ");
-            }else if(__PRESSED__) {E
+            }else if(__PRESSED__) {
                 register_code(KC_LSFT);
             }else{
                 unregister_code(KC_LSFT);
