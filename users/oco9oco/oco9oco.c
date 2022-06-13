@@ -105,19 +105,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
 // Intercept mod-tap
         case IPC(A):
-            if(record->tap.count && __PRESSED__){
+            if(__TAPPED__ && __PRESSED__){
                 SEND_STRING(SS_TAP(X_HAEN) SS_TAP(X_A) SS_TAP(X_HAEN));
                 //tap_code(KC_A);
             }else if(__PRESSED__) {
-                register_code(KC_LGUI);
+                register_code(KC_LSFT);
             }else{
-                unregister_code(KC_LGUI);
+                unregister_code(KC_LSFT);
             }
             return false;
             break;
 
         case IPC(S):
-            if(record->tap.count && __PRESSED__){
+            if(__TAPPED__ && __PRESSED__){
                 SEND_STRING("()" SS_TAP(X_LEFT));
                 prns_pressed = true;
             }else if(__PRESSED__) {
@@ -129,9 +129,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case IPC(F):
-            if(record->tap.count && __PRESSED__){
+            if(__TAPPED__ && __PRESSED__){
                 SEND_STRING(", ");
-            }else if(__PRESSED__) {
+            }else if(__PRESSED__) {E
                 register_code(KC_LSFT);
             }else{
                 unregister_code(KC_LSFT);
@@ -140,16 +140,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case IPC(Z):
-            if (record->tap.count && __PRESSED__) {
-                tap_code16(C(KC_Z));
+            if (__TAPPED__ && __PRESSED__) {
+                tap_code16(SCRNSHOT);
             } else if (__PRESSED__) {
-                register_code(KC_LSFT);
-            } else {unregister_code(KC_LSFT);}
+                register_code(KC_LGUI);
+            } else {unregister_code(KC_LGUI);}
             return false;
             break;
 
         case IPC(C):
-        if(record->tap.count && __PRESSED__){
+        if(__TAPPED__ && __PRESSED__){
             tap_code16(KC_UNDS);
         }else if(__PRESSED__) {
             tap_code16(KC_EQL);
