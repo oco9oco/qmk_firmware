@@ -108,15 +108,6 @@ Z X C V B  N M , . /
 #define BULLET_U  C(S(KC_LBRC))
 #define BULLET_D  C(S(KC_RBRC))
 
-
-// Thumb keys 
-#define THUMB_L1  LCTL_T(KC_TAB)
-#define THUMB_L2  LT(_IPC,KC_BSPC)
-#define THUMB_L3  LT(_SETTINGS,KC_DEL)
-#define THUMB_R3  LT(_MOUSE,KC_ENT)
-#define THUMB_R2  LT(_NAV,KC_SPC)
-#define THUMB_R1  LT(_FUNC,KC_HAEN)
-
 // function keys
 #define UNDO      C(KC_Z)
 #define CUT       C(KC_X)
@@ -219,3 +210,103 @@ enum layer_index{
 // Korean
 bool prns_pressed; // 괄호입력상태
 bool num_in_prns; // 괄호 치고 번호를 입력한 경우
+
+
+
+
+// BASE KEYMAPS [3X5 + 3 THUMB KEYS]
+
+#define __BASE_L1   __________________QWERTY_L1________________
+#define __BASE_L2   __________________QWERTY_SACS_L2___________
+#define __BASE_L3   __________________QWERTY_GUIZ_L3___________
+
+#define __BASE_R1   __________________QWERTY_R1________________
+#define __BASE_R2   __________________QWERTY_HOME_R2___________
+#define __BASE_R3   __________________QWERTY_R3________________
+
+#define __ALT_L1    __________________QWERTY_L1________________
+#define __ALT_L2    __________________QWERTY_L2________________
+#define __ALT_L3    __________________QWERTY_L3________________
+
+#define __ALT_R1    __________________QWERTY_R1________________
+#define __ALT_R2    __________________QWERTY_R2________________
+#define __ALT_R3    __________________QWERTY_R3________________
+
+
+#define __IPC_L1    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH                            
+#define __IPC_L2    IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT                             
+#define __IPC_L3    IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN
+
+#define __IPC_R1    KC_LBRC, _________NUM_789_________, KC_RBRC
+#define __IPC_R2    KC_GRV,  _________NUM_456_________, KC_COLN
+#define __IPC_R3    A(KC_2), _________NUM_123_________, _______
+
+
+#define __NAV_L1    XXXXXXX, A(KC_7), A(KC_8), A(KC_9),  KC_F6
+#define __NAV_L2    XXXXXXX, KC_LALT, KC_LCTL, KC_LSFT,  KC_F7
+#define __NAV_L3    NAV(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B)
+
+#define __NAV_R1    XXXXXXX, A(KC_1), A(KC_2), A(KC_3), XXXXXXX
+#define __NAV_R2    KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+#define __NAV_R3    KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END
+
+
+#define __MOUSE_L1  XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX                            
+#define __MOUSE_L2  KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX                            
+#define __MOUSE_L3  UNDO,    CUT,     COPY,    PASTE,   BOLDFACE
+
+#define __MOUSE_R1  XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX
+#define __MOUSE_R2  KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3
+#define __MOUSE_R3  KC_APP,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
+
+
+#define __FUNC_L1   RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX
+#define __FUNC_L2   KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX
+#define __FUNC_L3   KC_LGUI, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+
+#define __FUNC_R1   XXXXXXX, KC_F9,   KC_F10,  KC_F11,  KC_F12
+#define __FUNC_R2   XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8
+#define __FUNC_R3   XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4
+
+// Thumb keys 
+#define THUMB_L1  LCTL_T(KC_TAB)
+#define THUMB_L2  LT(_IPC,KC_BSPC)
+#define THUMB_L3  LT(_SETTINGS,KC_DEL)
+
+#define THUMB_R3  LT(_MOUSE,KC_ENT)
+#define THUMB_R2  LT(_NAV,KC_SPC)
+#define THUMB_R1  LT(_FUNC,KC_HAEN)
+
+
+#define __BASE_LT   THUMB_L1,           THUMB_L2,           LSFT_T(KC_DEL)
+#define __BASE_RT   THUMB_R3,           THUMB_R2,           THUMB_R1
+
+#define __ALT_LT    _______,            LT(_IPC, KC_BSPC),  LSFT_T(KC_DEL) 
+#define __ALT_RT    _______,            _______,            _______
+
+#define __NAV_LT    BRKT,               KC_BSPC,            KC_DEL
+#define __NAV_RT    _______,            KC_TRNS,            _______
+
+#define __IPC_LT    _______,            _______,            _______
+#define __IPC_RT    _______,            LT(_NAV, KC_0),     _______
+
+#define __MOUSE_LT  KC_LCTL,            KC_SPC,             KC_ENT           
+#define __MOUSE_RT  KC_TRNS,            _______,            _______
+
+#define __FUNC_LT   _______,            _______,            _______
+#define __FUNC_RT   _______,            _______,            KC_TRNS
+
+// AUX KEYS E.G. NUM ROWS, FUNC ROW
+#define __NONE      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __IPC_L0    A62B18,  E05C,    E05B,    KC_SLSH, XXXXXXX
+#define __IPC_R0    KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT
+#define __NAV_L0    CTRL_F1, KC_F2,   KC_F3,   ALT_F4,   KC_F5
+#define __NAV_R0    KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10
+#define __NUMROW_L  KC_1,  KC_2,  KC_3,  KC_4,  KC_5
+#define __NUMROW_R  KC_6,  KC_7,  KC_8,  KC_9,  KC_0
+#define __FN_ROW_L  KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
+#define __FN_ROW_R  KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
+
+#define __NUM_789 KC_7, KC_8, KC_9
+#define __NUM_456 KC_4, KC_5, KC_6
+#define __NUM_123 KC_1, KC_2, KC_3
