@@ -30,14 +30,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     KC_ESC,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     KC_CAPS, __________________QWERTY_L2_SFTA___________,                            __________________QWERTY_R2________________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3_SFTZ___________,                            __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_L3_GUIZ___________,                            __________________QWERTY_R3________________, KC_BSLS,
                                         THUMB_L1, THUMB_L2, LSFT_T(KC_DEL),        THUMB_R3, THUMB_R2, THUMB_R1
     ),
   [_IPC] = LAYOUT_split_3x6_3(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    KC_GRAVE,HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  HAEN_F,                             KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS, 
-    MT_CAPS, _IPC_A,  _IPC_S,  _IPC_MIN,_IPC_F,  KC_DOT,                             KC_RBRC, KC_4,    KC_5,    KC_6,    CLN_SPC, KC_DQUO, 
-    _______, _IPC_Z,  BRKT,    KC_UNDS, KC_EQL,  KC_BSLS,                           KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,                   
+    KC_TAB,  HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS, 
+    MT_CAPS, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             KC_RBRC, KC_4,    KC_5,    KC_6,    CLN_SPC, KC_DQUO, 
+    KC_LANG1,IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN,                            KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,                   
                                         _______, _______, _______,          A(KC_2), LT(_NAV,KC_0), _______
     ),
   [_NUM] = LAYOUT_crkbd_wrapper(
@@ -49,22 +49,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_NAV] = LAYOUT_split_3x6_3(          //Navigations
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    _______, C(KC_F1),KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  A(KC_F4),
-    _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              KC_INS, KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_F11,
-    _______, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            KC_APP, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_F12,
+    _______, C(KC_F1), KC_F2,  KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  A(KC_F4),
+    _______, KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              KC_INS, KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_F11,
+    _______, NAV(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            KC_APP, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_F12,
                                         _______, KC_BSPC, KC_DEL,          _______, _______, _______
     ),
   [_FUNC] = LAYOUT_crkbd_wrapper(       //Functions
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
     XXXXXXX, C(KC_F1),KC_F2,   KC_F3,   A(KC_F4),KC_F5,                              _____________FUNC_2789____________, XXXXXXX, KC_BSPC,
-    XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              _____________FUNC_1456____________, XXXXXXX, KC_DEL,
-    XXXXXXX, KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            _____________FUNC_0123____________, XXXXXXX, XXXXXXX,
+    XXXXXXX, KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              _____________FUNC_1456____________, XXXXXXX, KC_DEL,
+    XXXXXXX, KC_LGUI, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            _____________FUNC_0123____________, XXXXXXX, XXXXXXX,
                                         _______, _______, _______,          _______, _______, _______
     ),
   [_MOUSE] = LAYOUT_split_3x6_3(       //Mouse keys
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|   
-    KC_U, C(KC_F1), KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  RESET,    
-    KC_P, KC_H, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                                  KC_INS, KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,  KC_ENT,  
+    KC_U, C(KC_F1), KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                              XXXXXXX,KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX,  RESET,    
+    KC_P, KC_H,     KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                              KC_INS, KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,  KC_ENT,  
     KC_X, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_B),                               KC_APP, KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_DEL,
                                         _______, _______, _______,          _______, _______, _______        
     ),
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|     
     TO(_BASE),A(KC_F4),KC_BTN2,KC_UP,   KC_BTN1, LSG(KC_S),                          BRKT,    KC_7,    KC_8,    KC_9,    _______, _______, 
     KC_LALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, G(KC_RGHT),                         PRNS,    KC_4,    KC_5,    KC_6,    KC_LGUI, KC_LSFT, 
-    KC_LSFT, _IPC_Z,  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            _______, KC_1,    KC_2,    KC_3,    KC_LCTL, KC_LALT, 
+    KC_LSFT, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            _______, KC_1,    KC_2,    KC_3,    KC_LCTL, KC_LALT, 
                                         KC_DEL,  KC_SPC, KC_BTN3,           _______, LT(_NAV,KC_0), _______    
     )
 };
@@ -118,8 +118,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
             return true;
-        case SFTT_Z:    
-            if (KEY_ROW==0 && KEY_COL>2){return true;} else {return false;} // KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;
     }
@@ -127,10 +125,10 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 // Ignore mod tap interrupt
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case THUMB_L2:
         case SFTT_Z:
         case GUIT_Z:
         case SFTT_A:
-           if (KEY_ROW==0){return false;} else {return true;}
         case SFTT_F:
         case SFTT_J:
         case ALTT_S:
