@@ -94,56 +94,6 @@ combo_t key_combos[] = {
     [COMBO_VIM]	      = COMBO(hl_combo, TO(_BASE_NOMOD)) 
 };
 
-// Tapping term
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-            return TAPPING_TERM - 100;
-        case SFTT_F:
-            return TAPPING_TERM + 100;
-        case SFTT_A:
-        case SFTT_Z:
-        case GUIT_Z:
-            return TAPPING_TERM + 200;
-        case SFTT_J:
-        case GUIT_A:
-        case GUIT_SCL:   
-            return TAPPING_TERM + 50;
-        default:
-            return TAPPING_TERM;
-    }
-}
-//Get hold on other key press
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-            return true;
-        default:
-            return false;
-    }
-}
-// Ignore mod tap interrupt
-bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-        case SFTT_Z:
-        case GUIT_Z:
-        case SFTT_A:
-        case SFTT_F:
-        case SFTT_J:
-        case ALTT_S:
-        case CTLT_D:
-        case GUIT_SCL:
-        case ALTT_L:
-        case CTLT_K:
-        case GUIT_A:
-        case LT(_NAV, KC_SPC):
-        case LT(_NAV, KC_0):
-            return true;
-        default:
-            return false;
-    }
-}
 // Key overrides
 
 const key_override_t tilde_esc_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_GRAVE));   // Shift + esc = ~
