@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS,
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     SFT_CAPS,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_GUIZ_L3___________, KC_BTN1,           KC_B,   __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_GUIZ_L3___________, TO(_SETTINGS),           KC_B,   __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                KC_LANG2,LALT_T(KC_HAEN),THUMB_L1,THUMB_L2,LSFT_T(KC_DEL),         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
 ),
@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, PDF_HL,  KC_P,    KC_X,    KC_SLSH, XXXXXXX,                            KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
+    _______, PDF_HL,  KC_P,    KC_X,    XXXXXXX, XXXXXXX,                            KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT, KC_UNDS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             KC_GRV,  _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN, KC_ENT,           TO_BASE, A(KC_2), _________NUM_123_________, _______, KC_PIPE,
@@ -102,9 +102,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SETTINGS] = LAYOUT(
 //|-------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
    _______,      XXXXXXX, XXXXXXX, A(KC_0), A(KC_F4),KC_ENT,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
-   XXXXXXX,/*|*/ XXXXXXX, A(KC_4), A(KC_5), A(KC_6), KC_X,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   XXXXXXX,/*|*/ C(KC_WH_U), A(KC_4), A(KC_5), A(KC_6), KC_X,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    XXXXXXX,/*|*/ SCRNSHOT,A(KC_1), A(KC_2), A(KC_3), PDF_HL,                               RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   XXXXXXX,/*|*/ XXXXXXX, A(KC_7), A(KC_8), A(KC_9), KC_P, KC_ENT,         TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
+   XXXXXXX,/*|*/ C(KC_WH_D), A(KC_7), A(KC_8), A(KC_9), KC_P, KC_ENT,         TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, _______, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
 )
