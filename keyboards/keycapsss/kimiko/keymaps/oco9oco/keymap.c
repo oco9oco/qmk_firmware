@@ -101,10 +101,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_SETTINGS] = LAYOUT(
 //|-------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-   _______,      XXXXXXX, XXXXXXX, A(KC_0), A(KC_F4),KC_ENT,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
+   _______,      C(KC_WH_D), XXXXXXX, A(KC_0), A(KC_F4),KC_ENT,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
    XXXXXXX,/*|*/ C(KC_WH_U), A(KC_4), A(KC_5), A(KC_6), KC_X,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    XXXXXXX,/*|*/ SCRNSHOT,A(KC_1), A(KC_2), A(KC_3), PDF_HL,                               RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   XXXXXXX,/*|*/ C(KC_WH_D), A(KC_7), A(KC_8), A(KC_9), KC_P, KC_ENT,         TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
+   XXXXXXX,/*|*/ XXXXXXX, A(KC_7), A(KC_8), A(KC_9), KC_P, KC_ENT,         TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, _______, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
 )
