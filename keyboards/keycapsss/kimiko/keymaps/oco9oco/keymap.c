@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     SFT_CAPS,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_GUIZ_L3___________, TO(_SETTINGS),           KC_B,   __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-               KC_LANG2,LALT_T(KC_HAEN),THUMB_L1,THUMB_L2,LSFT_T(KC_DEL),         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
+               KC_LANG1,KC_LALT,THUMB_L1,THUMB_L2,LSFT_T(KC_DEL),         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
 ),
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
@@ -126,10 +126,10 @@ enum combos {
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM onehand_combo[] = {KC_ESC, KC_1, COMBO_END};
-const uint16_t PROGMEM onehand_end_combo[] = {KC_LEFT, KC_RGHT, COMBO_END};
-const uint16_t PROGMEM nomod_combo[] = {KC_ESC, KC_GRV, COMBO_END};
-const uint16_t PROGMEM nomod_end_combo[] = {KC_ESC, KC_TAB, COMBO_END};
-const uint16_t PROGMEM haen_combo[] = {KC_CAPS, KC_LSFT, COMBO_END};
+const uint16_t PROGMEM onehand_end_combo[] = {KC_ESC, A(KC_1), COMBO_END};
+const uint16_t PROGMEM nomod_combo[] = {KC_ESC, KC_2, COMBO_END};
+const uint16_t PROGMEM nomod_end_combo[] = {KC_ESC, KC_3, COMBO_END};
+const uint16_t PROGMEM haen_combo[] = {KC_LANG1, KC_LSFT, COMBO_END};
 // const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
 
 combo_t key_combos[] = {
@@ -137,7 +137,7 @@ combo_t key_combos[] = {
     [COMBO_ONEHAND_END]   = COMBO(onehand_end_combo,TO(_BASE)),
     [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_BASE_NOMOD)),
     [COMBO_NOMOD_END]   = COMBO(nomod_end_combo,TO(_BASE)),
-    [COMBO_HAEN]   = COMBO(haen_combo,KC_LANG1),
+    [COMBO_HAEN]   = COMBO(haen_combo,KC_LANG2),
     // [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
 };
 // COMBO_TERM
@@ -219,8 +219,7 @@ combo_t key_combos[] = {
 
 // Key overrides
 
-const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
-// const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
+const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);   
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     &DLR_0_override,
     NULL                                                                                        // Null terminate the array of overrides!
