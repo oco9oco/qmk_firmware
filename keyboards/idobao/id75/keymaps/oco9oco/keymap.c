@@ -19,13 +19,27 @@
 // Keyboard Layers
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
- [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
-    KC_ESC,    __________________NUMROW_L_________________, XXXXXXX, XXXXXXX, XXXXXXX,  __________________NUMROW_R_________________,    KC_MINS,
-    KC_GRAVE,  __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,    KC_EQL,
-    KC_CAPS,   __________________QWERTY_L2________________, KC_4,    KC_5,    KC_6,     __________________QWERTY_R2________________,    KC_QUOT,
-    KC_LSFT,   __________________QWERTY_L3________________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,    KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, KC_ENT,  KC_0,    KC_INS,   THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, TO(_SETTINGS)
- ),
+[0] = LAYOUT_ID75_wrapper( /* QWERTY */
+    KC_ESC,    KC_F1,   KC_F2,   KC_F3,  KC_F4,   KC_F5,    KC_F6,  XXXXXXX,  KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_MINS,
+    KC_TAB,    __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,      KC_EQL,
+    KC_CAPS,   __________________QWERTY_L2________________, KC_4,    KC_5,    KC_6,     __________________QWERTY_R2________________,      KC_QUOT,
+    KC_LSFT,   __________________QWERTY_L3________________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,      KC_BSLS,
+    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, KC_ENT,  KC_0,    KC_DOT,   THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, TO(_SETTINGS)
+),
+[1] = LAYOUT_ID75_wrapper( /* QWERTY */
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______,
+    _______,   __________________QWERTY_L1________________, _______, _______, _______,  __________________QWERTY_R1________________,      _______,
+    _______,   __________________QWERTY_SACS_L2___________, _______, _______, _______,  __________________QWERTY_HOME_R2___________,      _______,
+    _______,   __________________QWERTY_GUIZ_L3___________, _______, _______, _______,  __________________QWERTY_R3________________,      _______,
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______,
+),
+[_NAV] = LAYOUT_ID75_wrapper( /* QWERTY */
+    KC_ESC,    C(KC_F1),_______, _______, A(KC_F4),KC_F5, _______, _______, _______,  _______, _______, _______, _______, _______,      _______, 
+    KC_TAB,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,   _______, _______, _______,  __________________QWERTY_R1________________,      _______, 
+    KC_CAPS,   KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,   _______, _______, _______,  __________________QWERTY_R2________________,      _______, 
+    KC_LSFT,   KC_LGUI, C(KC_X),C(KC_X), C(KC_X), C(KC_X),  _______, _______, _______,  __________________QWERTY_R3________________,      _______, 
+    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, _______, _______, _______,  THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, TO(_SETTINGS)
+),
 };
 //clang-format on
 

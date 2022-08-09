@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_IPC] = LAYOUT_split_3x6_3(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
-    KC_TAB,  HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS, 
+    PDF_HL,  HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS, 
     MT_CAPS, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             KC_RBRC, KC_4,    KC_5,    KC_6,    CLN_SPC, KC_DQUO, 
     KC_LANG1,IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN,                            KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,                   
                                         _______, _______, _______,          A(KC_2), LT(_NAV,KC_0), _______
@@ -82,16 +82,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 enum combos {
     COMBO_ONEHAND,
     COMBO_VIM,
+    COMBO_HOME,
     //ZB_STENO, 
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM hl_combo[] = {KC_H, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM ee_combo[] = {KC_ESC, KC_EQL, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(qw_combo, TO(_ONEHAND)),
-    [COMBO_VIM]	      = COMBO(hl_combo, TO(_BASE_NOMOD)) 
+    [COMBO_VIM]	      = COMBO(hl_combo, TO(_BASE_NOMOD)),
+    [COMBO_HOME]      = COMBO(ee_combo, TO(_BASE))
 };
 
 // Key overrides
