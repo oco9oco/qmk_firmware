@@ -25,6 +25,18 @@ void appcmd(uint16_t keycode){
 // process_record_user
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+/*ID75/V1 MACROS*/
+case BRK_PAIR:
+    if(__PRESSED__){
+        SEND_STRING("()" SS_TAP(X_LEFT));
+        prns_pressed = true;
+    } else {
+        tap_code(KC_RGHT);
+    }
+    break;
+
+
+
 // appcmd function
         case JOINTBL:
             if(__PRESSED__){

@@ -203,7 +203,7 @@ enum layer_index{
   _ONEHAND,     // 
   _SETTINGS,
 };
-
+#define _ALT _BASE_NOMOD
 
 //MOVED COMBO TO EACH KEYBOARDS
 
