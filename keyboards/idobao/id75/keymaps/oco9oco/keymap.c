@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,      KC_EQL,
     KC_CAPS,   __________________QWERTY_L2________________, KC_4,    KC_5,    KC_6,     __________________QWERTY_R2________________,      KC_QUOT,
     KC_LSFT,   __________________QWERTY_L3________________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,      KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, PRNS,    KC_0,    CMM_SPC,     THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, TO(_SETTINGS)
+    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, PRNS,    KC_0,    CMM_SPC,     THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, XXXXXXX
 ),
 /* TODO MACROS
 PAIR : 
@@ -66,6 +66,14 @@ PUNCS:
     _______,   KC_LGUI, C(KC_X),C(KC_X), C(KC_X), C(KC_X),  _______, _______, _______,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,       _______, 
     _______,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, _______, _______, _______,  THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2,     _______
 ),
+[_IPC] = LAYOUT_ID75_wrapper(
+   _______, PDF_HL,  KC_P,    KC_X,    XXXXXXX, XXXXXXX,    _______, _______, _______,  KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT,        KC_UNDS,
+   _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,    _______, _______, _______,  KC_LBRC, _________NUM_789_________, KC_RBRC,      KC_PLUS,
+   _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,     _______, _______, _______,  KC_GRV,  _________NUM_456_________, KC_COLN,      KC_DQUO,
+   _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN,    _______, _______, _______,  A(KC_2), _________NUM_123_________, _______,      KC_PIPE,
+   _______, _______, _______, _______, _______, _______,    _______, _______, _______,  KC_TRNS, LT(_NAV, KC_0), _______, _______, _______,_______
+),
+
 [_MOUSE] = LAYOUT_ID75_wrapper(
    _______,    C(KC_F1),_______, _______, A(KC_F4),KC_F5,   _______, _______, _______,  _______, _______, _______, _______, _______,      RESET,
     KC_U,      XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX, _______, _______, _______,  XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,
