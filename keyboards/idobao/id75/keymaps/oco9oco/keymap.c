@@ -72,6 +72,7 @@ PUNCS:
     KC_P,      KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX, _______, _______, _______,  KC_INS,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,      XXXXXXX,
     KC_X,      UNDO,    CUT,     COPY,    PASTE,   BOLDFACE,_______, _______, _______,  KC_APP,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,      XXXXXXX,
     _______,   _______, _______, KC_LCTL, KC_SPC,  KC_ENT,  _______, _______, _______,  KC_TRNS, _______, _______, _______, _______,      _______
+),
 };
 //clang-format on
 
