@@ -90,60 +90,60 @@ combo_t key_combos[] = {
 //    [ZB_STENO]   = COMBO(STENO_combo, TO(_SORIZAVA_3BEOL)),
 };
 
-// Tapping term
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-            return TAPPING_TERM - 100;
-      case LGUI_T(KC_F): 
-      case LGUI_T(KC_Z):
-         return TAPPING_TERM + 200;
-        case SFTT_F:
-        case SFTT_J:
-        case GUIT_A:
-        case GUIT_SCL:   
-            return TAPPING_TERM + 50;
-         case SFTT_A:
-         case SFTT_Z:
-            return TAPPING_TERM + 100;
-        default:
-            return TAPPING_TERM;
-    }
-}
-//Get hold on other key press
-bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-            return true;    
-        case SFTT_A:
-        case SFTT_Z:    
-            return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
-        default:
-            return false;
-    }
-}
-// Ignore mod tap interrupt
-bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case THUMB_L2:
-        case THUMB_R1:
-        case THUMB_R2:
-        case THUMB_R3:
-        case LGUI_T(KC_F):
-        case SFTT_A:
-        case SFTT_Z:
-        case SFTT_F:
-        case SFTT_J:
-        case ALTT_S:
-        case CTLT_D:
-        case GUIT_SCL:
-        case ALTT_L:
-        case CTLT_K:
-        case GUIT_A:
-        case LGUI_T(KC_Z):
-        case LT(_NAV, KC_0):
-            return true;
-        default:
-            return false;
-    }
-}
+// // Tapping term
+// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case THUMB_L2:
+//             return TAPPING_TERM - 100;
+//       case LGUI_T(KC_F): 
+//       case LGUI_T(KC_Z):
+//          return TAPPING_TERM + 200;
+//         case SFTT_F:
+//         case SFTT_J:
+//         case GUIT_A:
+//         case GUIT_SCL:   
+//             return TAPPING_TERM + 50;
+//          case SFTT_A:
+//          case SFTT_Z:
+//             return TAPPING_TERM + 100;
+//         default:
+//             return TAPPING_TERM;
+//     }
+// }
+// //Get hold on other key press
+// bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case THUMB_L2:
+//             return true;    
+//         case SFTT_A:
+//         case SFTT_Z:    
+//             return true;// KEY_ROW, KEY_COL: look for oco9oco.h 
+//         default:
+//             return false;
+//     }
+// }
+// // Ignore mod tap interrupt
+// bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case THUMB_L2:
+//         case THUMB_R1:
+//         case THUMB_R2:
+//         case THUMB_R3:
+//         case LGUI_T(KC_F):
+//         case SFTT_A:
+//         case SFTT_Z:
+//         case SFTT_F:
+//         case SFTT_J:
+//         case ALTT_S:
+//         case CTLT_D:
+//         case GUIT_SCL:
+//         case ALTT_L:
+//         case CTLT_K:
+//         case GUIT_A:
+//         case LGUI_T(KC_Z):
+//         case LT(_NAV, KC_0):
+//             return true;
+//         default:
+//             return false;
+//     }
+// }
