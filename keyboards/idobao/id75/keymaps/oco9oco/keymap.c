@@ -63,12 +63,12 @@ PUNCS:
     _______,   C(KC_F1),_______, _______, A(KC_F4),KC_F5,   _______, _______, _______,  _______, _______, _______, _______, _______,      _______, 
     _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,   _______, _______, _______,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      _______, 
     _______,   KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,   _______, _______, _______,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,      _______, 
-    _______,   KC_LGUI, C(KC_X),C(KC_X), C(KC_X), C(KC_X),  _______, _______, _______,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,       _______, 
+    _______,   NAV(Z), C(KC_X),C(KC_C), C(KC_V), C(KC_B),  _______, _______, _______,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,       _______, 
     _______,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, _______, _______, _______,  THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2,     _______
 ),
 [_IPC] = LAYOUT_ID75_wrapper(
    _______, PDF_HL,  KC_P,    KC_X,    XXXXXXX, XXXXXXX,    _______, _______, _______,  KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT,        KC_UNDS,
-   _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,    _______, _______, _______,  KC_LBRC, _________NUM_789_________, KC_RBRC,      KC_PLUS,
+   _______, A(KC_1), A(KC_2), A(KC_3), A(KC_7), A(KC_8),    _______, _______, _______,  KC_LBRC, _________NUM_789_________, KC_RBRC,      KC_PLUS,
    _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,     _______, _______, _______,  KC_GRV,  _________NUM_456_________, KC_COLN,      KC_DQUO,
    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN,    _______, _______, _______,  A(KC_2), _________NUM_123_________, _______,      KC_PIPE,
    _______, _______, _______, _______, _______, _______,    _______, _______, _______,  KC_TRNS, LT(_NAV, KC_0), _______, _______, _______,_______
