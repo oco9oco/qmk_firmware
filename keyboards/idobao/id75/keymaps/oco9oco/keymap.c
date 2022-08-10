@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,      KC_EQL,
     KC_CAPS,   __________________QWERTY_L2________________, KC_4,    KC_5,    KC_6,     __________________QWERTY_R2________________,      KC_QUOT,
     KC_LSFT,   __________________QWERTY_L3________________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,      KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, PRNS,    KC_0,    CMM_SPC,     THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, XXXXXXX
+    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, KC_LSFT, KC_0,    CMM_SPC,     THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, XXXXXXX
 ),
 /* TODO MACROS
 PAIR : 
