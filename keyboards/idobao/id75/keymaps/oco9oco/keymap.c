@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
     KC_ESC,    KC_F1,   KC_F2,   KC_F3,  KC_F4,   KC_F5,    KC_F6,   TG(_ALT), KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_MINS,
     KC_TAB,    __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,      KC_EQL,
-    KC_CAPS,   LSFT_T(KC_A), KC_S, KC_D, KC_F,    KC_G,     KC_4,    KC_5,    KC_6,     __________________QWERTY_R2________________,      KC_QUOT,
-    KC_LSFT,   __________________QWERTY_L3________________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,      KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, KC_LSFT, KC_0,    CMM_SPC,     THUMB_R3, THUMB_R2, THUMB_R1, KC_LANG1, KC_LANG2, XXXXXXX
+    KC_CAPS,   __________________QWERTY_SACS_L2___________, KC_4,    KC_5,    KC_6,     __________________QWERTY_HOME_R2___________,      KC_QUOT,
+    KC_LSFT,   __________________QWERTY_GUIZ_L3___________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,      KC_BSLS,
+    KC_LCTL,   KC_LGUI, KC_LALT, XXXXXXX, THUMB_L1,THUMB_L2,THUMB_L3,KC_0,    THUMB_R3, THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2,XXXXXXX,      XXXXXXX
 ),
 /* TODO MACROS
 PAIR : 
@@ -40,7 +40,6 @@ SWITCH :ctrl
                     SEND_STRING("[]" SS_TAP(X_LEFT));
                     prns_pressed = true;
 
-
 SWITCH :alt 
                 IF PRESSED
                     SEND_STRING("<>" SS_TAP(X_LEFT));
@@ -49,14 +48,16 @@ PUNCS:
                 IF PRESSED
                     SEND_STRING(", ");
 
-
+__________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,
+LSFT_T(KC_A), KC_S, KC_D, KC_F,    KC_G,     KC_4,    KC_5,    KC_6,     __________________QWERTY_R2________________,
+__________________QWERTY_L3________________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,
 
 */
 [_ALT] = LAYOUT_ID75_wrapper( /* QWERTY */
     _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______,
     _______,   __________________QWERTY_L1________________, _______, _______, _______,  __________________QWERTY_R1________________,      _______,
-    _______,   __________________QWERTY_SACS_L2___________, _______, _______, _______,  __________________QWERTY_HOME_R2___________,      _______,
-    _______,   __________________QWERTY_GUIZ_L3___________, _______, _______, _______,  __________________QWERTY_R3________________,      _______,
+    _______,   SFTT_A,  KC_S,    KC_D,    KC_F,    KC_G,    _______, _______, _______,  __________________QWERTY_R2________________,      _______,
+    _______,   __________________QWERTY_L3________________, _______, _______, _______,  __________________QWERTY_R3________________,      _______,
     _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______
 ),
 [_NAV] = LAYOUT_ID75_wrapper( /* QWERTY */
@@ -64,7 +65,7 @@ PUNCS:
     _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,   _______, _______, _______,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      _______, 
     _______,   KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,   _______, _______, _______,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,      _______, 
     _______,   NAV(Z), C(KC_X),C(KC_C), C(KC_V), C(KC_B),  _______, _______, _______,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,       _______, 
-    _______,   KC_LGUI, KC_LALT,THUMB_L1,THUMB_L2,THUMB_L3, _______, _______, _______,  THUMB_R3,THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2,     _______
+    _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______
 ),
 [_IPC] = LAYOUT_ID75_wrapper(
    _______, PDF_HL,  KC_P,    KC_X,    XXXXXXX, XXXXXXX,    _______, _______, _______,  KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT,        KC_UNDS,
