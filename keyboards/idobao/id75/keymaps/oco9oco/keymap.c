@@ -19,11 +19,11 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //clang-format off
 [_BASE] = LAYOUT_ID75_wrapper( /* QWERTY */
-    KC_ESC,    KC_F1,   KC_F2,   KC_F3,  KC_F4,   KC_F5,    KC_F6,   TG(_ALT), KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_MINS,
-    KC_TAB,    __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,      KC_EQL,
+    KC_ESC,    KC_F1,   KC_F2,   KC_F3,  KC_F4,   KC_F5,    KC_F6,   TG(_ALT), KC_F7,   KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_DEL,
+    KC_TAB,    __________________QWERTY_L1________________, KC_7,    KC_8,    KC_9,     __________________QWERTY_R1________________,      KC_BSPC,
     KC_CAPS,   __________________QWERTY_SACS_L2___________, KC_4,    KC_5,    KC_6,     __________________QWERTY_HOME_R2___________,      KC_QUOT,
     KC_LSFT,   __________________QWERTY_GUIZ_L3___________, KC_1,    KC_2,    KC_3,     __________________QWERTY_R3________________,      KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT, XXXXXXX, THUMB_L1,THUMB_L2,THUMB_L3,KC_0,    THUMB_R3, THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2,XXXXXXX,      XXXXXXX
+    KC_LCTL,   KC_LGUI, KC_LALT, KC_SLSH, THUMB_L1,THUMB_L2,THUMB_L3,KC_0,    THUMB_R3, THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2,XXXXXXX,      XXXXXXX
 ),
 /* TODO MACROS
 PAIR : 
@@ -64,8 +64,8 @@ PUNCS:
     _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______
 ),
 [_IPC] = LAYOUT_ID75_wrapper(
-   _______, PDF_HL,  KC_P,    KC_X,    XXXXXXX, XXXXXXX,    _______, _______, _______,  KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT,        KC_UNDS,
-   _______, A(KC_1), A(KC_2), A(KC_3), A(KC_7), A(KC_8),    _______, _______, _______,  KC_LBRC, _________NUM_789_________, KC_RBRC,      KC_PLUS,
+   _______, PDF_HL,  KC_P,    KC_X,    XXXXXXX, XXXXXXX,    _______, _______, _______,  KC_LT,   KC_LPRN, KC_GRV,  KC_RPRN, KC_GT,        _______,
+   _______, A(KC_1), A(KC_2), A(KC_3), A(KC_7), A(KC_8),    _______, _______, _______,  KC_LBRC, _________NUM_789_________, KC_RBRC,      _______,
    _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,     _______, _______, _______,  KC_GRV,  _________NUM_456_________, KC_COLN,      KC_DQUO,
    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN,    _______, _______, _______,  A(KC_2), _________NUM_123_________, _______,      KC_PIPE,
    _______, _______, _______, _______, _______, _______,    _______, _______, _______,  LT(_NAV, KC_0),_______, _______, _______, _______,_______
