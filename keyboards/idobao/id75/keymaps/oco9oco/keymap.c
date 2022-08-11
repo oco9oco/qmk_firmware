@@ -60,7 +60,7 @@ PUNCS:
     _______,   C(KC_F1),_______, _______, A(KC_F4),KC_F5,   _______, _______, _______,  _______, _______, _______, _______, _______,      _______, 
     _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,   _______, _______, _______,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      _______, 
     _______,   KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F7,   _______, _______, _______,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,      _______, 
-    _______,   NAV(Z), C(KC_X),C(KC_C), C(KC_V), C(KC_B),  _______, _______, _______,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,       _______, 
+    _______,   NAV(Z), C(KC_X),C(KC_C), C(KC_V), C(KC_B),   _______, _______, _______,  KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,       _______, 
     _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______
 ),
 [_IPC] = LAYOUT_ID75_wrapper(
