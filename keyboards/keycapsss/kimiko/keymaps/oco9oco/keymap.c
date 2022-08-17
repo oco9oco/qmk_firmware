@@ -54,9 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, 
     _______, XXXXXXX, KC_AMPR, KC_PIPE, KC_SLSH, XXXXXXX,                            XXXXXXX, _________NUM_789_________, XXXXXXX, KC_PLUS,
     _______, A62B18,  E05B,    E05C,    E05D,    E05G,                               XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, E05F,    E06B,    F24F,    B60J,    _______, XXXXXXX,          XXXXXXX, XXXXXXX, _________NUM_123_________, KC_QUES, KC_PIPE,
+    _______, E05F,    E06B,    F24F,    B60J,    _______, TO_BASE,          XXXXXXX, XXXXXXX, _________NUM_123_________, KC_QUES, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_TRNS, KC_TRNS, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
+                      KC_TRNS, KC_TRNS, _______, _______, _______,          ENT_HOME, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
 
 [_NAV] = LAYOUT_kimiko_wrapper(

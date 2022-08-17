@@ -237,6 +237,12 @@ case NAV(Z):
                 SEND_STRING(": ");
             }
             break;
+        case ENT_HOME:
+            if (__PRESSED__){
+                tap_code(KC_ENT);
+                layer_move(_BASE);
+            }
+            break;
         // case SLSH_LL:
         //     if (__PRESSED__) {
         //         SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_SLSH) SS_TAP(X_RGHT) SS_TAP(X_RGHT));
@@ -271,8 +277,8 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFT_CAPS:
         // case SFTT_A:
-        // case SFTT_Z:
-            return true;// KEY_ROW, KEY_COL: look for oco9oco.h
+        case THUMB_L2:
+            return true;
         default:
             return false;
     }
@@ -281,6 +287,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
 bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case NAV(Z):
+        case THUMB_L2:
         case THUMB_L3:
         case THUMB_R2:
         case THUMB_R3:
