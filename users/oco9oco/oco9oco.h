@@ -169,40 +169,8 @@ Z X C V B  N M , . /
 #define LAYOUT_moonlander_wrapper(...)  LAYOUT_MOONLANDER(__VA_ARGS__)
 #define LAYOUT_kimiko_wrapper(...)      LAYOUT(__VA_ARGS__)
 #define LAYOUT_ID75_wrapper(...)        LAYOUT_ortho_5x15(__VA_ARGS__)
-enum custom_keycodes{
-  PRNS = SAFE_RANGE,
-  BRKT,
-  ABRK,
-  CMM_SPC,
-  CLN_SPC,
-  SLSH_LL,
-  NEXT_LNE, 
-  HAEN_A,
-  HAEN_B,
-  HAEN_C,
-  HAEN_D,
-  HAEN_E,
-  HAEN_F,
-  HAEN_G,
-  PDF_HL,// ADOBE PDF HIGHLIGHT MACRO
-  JOINTBL, 
-  A62B18,
-  E05C,
-  E05B,
-};
 
-enum layer_index{
-  _BASE=0,      // QWERTY with home row mods
-  _BASE_NOMOD,   // Just QWERTY
-  _SORIZAVA_3BEOL,  // SORIZAVA STENO 3-BEOL LAYOUT
-  _NUM,         // No use ==> HWP 전용으로 사용예정
-  _NAV,         // Arrows
-  _IPC,         // 
-  _MOUSE,       //
-  _FUNC,        //
-  _ONEHAND,     // 
-  _SETTINGS,
-};
+
 #define _ALT _BASE_NOMOD
 
 //MOVED COMBO TO EACH KEYBOARDS
@@ -310,3 +278,46 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 #define __NUM_789 KC_7, KC_8, KC_9
 #define __NUM_456 KC_4, KC_5, KC_6
 #define __NUM_123 KC_1, KC_2, KC_3
+
+
+enum custom_keycodes{
+  PRNS = SAFE_RANGE,
+  BRKT,
+  ABRK,
+  CMM_SPC,
+  CLN_SPC,
+  SLSH_LL,
+  NEXT_LNE, 
+  HAEN_A,
+  HAEN_B,
+  HAEN_C,
+  HAEN_D,
+  HAEN_E,
+  HAEN_F,
+  HAEN_G,
+  PDF_HL,// ADOBE PDF HIGHLIGHT MACRO
+  JOINTBL, 
+// IPC CLASS
+  A62B18,
+  E05B,
+  E05C,
+  E05D,
+  E05F,
+  E05G,
+  B60J,
+  E06B,
+  F24F,
+};
+
+enum layer_index{
+  _BASE=0,      // QWERTY with home row mods
+  _BASE_NOMOD,   // Just QWERTY
+  _SORIZAVA_3BEOL,  // SORIZAVA STENO 3-BEOL LAYOUT
+  _NUM,         // No use ==> HWP 전용으로 사용예정
+  _NAV,         // Arrows
+  _IPC,         // 
+  _MOUSE,       //
+  _FUNC,        //
+  _ONEHAND,     // 
+  _SETTINGS,
+};

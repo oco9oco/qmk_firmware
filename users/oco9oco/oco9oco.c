@@ -165,7 +165,7 @@ case NAV(Z):
             } else {unregister_code(KC_LGUI);}
             return false;
             break;
-
+// IPC CLASSIFICATION
         case A62B18:
         if(__PRESSED__){
             SEND_STRING("A62B18");
@@ -181,6 +181,37 @@ case NAV(Z):
             SEND_STRING("E05B");
         }
         break;
+
+        case E05D:
+        if(__PRESSED__){
+            SEND_STRING("E05D");
+        }
+        break;
+        case B60J:
+        if(__PRESSED__){
+            SEND_STRING("B60J");
+        }
+        break;
+        case E05G:
+        if(__PRESSED__){
+            SEND_STRING("E05G");
+        }
+        break;
+        case F24F:
+        if(__PRESSED__){
+            SEND_STRING("F24F");
+        }
+        break;
+        case E06B:
+        if(__PRESSED__){
+            SEND_STRING("E06B");
+        }
+        break;
+        case E05F:
+        if(__PRESSED__){
+            SEND_STRING("E05F");
+        }
+        break;        
 
         //CLOSING BRACKET PAIRS
         case BRKT:
