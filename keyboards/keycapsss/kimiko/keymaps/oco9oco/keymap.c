@@ -27,22 +27,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     SFT_CAPS,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_GUIZ_L3___________, TG(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_BTN1, KC_BTN2, THUMB_L1,THUMB_L2,LSFT_T(KC_DEL),         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
+                      KC_PSCR, KC_BTN2, THUMB_L1,THUMB_L2,LSFT_T(KC_DEL),         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
 ),
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL, 
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
-    KC_ESC,  __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
+    KC_CAPS, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3________________, _______,          KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_LGUI, KC_LALT, KC_LCTL, LT(_IPC, KC_BSPC), LSFT_T(KC_DEL),  _______, _______, _______, KC_LALT, KC_LGUI
+                      KC_LGUI, KC_LALT, KC_LCTL, LT(_IPC, KC_BSPC), LSFT_T(KC_DEL),  RSFT_T(KC_ENT), _______, _______, KC_LALT, KC_LGUI
 ),
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, PDF_HL,  KC_P,    KC_X,    KC_F6,   KC_F7,                              KC_LPRN,   KC_RPRN, KC_GRV,  KC_LT, KC_GT,   KC_MINS,
+    KC_GRAVE,PDF_HL,  KC_P,    KC_X,    KC_F6,   KC_F7,                              KC_LPRN,   KC_RPRN, KC_GRV,  KC_LT, KC_GT,   KC_MINS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, _________NUM_789_________, KC_RBRC, KC_EQL,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  TG(_NUM), KC_ENT,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, 
     _______, XXXXXXX, KC_AMPR, KC_PIPE, KC_SLSH, XXXXXXX,                            XXXXXXX, _________NUM_789_________, XXXXXXX, KC_PLUS,
     _______, A62B18,  E05B,    E05C,    E05D,    E05G,                               XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, E05F,    E06B,    F24F,    B60J,    _______, TO_BASE,          XXXXXXX, XXXXXXX, _________NUM_123_________, KC_QUES, KC_PIPE,
+    _______, E05F,    E06B,    F24F,    B60J,    _______, TO_BASE,          KC_ENT, XXXXXXX, _________NUM_123_________, KC_QUES, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_TRNS, KC_TRNS, _______, _______, _______,          ENT_HOME, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
