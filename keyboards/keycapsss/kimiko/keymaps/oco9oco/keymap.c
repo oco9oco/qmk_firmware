@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRAVE,PDF_HL,  KC_P,    KC_X,    KC_F6,   KC_F7,                              KC_LPRN,   KC_RPRN, KC_GRV,  KC_LT, KC_GT,   KC_MINS,
     _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, _________NUM_789_________, KC_RBRC, KC_EQL,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  TG(_NUM), KC_ENT,          XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
+    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  TG(_NUM), TO(_ONEHAND),    XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
