@@ -23,32 +23,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,    __________________QWERTY_L1________________, KC_HOME, BRKT,    KC_PGUP,    __________________QWERTY_R1________________,   KC_BSPC,
     KC_CAPS,   __________________QWERTY_SACS_L2___________, KC_END,  KC_UP,   KC_PGDN,    __________________QWERTY_HOME_R2___________,   KC_QUOT,
     KC_LSFT,   __________________QWERTY_GUIZ_L3___________, KC_LEFT, KC_DOWN, KC_RGHT,    __________________QWERTY_R3________________,   KC_BSLS,
-    KC_LCTL,   KC_LGUI, KC_LALT, KC_SLSH, THUMB_L1,THUMB_L2,THUMB_L3,TG(_ALT),THUMB_R3, THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2, XXXXXXX,    XXXXXXX
+    KC_LCTL,   KC_LGUI, KC_LALT, KC_SLSH, THUMB_L1,THUMB_L2,THUMB_L3,TG(_ALT),THUMB_R3, THUMB_R2,THUMB_R1,KC_LANG1,KC_LANG2, XXXXXXX,    _
 ),
-/* TODO MACROS
-PAIR : 
-SWITCH :NONE 
-                IF PRESSED
-                    SEND_STRING("()" SS_TAP(X_LEFT));
-                    prns_pressed = true;
-                IF RELEASED: 
-                    IF prns_pressed && num_in_prns
-                    ss_tap(x_rght);
-
-SWITCH :ctrl 
-                IF PRESSED
-                    SEND_STRING("[]" SS_TAP(X_LEFT));
-                    prns_pressed = true;
-
-SWITCH :alt 
-                IF PRESSED
-                    SEND_STRING("<>" SS_TAP(X_LEFT));
-                    
-PUNCS:
-                IF PRESSED
-                    SEND_STRING(", ");
-
-*/
 [_ALT] = LAYOUT_ID75_wrapper( /* QWERTY */
     _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______,
     _______,   __________________QWERTY_L1________________, _______, _______, _______,  __________________QWERTY_R1________________,      _______,
@@ -56,6 +32,15 @@ PUNCS:
     _______,   __________________QWERTY_L3________________, _______, _______, KC_B,     __________________QWERTY_R3________________,      _______,
     _______,   _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______,      _______
 ),
+[_SORIZAVA_3BEOL] = LAYOUT_ID75_wrapper( /* MACRO */
+    XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,
+    XXXXXXX,   XXXXXXX, XXXXXXX, KC_U,    KC_P,    KC_X,    XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,
+    XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,      XXXXXXX,
+    XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,       XXXXXXX,
+    XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX, _______,  _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,      _______
+),
+
+
 [_NAV] = LAYOUT_ID75_wrapper( /* QWERTY */
     _______,   C(KC_F1),_______, _______, A(KC_F4),KC_F5,   _______, _______, _______,  _______, _______, _______, _______, _______,      _______, 
     _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F6,   _______, _______, _______,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      _______, 
@@ -70,7 +55,6 @@ PUNCS:
    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN,    _______, _______, _______,  A(KC_2), _________NUM_123_________, _______,      KC_PIPE,
    _______, _______, _______, _______, _______, _______,    _______, _______, _______,  LT(_NAV, KC_0),_______, _______, _______, _______,_______
 ),
-
 [_MOUSE] = LAYOUT_ID75_wrapper(
    _______,    C(KC_F1),_______, _______, A(KC_F4),KC_F5,   _______, _______, _______,  _______, _______, _______, _______, _______,      RESET,
     KC_U,      XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX, _______, _______, _______,  XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,

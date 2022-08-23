@@ -308,6 +308,7 @@ enum custom_keycodes{
   E06B,
   F24F,
   ENT_HOME,
+  AT_IPC,
 };
 
 enum layer_index{

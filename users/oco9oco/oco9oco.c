@@ -243,7 +243,11 @@ case NAV(Z):
                 layer_move(_BASE);
             }
             break;
-
+        case AT_IPC:
+            if (__PRESSED__){
+                SEND_STRING("@IPC");
+            }
+            break;
         // case SLSH_LL:
         //     if (__PRESSED__) {
         //         SEND_STRING(SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_SLSH) SS_TAP(X_RGHT) SS_TAP(X_RGHT));
