@@ -49,6 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
+
 [_NUM] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     TO_BASE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, 
@@ -142,83 +143,7 @@ combo_t key_combos[] = {
 };
 // COMBO_TERM
 
-// uint16_t get_combo_term(uint16_t index, combo_t *combo) {
-// 	switch (index){
-// 		case SHIFT_Q:
-// 		case SHIFT_W:
-// 		case SHIFT_E:
-// 		case SHIFT_R:
-// 		case SHIFT_T:
-// 			return 200;
-// 	}
-// 	return COMBO_TERM;
-// }
-
-// Tapping term
-// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case GUIT_Z:
-//             return TAPPING_TERM+200;
-//         case THUMB_L2:
-//         case SFTT_A:
-//             return TAPPING_TERM-100;
-//         case SFTT_F:
-//         case SFTT_J:
-//         case GUIT_A:
-//         case GUIT_SCL:
-//             return TAPPING_TERM + 50;
-//         case NAV(S):
-//         case NAV(D):
-//         case NAV(F):
-//             return TAPPING_TERM -100;
-//         default:
-//             return TAPPING_TERM;
-//     }
-// }
-// //Get hold on other key press
-// bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case SFT_CAPS:
-//         case NAV(S):
-//         case NAV(D):
-//         case NAV(F):
-//         // case SFTT_A:
-//         // case SFTT_Z:
-//             return true;// KEY_ROW, KEY_COL: look for oco9oco.h
-//         default:
-//             return false;
-//     }
-// }
-// // Ignore mod tap interrupt
-// bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case NAV(S):
-//         case NAV(D):
-//         case NAV(F):
-//         case THUMB_L3:
-//         case THUMB_R2:
-//         case THUMB_R3:
-//         case SFTT_A:
-//         case SFTT_Z:
-//         case GUIT_Z:
-//         case SFTT_F:
-//         case SFTT_J:
-//         case ALTT_S:
-//         case CTLT_D:
-//         case GUIT_SCL:
-//         case ALTT_L:
-//         case CTLT_K:
-//         case GUIT_A:
-//         case LT(_NAV, KC_0):
-//         case SFT_CAPS:
-//             return true;
-//         default:
-//             return false;
-//     }
-// }
-
 // Key overrides
-
 const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);   
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     &DLR_0_override,
