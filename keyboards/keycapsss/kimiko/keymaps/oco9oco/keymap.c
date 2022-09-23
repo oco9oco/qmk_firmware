@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL,
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
-    KC_CAPS, LSFT_T(KC_A), KC_S, KC_D,  KC_F,    KC_G,                               __________________QWERTY_R2________________, KC_QUOT,
+    KC_CAPS, __________________QWERTY_L2________________                             __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3________________, _______,          KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LANG1, KC_LALT, LCTL_T(KC_TAB), LT(_IPC, KC_BSPC), KC_DEL,  _______, _______, _______, KC_LALT, KC_LGUI
@@ -128,16 +128,12 @@ enum combos {
 uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM onehand_combo[] = {KC_ESC, KC_1, COMBO_END};
 const uint16_t PROGMEM onehand_end_combo[] = {KC_ESC, A(KC_1), COMBO_END};
-const uint16_t PROGMEM nomod_combo[] = {KC_ESC, KC_2, COMBO_END};
-const uint16_t PROGMEM nomod_end_combo[] = {KC_ESC, KC_3, COMBO_END};
 const uint16_t PROGMEM haen_combo[] = {KC_LANG1, KC_LSFT, COMBO_END};
 // const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
     [COMBO_ONEHAND_END]   = COMBO(onehand_end_combo,TO(_BASE)),
-    [COMBO_NOMOD]   = COMBO(nomod_combo,TO(_BASE_NOMOD)),
-    [COMBO_NOMOD_END]   = COMBO(nomod_end_combo,TO(_BASE)),
     [COMBO_HAEN]   = COMBO(haen_combo,KC_LANG2),
     // [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
 };
