@@ -17,10 +17,8 @@
  */
 
 
-
-#include QMK_KEYBOARD_H
+#include "oco9oco.h"
 #include "version.h"
-
 enum layers {
     BASE,  // default layer
     SYMB,  // symbols

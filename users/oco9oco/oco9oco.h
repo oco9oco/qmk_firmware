@@ -12,7 +12,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include QMK_KEYBOARD_H
-//#include <stdio.h> 
+//#include <stdio.h>
 //MOD-TAP ALIASES
 #define GUIT_A    LGUI_T(KC_A)
 #define SFTT_A    LSFT_T(KC_A)
@@ -46,7 +46,7 @@ L X X X X X      X X X X X R
 m m m m m   T  T   m m m m m
         T T T  T T T
 N
-L,R 
+L,R
 E
 X Base row
 T Thumb row
@@ -80,7 +80,7 @@ Z X C V B  N M , . /
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_HOME_L2___________ GUIT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 #define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, KC_SCLN
-// different layout 
+// different layout
 #define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 //process-intercepted keys
 
@@ -104,7 +104,7 @@ Z X C V B  N M , . /
 #define _NUM_MIN  LCTL_T(KC_MINS)
 
 #define NUM(x)    LT(_NUM, KC_##x)
- 
+
 #define BULLET_U  C(S(KC_LBRC))
 #define BULLET_D  C(S(KC_RBRC))
 
@@ -124,7 +124,7 @@ Z X C V B  N M , . /
 #define LT_NAV_0 LT(_NAV,KC_0)
 #define MT_CAPS  LALT_T(KC_CAPS)
 #define SFT_CAPS  LSFT_T(KC_CAPS)
- 
+
 //NUMPAD
 #define _________NUM_789_________ KC_7, KC_8, KC_9
 #define _________NUM_456_________ KC_4, KC_5, KC_6
@@ -132,7 +132,7 @@ Z X C V B  N M , . /
 
 //FUNCPAD
 #define _____________FUNC_2789____________ KC_F12, KC_F7, KC_F8, KC_F9
-#define _____________FUNC_1456____________ KC_F11, KC_F4, KC_F5, KC_F6 
+#define _____________FUNC_1456____________ KC_F11, KC_F4, KC_F5, KC_F6
 #define _____________FUNC_0123____________ KC_F10, KC_F1, KC_F2, KC_F3
 
 //NUMROW
@@ -201,8 +201,8 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 #define __ALT_R3    __________________QWERTY_R3________________
 
 
-#define __IPC_L1    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH                            
-#define __IPC_L2    IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT                             
+#define __IPC_L1    HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH
+#define __IPC_L2    IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT
 #define __IPC_L3    IPC(Z),  BRKT,    IPC(C),  KC_EQL,  KC_COLN
 
 #define __IPC_R1    KC_LBRC, _________NUM_789_________, KC_RBRC
@@ -219,8 +219,8 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 #define __NAV_R3    KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END
 
 
-#define __MOUSE_L1  XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX                            
-#define __MOUSE_L2  KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX                            
+#define __MOUSE_L1  XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX
+#define __MOUSE_L2  KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX
 #define __MOUSE_L3  UNDO,    CUT,     COPY,    PASTE,   BOLDFACE
 
 #define __MOUSE_R1  XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX
@@ -236,7 +236,7 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 #define __FUNC_R2   XXXXXXX, KC_F5,   KC_F6,   KC_F7,   KC_F8
 #define __FUNC_R3   XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F4
 
-// Thumb keys 
+// Thumb keys
 #define THUMB_L1  LCTL_T(KC_TAB)
 #define THUMB_L2  LT(_IPC,KC_BSPC)
 #define THUMB_L3  LT(_SETTINGS,KC_DEL)
@@ -249,7 +249,7 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 #define __BASE_LT   THUMB_L1,           THUMB_L2,           LSFT_T(KC_DEL)
 #define __BASE_RT   THUMB_R3,           THUMB_R2,           THUMB_R1
 
-#define __ALT_LT    _______,            LT(_IPC, KC_BSPC),  LSFT_T(KC_DEL) 
+#define __ALT_LT    _______,            LT(_IPC, KC_BSPC),  LSFT_T(KC_DEL)
 #define __ALT_RT    _______,            _______,            _______
 
 #define __NAV_LT    BRKT,               KC_BSPC,            KC_DEL
@@ -258,7 +258,7 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 #define __IPC_LT    _______,            _______,            _______
 #define __IPC_RT    _______,            LT(_NAV, KC_0),     _______
 
-#define __MOUSE_LT  KC_LCTL,            KC_SPC,             KC_ENT           
+#define __MOUSE_LT  KC_LCTL,            KC_SPC,             KC_ENT
 #define __MOUSE_RT  KC_TRNS,            _______,            _______
 
 #define __FUNC_LT   _______,            _______,            _______
@@ -287,7 +287,7 @@ enum custom_keycodes{
   CMM_SPC,
   CLN_SPC,
   SLSH_LL,
-  NEXT_LNE, 
+  NEXT_LNE,
   HAEN_A,
   HAEN_B,
   HAEN_C,
@@ -296,7 +296,7 @@ enum custom_keycodes{
   HAEN_F,
   HAEN_G,
   PDF_HL,// ADOBE PDF HIGHLIGHT MACRO
-  JOINTBL, 
+  JOINTBL,
 // IPC CLASS
   A62B18,
   E05B,
@@ -316,10 +316,13 @@ enum layer_index{
   _BASE_NOMOD,   // Just QWERTY
   _SORIZAVA_3BEOL,  // SORIZAVA STENO 3-BEOL LAYOUT
   _NAV,         // Arrows
-  _IPC,         // 
-  _NUM, 
+  _IPC,         //
+  _NUM,
   _MOUSE,       //
   _FUNC,        //
-  _ONEHAND,     // 
+  _ONEHAND,     //
   _SETTINGS,
 };
+
+
+
