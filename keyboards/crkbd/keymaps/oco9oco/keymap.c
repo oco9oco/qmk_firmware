@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_NAV] = LAYOUT_split_3x6_3(          //Navigations
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, C(KC_F1), KC_F2,  KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  A(KC_F4),
+    _______, C(KC_F1), KC_F2,  TO(_MOUSE),   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  A(KC_F4),
     _______, KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT, KC_F6,                              KC_INS, KC_LEFT, KC_DOWN,  KC_UP,   KC_RGHT, KC_F11,
     _______, NAV(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            KC_APP, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_F12,
                                         _______, KC_BSPC, KC_DEL,          _______, _______, _______
@@ -65,8 +65,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_U, C(KC_F1), KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                              XXXXXXX,KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX,  RESET,
     KC_P, KC_H,     KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                              KC_INS, KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3,  KC_ENT,
-    KC_X, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_B),                               KC_APP, KC_HOME, KC_PGDN, KC_PGUP, KC_END,   KC_DEL,
-                                        _______, _______, _______,          _______, _______, _______
+    KC_X, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_B),                               KC_APP, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,  KC_DEL,
+                                        _______, _______, _______,          _______, _______, TO_BASE
     ),
   [_ONEHAND] = LAYOUT_split_3x6_3( //Trackball Manipulation
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -100,13 +100,14 @@ combo_t key_combos[] = {
 // Key overrides
 
 const key_override_t tilde_esc_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_GRAVE));   // Shift + esc = ~
-
 const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
 
 const key_override_t DEL_override = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);   // Shift + esc = ~
+const key_override_t OS_override = ko_make_basic(MOD_MASK_SHIFT, KC_CAPS, CG_TOGG);
+
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     &tilde_esc_override, &grave_esc_override,
-    &DEL_override,
+    &DEL_override, &OS_override,
     NULL                                                                                        // Null terminate the array of overrides!
 };
 
