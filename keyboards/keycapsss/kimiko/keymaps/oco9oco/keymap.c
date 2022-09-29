@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL,
     KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
-    SFT_CAPS,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
+    KC_CAPS, __________________QWERTY_SACS_L2___________,                            __________________QWERTY_HOME_R2___________, KC_QUOT,
     KC_LSFT, __________________QWERTY_GUIZ_L3___________, TG(_BASE_NOMOD),  KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LANG1, KC_LANG2, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL,
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
-    KC_CAPS, LSFT_T(KC_A),LALT_T(KC_S),LGUI_T(KC_D),LSFT_T(KC_F),KC_G,                             __________________QWERTY_R2________________, KC_QUOT,
-    KC_LSFT, LCTL_T(KC_Z),KC_X,KC_C,    KC_V,    KC_B,    _______,          KC_B,    __________________QWERTY_R3________________, KC_BSLS,
+    KC_CAPS, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
+    KC_LSFT, __________________QWERTY_L3________________,    _______,          KC_B, __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LANG1, KC_LALT, LGUI_T(KC_TAB), LT(_IPC, KC_BSPC), KC_DEL,  _______, _______, _______, KC_LALT, KC_LGUI
 ),
@@ -62,10 +62,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_NAV] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
+    _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     _______, XXXXXXX, A(KC_7), A(KC_8), A(KC_9),  KC_F6,                             XXXXXXX, A(KC_1), A(KC_2), A(KC_3), XXXXXXX, KC_F12,
-    _______, XXXXXXX, KC_LALT, KC_LCTL, KC_LSFT,  KC_F7,                             KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-    _______, NAV(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          TG(_NAV),KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
+    _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,  KC_F7,                             KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
+    _______, NAV(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          CG_TOGG, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, BRKT, _______, _______,           _______, KC_TRNS, _______, _______, _______
 ),
@@ -193,3 +193,4 @@ const key_override_t **key_overrides = (const key_override_t *[]){              
 //     rgblight_set_layer_state(2, layer_state_cmp(state, _BASE_NOMOD));
 //     rgblight_set_layer_state(3, layer_state_cmp(state, _ONEHAND));
 //     return state;
+
