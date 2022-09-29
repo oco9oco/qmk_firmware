@@ -70,8 +70,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_ONEHAND] = LAYOUT_split_3x6_3( //Trackball Manipulation
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    TO(_BASE),A(KC_F4),KC_BTN2,KC_UP,   KC_BTN1, LSG(KC_S),                          BRKT,    KC_7,    KC_8,    KC_9,    _______, _______,
-    KC_LALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, G(KC_RGHT),                         PRNS,    KC_4,    KC_5,    KC_6,    KC_LGUI, KC_LSFT,
+    KC_ESC,A(KC_F4),KC_BTN2,KC_UP,   KC_BTN1, KC_WH_U,                          BRKT,    KC_7,    KC_8,    KC_9,    _______, _______,
+    KC_LALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, KC_WH_D,                         PRNS,    KC_4,    KC_5,    KC_6,    KC_LGUI, KC_LSFT,
     KC_LSFT, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            _______, KC_1,    KC_2,    KC_3,    KC_LCTL, KC_LALT,
                                         KC_DEL,  KC_SPC, KC_BTN3,           _______, LT(_NAV,KC_0), _______
     )
@@ -84,19 +84,23 @@ enum combos {
     COMBO_VIM,
     COMBO_HOME,
     COMBO_OS,
+    COMBO_ONEHAND_HOME,
     //ZB_STENO,
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
-const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM qw_combo[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM hl_combo[] = {KC_H, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM ee_combo[] = {KC_ESC, KC_EQL, COMBO_END};
-const uint16_t PROGMEM os_combo[] = {KC_BSLS, KC_SLSH, COMBO_END};
+const uint16_t PROGMEM os_combo[]= {KC_BSLS, KC_SLSH, COMBO_END};
+const uint16_t PROGMEM oh_combo[]= {KC_BTN2, KC_UP, COMBO_END};
+
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(qw_combo, TO(_ONEHAND)),
     [COMBO_VIM]	      = COMBO(hl_combo, TO(_BASE_NOMOD)),
     [COMBO_HOME]      = COMBO(ee_combo, TO(_BASE)),
     [COMBO_OS]      = COMBO(os_combo, CG_TOGG),
+    [COMBO_ONEHAND_HOME] = COMBO(oh_combo, TO(_BASE)),
 };
 
 // Key overrides
