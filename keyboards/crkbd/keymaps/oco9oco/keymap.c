@@ -83,6 +83,7 @@ enum combos {
     COMBO_ONEHAND,
     COMBO_VIM,
     COMBO_HOME,
+    COMBO_OS,
     //ZB_STENO,
     COMBO_LENGTH
 };
@@ -90,11 +91,12 @@ uint16_t COMBO_LEN = COMBO_LENGTH;
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM hl_combo[] = {KC_H, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM ee_combo[] = {KC_ESC, KC_EQL, COMBO_END};
-
+const uint16_t PROGMEM os_combo[] = {KC_BSLS, KC_SLSH, COMBO_END};
 combo_t key_combos[] = {
     [COMBO_ONEHAND]   = COMBO(qw_combo, TO(_ONEHAND)),
     [COMBO_VIM]	      = COMBO(hl_combo, TO(_BASE_NOMOD)),
-    [COMBO_HOME]      = COMBO(ee_combo, TO(_BASE))
+    [COMBO_HOME]      = COMBO(ee_combo, TO(_BASE)),
+    [COMBO_OS]      = COMBO(os_combo, CG_TOGG),
 };
 
 // Key overrides
@@ -102,12 +104,12 @@ combo_t key_combos[] = {
 const key_override_t tilde_esc_override = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_GRAVE));   // Shift + esc = ~
 const key_override_t grave_esc_override = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRAVE);       // GUI + esc = `
 
-const key_override_t DEL_override = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);   // Shift + esc = ~
-const key_override_t OS_override = ko_make_basic(MOD_MASK_SHIFT, KC_CAPS, CG_TOGG);
+const key_override_t DEL_override = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);   // Shift + del = bspc
+//   // shift + caps lock = toggle control - gui
 
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     &tilde_esc_override, &grave_esc_override,
-    &DEL_override, &OS_override,
+    &DEL_override, //&OS_override,
     NULL                                                                                        // Null terminate the array of overrides!
 };
 
