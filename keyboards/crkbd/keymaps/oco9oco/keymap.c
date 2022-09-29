@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,A(KC_F4),KC_BTN2,KC_UP,   KC_BTN1, KC_WH_U,                          BRKT,    KC_7,    KC_8,    KC_9,    _______, _______,
     KC_LALT, KC_LCTL, KC_LEFT, KC_DOWN, KC_RGHT, KC_WH_D,                         PRNS,    KC_4,    KC_5,    KC_6,    KC_LGUI, KC_LSFT,
     KC_LSFT, IPC(Z),  C(KC_X), C(KC_C), C(KC_V), C(KC_B),                            _______, KC_1,    KC_2,    KC_3,    KC_LCTL, KC_LALT,
-                                        KC_DEL,  KC_SPC, KC_BTN3,           _______, LT(_NAV,KC_0), _______
+                                        KC_DEL,  KC_SPC, KC_BTN3,           MO(_MOUSE), LT(_NAV,KC_0), _______
     )
 };
 //clang-format on
