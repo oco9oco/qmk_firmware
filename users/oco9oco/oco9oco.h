@@ -140,16 +140,16 @@ Z X C V B  N M , . /
 
 // TAP-HOLD CONFIG CONDITIONS
 //ROW INDEX
-#if PRODUCT == Crkbd
-  #define ALPHA_QWERT 0 //AFTER NUMBER ROW
-  #define ALPHA_ASDFG 1 //AFTER NUMBER ROW
-  #define ALPHA_ZXCVB 2 //AFTER NUMBER ROW
-#else
-  #define NUMBR_12345 0 //NO NUMBER ROW
-  #define ALPHA_QWERT 1 //NO NUMBER ROW
-  #define ALPHA_ASDFG 2 //NO NUMBER ROW
-  #define ALPHA_ZXCVB 3 //NO NUMBER ROW
-#endif
+// #if PRODUCT == Crkbd
+//   #define ALPHA_QWERT 0 //AFTER NUMBER ROW
+//   #define ALPHA_ASDFG 1 //AFTER NUMBER ROW
+//   #define ALPHA_ZXCVB 2 //AFTER NUMBER ROW
+// #else
+//   #define NUMBR_12345 0 //NO NUMBER ROW
+//   #define ALPHA_QWERT 1 //NO NUMBER ROW
+//   #define ALPHA_ASDFG 2 //NO NUMBER ROW
+//   #define ALPHA_ZXCVB 3 //NO NUMBER ROW
+// #endif
 
 //COLUMN INDEX
 #define MOD_COL   0
