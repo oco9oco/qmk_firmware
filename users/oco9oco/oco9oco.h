@@ -239,7 +239,7 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 // Thumb keys
 #define THUMB_L1  LCTL_T(KC_TAB)
 #define THUMB_L2  LT(_IPC,KC_BSPC)
-#define THUMB_L3  LT(_SETTINGS,KC_DEL)
+#define THUMB_L3  KC_DEL
 
 #define THUMB_R3  LT(_MOUSE,KC_ENT)
 #define THUMB_R2  LT(_NAV,KC_SPC)
