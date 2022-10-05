@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_L3________________, _______,          KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_LGUI, KC_LALT, LCTL_T(KC_TAB), LT(_IPC, KC_BSPC), KC_DEL,  _______, _______, _______, KC_LANG1, KC_LANG2
+                      KC_F13, KC_LALT, LCTL_T(KC_TAB), LT(_IPC, KC_BSPC), KC_DEL,  _______, _______, _______, KC_F14, KC_F15
 ),
 
 [_IPC] = LAYOUT_kimiko_wrapper(
@@ -92,10 +92,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ONEHAND] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    KC_ESC,  C(KC_F1),XXXXXXX, XXXXXXX, A(KC_F4),XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-    KC_TAB,  KC_WH_U, KC_BTN2, KC_UP,   KC_BTN1, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-    XXXXXXX, KC_WH_D, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,  TO_BASE,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+    KC_ESC,  C(KC_F1),XXXXXXX, XXXXXXX, A(KC_F4),XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_TAB,  KC_WH_U, KC_BTN2, KC_UP,   KC_BTN1, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    XXXXXXX, KC_WH_D, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,  TO_BASE,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LGUI, KC_LALT, KC_LCTL, KC_SPC,  KC_ENT,         TO(_MOUSE),_______, _______, _______, _______
 ),
