@@ -35,17 +35,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL,
     KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
     KC_CAPS, __________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3________________,    _______,       KC_B,    __________________QWERTY_R3________________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_L3________________, _______,          KC_B,    __________________QWERTY_R3________________, KC_BSLS,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_LGUI, KC_LALT, LCTL_T(KC_TAB), LT(_IPC, KC_BSPC), KC_DEL,  _______, _______, _______, KC_LANG1, KC_LANG2
 ),
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    KC_GRAVE,PDF_HL,  KC_P,    KC_X,    KC_F6,   KC_F7,                              KC_LPRN,   KC_RPRN, KC_GRV,  KC_LT, KC_GT,   KC_MINS,
-    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, _________NUM_789_________, KC_RBRC, KC_EQL,
+    KC_GRAVE,PDF_HL,  KC_P,    KC_X,    ALT_F4,  KC_F7,                              KC_LPRN,   KC_RPRN, KC_GRV,  KC_LT, KC_GT,   KC_MINS,
+    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            XXXXXXX, _________NUM_789_________, KC_RBRC, KC_EQL,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  TG(_NUM), TO(_ONEHAND),    XXXXXXX, XXXXXXX, _________NUM_123_________, _______, KC_PIPE,
+    _______, IPC(Z),  BRKT,    IPC(C),  KC_EQL,  TG(_NUM),XXXXXXX,          KC_LBRC, KC_RBRC, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, _______, _______, _______,          _______, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  RESET,
     KC_U,    XXXXXXX, KC_WH_D, KC_MS_U, KC_WH_U, XXXXXXX,                            XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     KC_P,    KC_LSFT, KC_MS_L, KC_MS_D, KC_MS_R, XXXXXXX,                            KC_ACL2,  KC_ACL0, KC_BTN1, KC_BTN2, KC_BTN3, KC_ENT,
-    KC_X,    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, BOLDFACE,TO_BASE,        TO(_MOUSE),KC_APP,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
+    KC_X,    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, BOLDFACE,TO_BASE,     TO(_ONEHAND), KC_APP,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, KC_LCTL, KC_SPC,  KC_ENT,           KC_TRNS, _______, _______, _______, _______
 ),
@@ -92,19 +92,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ONEHAND] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    KC_ESC,  C(KC_F1), XXXXXXX, XXXXXXX, A(KC_F4), XXXXXXX,                            _______, _______, _______, _______, _______, _______,
-    KC_TAB,  C(KC_WH_U), KC_BTN2, KC_UP,   KC_BTN1, SCRNSHOT,                           BRKT,    KC_WH_D, KC_MS_U, KC_WH_U, _______, _______,
-    A(KC_6), C(KC_WH_D), KC_LEFT, KC_DOWN, KC_RGHT, PDF_HL,                             PRNS,    KC_MS_L, KC_MS_D, KC_MS_R, _______, _______,
-    KC_LSFT, UNDO,    A(KC_7), A(KC_8), PASTE,   KC_ENT,  TO_BASE,          XXXXXXX, _______, _______, _______, KC_LCTL, _______, _______,
+    KC_ESC,  C(KC_F1),XXXXXXX, XXXXXXX, A(KC_F4),XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+    KC_TAB,  KC_WH_U, KC_BTN2, KC_UP,   KC_BTN1, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+    XXXXXXX, KC_WH_D, KC_LEFT, KC_DOWN, KC_RGHT, KC_BSPC,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,  TO_BASE,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      KC_BSPC, KC_LALT, KC_LCTL, KC_BSPC, KC_DEL,          _______, _______, _______, _______, _______
+                      KC_LGUI, KC_LALT, KC_LCTL, KC_SPC,  KC_ENT,         TO(_MOUSE),_______, _______, _______, _______
 ),
 
 [_SETTINGS] = LAYOUT(
 //|-------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-   _______,     C(KC_WH_D), XXXXXXX, A(KC_0), A(KC_F4),XXXXXXX,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
-   KC_TAB,/*|*/ C(KC_WH_U), A(KC_4), A(KC_5), A(KC_6), KC_X,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-   KC_ENT,/*|*/ SCRNSHOT,A(KC_1), A(KC_2), A(KC_3), PDF_HL,                               RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   _______,     C(KC_WH_D), XXXXXXX, A(KC_0), A(KC_F4),XXXXXXX,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET,
+   KC_TAB,/*|*/ C(KC_WH_U), A(KC_4), A(KC_5), A(KC_6), KC_X,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+   KC_ENT,/*|*/ SCRNSHOT,A(KC_1), A(KC_2), A(KC_3), PDF_HL,                         RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
    KC_SPC,/*|*/ XXXXXXX, A(KC_7), A(KC_8), A(KC_9), KC_P, TO_BASE,         TO_BASE, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_LSFT, XXXXXXX,
 //|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                      _______, KC_LALT, _______, _______, KC_TRNS,          _______, _______, _______, KC_GT, KC_LT
@@ -119,27 +119,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 enum combos {
     COMBO_ONEHAND,
     COMBO_ONEHAND_END,
-    COMBO_HAEN,
-    // SHIFT_T,
     COMBO_LENGTH
 };
 uint16_t COMBO_LEN = COMBO_LENGTH;
-const uint16_t PROGMEM onehand_combo[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM onehand_end_combo[] = {KC_ESC, A(KC_1), COMBO_END};
-const uint16_t PROGMEM haen_combo[] = {KC_LANG1, KC_LSFT, COMBO_END};
+const uint16_t PROGMEM onehand_combo[]      = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM onehand_end_combo[]  = {KC_BTN2, KC_UP, COMBO_END};
 // const uint16_t PROGMEM shift_T[] = {KC_A, KC_T, COMBO_END};
 
 combo_t key_combos[] = {
-    [COMBO_ONEHAND]   = COMBO(onehand_combo, TO(_ONEHAND)),
-    [COMBO_ONEHAND_END]   = COMBO(onehand_end_combo,TO(_BASE)),
-    [COMBO_HAEN]   = COMBO(haen_combo,KC_LANG2),
+    [COMBO_ONEHAND]     = COMBO(onehand_combo, TO(_ONEHAND)),
+    [COMBO_ONEHAND_END] = COMBO(onehand_end_combo,TO(_BASE)),
     // [SHIFT_T]   = COMBO(shift_T,S(KC_T)),
 };
 // COMBO_TERM
 
 // Key overrides
-const key_override_t DLR_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
-const key_override_t DEL_override = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);
+const key_override_t DLR_0_override     = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
+const key_override_t DEL_override       = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);
 
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
     &DLR_0_override,
