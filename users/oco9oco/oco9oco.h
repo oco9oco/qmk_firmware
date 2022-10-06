@@ -85,7 +85,7 @@ Z X C V B  N M , . /
 #define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, KC_SCLN
 #define __________________QWERTY_HOME_R3___________ KC_N, KC_M, LCTL_T(KC_COMM), LALT_T(KC_DOT),LGUI_T(KC_SLSH)
 // different layout
-#define __________________QWERTY_SACS_L2___________ KC_A, ALTT_S, CTLT_D, SFTT_F, KC_G
+#define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 //process-intercepted keys
 
 #define _IPC_A    LT(_IPC,KC_A)
