@@ -211,7 +211,7 @@ case NAV(Z):
         if(__PRESSED__){
             SEND_STRING("E05F");
         }
-        break;        
+        break;
 
         //CLOSING BRACKET PAIRS
         case BRKT:
@@ -219,14 +219,14 @@ case NAV(Z):
                 SEND_STRING("[]" SS_TAP(X_LEFT));
                 prns_pressed = true;  // 괄호입력상태
             }
-            break; 
+            break;
         case ABRK:
             if (__PRESSED__) {
                 SEND_STRING("<>" SS_TAP(X_LEFT));
                 prns_pressed = true;  // 괄호입력상태
             }
-            break; 
-                        
+            break;
+
         case CMM_SPC:
             if (__PRESSED__) {
                 SEND_STRING(", ");
@@ -263,7 +263,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM+200;
         case THUMB_L2:
         case SFTT_A:
-            return TAPPING_TERM-100;
+            return TAPPING_TERM-150;
         case SFTT_F:
         case SFTT_J:
         case GUIT_A:
@@ -307,6 +307,10 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case GUIT_A:
         case LT(_NAV, KC_0):
         case SFT_CAPS:
+        case SFTT_M:
+        case CTL_CL:
+        case ALT_DT:
+        case GUI_SLSH:
             return true;
         default:
             return false;
@@ -316,6 +320,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 bool get_permissive_hold_per_key(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case THUMB_L2:
+        case SFT_CAPS:
             return true;// KEY_ROW, KEY_COL: look for oco9oco.h
         default:
             return false;

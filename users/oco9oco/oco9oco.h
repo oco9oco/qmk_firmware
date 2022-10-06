@@ -25,7 +25,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CTLT_K    LCTL_T(KC_K)
 #define ALTT_L    LALT_T(KC_L)
 #define GUIT_SCL  LGUI_T(KC_SCLN)
-
+#define SFTT_M    LSFT_T(KC_M)
+#define CTL_CL    LCTL_T(KC_COMM)
+#define ALT_DT    LALT_T(KC_DOT)
+#define GUI_SLSH  LGUI_T(KC_SLSH)
 //NUMBER ROW MOD-TAP KEYS
 #define F1_1  LT(_BASE,KC_1)
 #define F2_2  LT(_BASE,KC_2)
@@ -80,6 +83,7 @@ Z X C V B  N M , . /
 //     |--------|--------|--------|--------|--------|
 #define __________________QWERTY_HOME_L2___________ GUIT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 #define __________________QWERTY_HOME_R2___________ KC_H, SFTT_J, CTLT_K, ALTT_L, KC_SCLN
+#define __________________QWERTY_HOME_R3___________ KC_N, RSFT_T(KC_M),LCTL_T(KC_COMM), LALT_T(KC_DOT),LGUI_T(KC_SLSH)
 // different layout
 #define __________________QWERTY_SACS_L2___________ SFTT_A, ALTT_S, CTLT_D, SFTT_F, KC_G
 //process-intercepted keys
