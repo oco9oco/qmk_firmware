@@ -138,6 +138,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                                 tap_code(KC_BSPC);
                                 user_i++;
                             }
+                        }
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
@@ -153,6 +154,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                                 tap_code(KC_BSPC);
                                 user_i++;
                             }
+                        }
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
