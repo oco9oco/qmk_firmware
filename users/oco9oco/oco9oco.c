@@ -92,10 +92,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (__PRESSED__) {
                 prns_pressed = false;
                 num_in_prns  = false;
+                switch_cite = 0;
+                cite_done = true;
+
             } else {
                 if (prns_pressed && num_in_prns) {
                     SEND_STRING(SS_TAP(X_RGHT));
                     cite_done=true;
+
                 }
             }
             break;
