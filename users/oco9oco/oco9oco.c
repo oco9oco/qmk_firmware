@@ -120,6 +120,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
                 switch (switch_cite){
                     case 0:
+                        if(!cite_done){
+                           user_i = 0;
+                            while(user_i<2){
+                                tap_code(KC_BSPC);
+                                user_i++;
+                            }
+                        }
                         if(!prns_pressed){
                             SEND_STRING("[]");
                             tap_code(KC_LEFT);
@@ -168,7 +175,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                             num_in_prns = false;
                         }
                         SEND_STRING("eh ");
-                        switch_cite=3;
+                        switch_cite=0;
                         cite_done=false;
                         break;
                 }
