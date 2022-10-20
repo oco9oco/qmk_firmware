@@ -180,6 +180,7 @@ Z X C V B  N M , . /
 //MOVED COMBO TO EACH KEYBOARDS
 
 // Korean
+bool user_debug;
 bool prns_pressed; // 괄호입력상태
 bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 bool cite_done;

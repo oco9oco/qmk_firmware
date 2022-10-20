@@ -92,26 +92,61 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (__PRESSED__) {
                 prns_pressed = false;
                 num_in_prns  = false;
-                switch_cite = 0;
+                switch_cite=0;
                 cite_done = true;
-
             } else {
                 if (prns_pressed && num_in_prns) {
                     SEND_STRING(SS_TAP(X_RGHT));
-                    cite_done=true;
-
                 }
             }
             break;
         case KC_COMM:
             if (__PRESSED__ && prns_pressed) {
                 cite_done=true;
-            }
+            }return true;
         case KC_1 ... KC_0:
             if (__PRESSED__ && prns_pressed) {
                 num_in_prns = true;
                 cite_done = true;
             } return true;
+        break;
+        // HWP_CITE
+        case HWP_CITE:
+        //prns 안에서는 cite_done = false
+        //comma 누르면 cite_done = true
+        //prns && num 상태에서는 cite_done = true, SPC_COMM
+            if(__PRESSED__){
+                if(!cite_done){
+                    tap_code16(C(KC_BSPC));
+                    tap_code16(C(KC_BSPC));
+                }
+                switch (switch_cite){
+                    case 0:
+                        SEND_STRING("anseks ");
+                        switch_cite=1;
+                        cite_done=false;
+                        break;
+                    case 1:
+                        if(prns_pressed && num_in_prns){
+                            SEND_STRING(", ");
+                            num_in_prns = false;
+                    }
+                        tap_code(KC_BSPC);
+                        SEND_STRING("cjdrngkd ");
+                        switch_cite=2;
+                        cite_done=false;
+                        break;
+                    case 2:
+                        if(prns_pressed && num_in_prns){
+                            SEND_STRING(", ");
+                            num_in_prns = false;
+                        }
+                        SEND_STRING("eh ");
+                        switch_cite=0;
+                        cite_done=false;
+                        break;
+                }
+            }
         break;
 // Intercept mod-tap
         case IPC(A):
@@ -175,63 +210,7 @@ case NAV(Z):
             } else {unregister_code(KC_LGUI);}
             return false;
             break;
-// HWP_CITE
-        case HWP_CITE:
-        //prns 안에서는 cite_done = false
-        //comma 누르면 cite_done = true
-        //prns && num 상태에서는 cite_done = true, SPC_COMM
-        if(__PRESSED__){
-            switch (switch_cite){
-                default:
-                case 0:
-                    if(!cite_done){
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                    }
-                    SEND_STRING("anseks ");
-                    switch_cite=1;
-                    cite_done=false;
-                case 1:
-                    if(!cite_done){
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                    }
-                    if(prns_pressed && num_in_prns){
-                        SEND_STRING(", ");
-                        num_in_prns = false;
-                }
-                    tap_code(KC_BSPC);
-                    SEND_STRING("cjdrngkd ");
-                    switch_cite=2;
-                    cite_done=false;
 
-                case 2:
-                    if(!cite_done){
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                        tap_code(KC_BSPC);
-                    }
-                    if(prns_pressed && num_in_prns){
-                        SEND_STRING(", ");
-                        num_in_prns = false;
-                }
-                    SEND_STRING("eh ");
-                    switch_cite=0;
-                    cite_done=false;
-            }
-        }break;
         //CLOSING BRACKET PAIRS
         case BRKT:
             if (__PRESSED__) {
