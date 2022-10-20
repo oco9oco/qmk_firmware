@@ -182,7 +182,8 @@ Z X C V B  N M , . /
 // Korean
 bool prns_pressed; // 괄호입력상태
 bool num_in_prns; // 괄호 치고 번호를 입력한 경우
-
+bool cite_done;
+int switch_cite;
 
 
 
@@ -301,18 +302,9 @@ enum custom_keycodes{
   HAEN_G,
   PDF_HL,// ADOBE PDF HIGHLIGHT MACRO
   JOINTBL,
-// IPC CLASS
-  A62B18,
-  E05B,
-  E05C,
-  E05D,
-  E05F,
-  E05G,
-  B60J,
-  E06B,
-  F24F,
   ENT_HOME,
   AT_IPC,
+  HWP_CITE,
 };
 
 enum layer_index{

@@ -95,12 +95,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 if (prns_pressed && num_in_prns) {
                     SEND_STRING(SS_TAP(X_RGHT));
+                    cite_done=true;
                 }
             }
             break;
+        case KC_COMM:
+            if (__PRESSED__ && prns_pressed) {
+                cite_done=true;
+            }
         case KC_1 ... KC_0:
             if (__PRESSED__ && prns_pressed) {
                 num_in_prns = true;
+                cite_done = true;
             } return true;
         break;
 // Intercept mod-tap
@@ -165,54 +171,61 @@ case NAV(Z):
             } else {unregister_code(KC_LGUI);}
             return false;
             break;
-// IPC CLASSIFICATION
-        case A62B18:
+// HWP_CITE
+        case HWP_CITE:
+        //prns 안에서는 cite_done = false
+        //comma 누르면 cite_done = true
+        //prns && num 상태에서는 cite_done = true, SPC_COMM
         if(__PRESSED__){
-            SEND_STRING("A62B18");
-        }
-        break;
-        case E05C:
-        if(__PRESSED__){
-            SEND_STRING("E05C");
-        }
-        break;
-        case E05B:
-        if(__PRESSED__){
-            SEND_STRING("E05B");
-        }
-        break;
+            switch (switch_cite){
+                default:
+                case 0:
+                    if(!cite_done){
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                    }
+                    SEND_STRING("anseks ");
+                    switch_cite=1;
+                case 1:
+                    if(!cite_done){
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                    }
+                    if(prns_pressed && num_in_prns){
+                        SEND_STRING(", ");
+                        num_in_prns = false;
+                }
+                    tap_code(KC_BSPC);
+                    SEND_STRING("cjdrngkd ");
+                    switch_cite=2;
 
-        case E05D:
-        if(__PRESSED__){
-            SEND_STRING("E05D");
-        }
-        break;
-        case B60J:
-        if(__PRESSED__){
-            SEND_STRING("B60J");
-        }
-        break;
-        case E05G:
-        if(__PRESSED__){
-            SEND_STRING("E05G");
-        }
-        break;
-        case F24F:
-        if(__PRESSED__){
-            SEND_STRING("F24F");
-        }
-        break;
-        case E06B:
-        if(__PRESSED__){
-            SEND_STRING("E06B");
-        }
-        break;
-        case E05F:
-        if(__PRESSED__){
-            SEND_STRING("E05F");
-        }
-        break;
-
+                case 2:
+                    if(!cite_done){
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                        tap_code(KC_BSPC);
+                    }
+                    if(prns_pressed && num_in_prns){
+                        SEND_STRING(", ");
+                        num_in_prns = false;
+                }
+                    SEND_STRING("eh ");
+                    switch_cite=0;
+                    cite_done=false;
+            }
+        }break;
         //CLOSING BRACKET PAIRS
         case BRKT:
             if (__PRESSED__) {

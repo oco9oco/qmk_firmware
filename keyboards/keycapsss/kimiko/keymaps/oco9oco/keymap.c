@@ -22,22 +22,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL,
-    KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
+    KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS,
+    KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     SFT_CAPS,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_R2________________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_GUIZ_L3___________, TG(_BASE_NOMOD),  KC_B,    __________________QWERTY_HOME_R3___________, KC_BSLS,
+    KC_LSFT, __________________QWERTY_GUIZ_L3___________, TG(_BASE_NOMOD),  KC_B,    __________________QWERTY_HOME_R3___________, RSFT_T(KC_BSLS),
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      XXXXXXX, XXXXXXX, THUMB_L1,THUMB_L2,KC_DEL,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
+                      XXXXXXX, XXXXXXX, THUMB_L1,THUMB_L2,THUMB_L3,         THUMB_R3,THUMB_R2,THUMB_R1,KC_LBRC, KC_RBRC
 ),
 
 [_BASE_NOMOD] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_DEL,
-    KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_BSPC,
-    SFT_CAPS,__________________QWERTY_L2________________,                            __________________QWERTY_R2________________, KC_QUOT,
-    KC_LSFT, __________________QWERTY_L3________________, _______,          KC_B,    __________________QWERTY_HOME_R3___________, RSFT_T(KC_BSLS),
+    KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, _______,
+    KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, _______,
+    SFT_CAPS,__________________QWERTY_L2________________,                            __________________QWERTY_R2________________, _______,
+    KC_LSFT, __________________QWERTY_L3________________, _______,          KC_B,    __________________QWERTY_HOME_R3___________, _______,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-                      XXXXXXX, XXXXXXX, LCTL_T(KC_TAB), LT(_IPC, KC_BSPC), KC_DEL,  _______, _______, _______, _______, _______
+                      XXXXXXX, KC_LALT, THUMB_L1,THUMB_L2,THUMB_L3,         _______, _______, _______, _______, _______
 ),
 
 [_IPC] = LAYOUT_kimiko_wrapper(
@@ -52,10 +52,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_NUM] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    TO_BASE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS,
-    _______, XXXXXXX, KC_AMPR, KC_PIPE, KC_SLSH, AT_IPC,                             XXXXXXX, _________NUM_789_________, XXXXXXX, KC_PLUS,
-    _______, A62B18,  E05B,    E05C,    E05D,    E05G,                               XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
-    _______, E05F,    E06B,    F24F,    B60J,    _______, TO_BASE,          KC_ENT,  XXXXXXX, _________NUM_123_________, KC_QUES, KC_PIPE,
+    TO_BASE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, _________NUM_789_________, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, _________NUM_456_________, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, BRKT,    HWP_CITE,XXXXXXX, XXXXXXX, TO_BASE,          TO_BASE, XXXXXXX, _________NUM_123_________, XXXXXXX, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_TRNS, KC_TRNS, _______, _______, _______,          ENT_HOME, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),
