@@ -54,8 +54,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     TO_BASE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, _________NUM_789_________, XXXXXXX, XXXXXXX,
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, _________NUM_456_________, XXXXXXX, XXXXXXX,
-    _______, XXXXXXX, BRKT,    HWP_CITE,XXXXXXX, XXXXXXX, TO_BASE,          TO_BASE, XXXXXXX, _________NUM_123_________, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, HWP_CITE,XXXXXXX, XXXXXXX,                            XXXXXXX, _________NUM_456_________, XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TO_BASE,          TO_BASE, XXXXXXX, _________NUM_123_________, XXXXXXX, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_TRNS, KC_TRNS, _______, _______, _______,          ENT_HOME, LT(_NAV, KC_0), _______, KC_LPRN, KC_RPRN
 ),

@@ -118,7 +118,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         //prns && num 상태에서는 cite_done = true, SPC_COMM
             if(__PRESSED__){
                 if(!prns_pressed){
-                    tap_code16(BRKT);
+                    SEND_STRING("[]");
+                    tap_code(KC_LEFT);
+                    prns_pressed=true;
                 }
                 switch (switch_cite){
                     case 3:
