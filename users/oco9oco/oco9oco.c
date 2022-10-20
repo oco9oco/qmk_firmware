@@ -97,6 +97,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 if (prns_pressed && num_in_prns) {
                     SEND_STRING(SS_TAP(X_RGHT));
+                    cite_done = true;
                 }
             }
             break;
@@ -116,30 +117,42 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         //comma 누르면 cite_done = true
         //prns && num 상태에서는 cite_done = true, SPC_COMM
             if(__PRESSED__){
-                if(!cite_done){
-                    user_i = 0;
-                    while(user_i<switch_cite){
-                        tap_code(KC_BSPC);
-                        user_i++;
-                    }
-                }
+
                 switch (switch_cite){
                     case 3:
+                        if(!cite_done){
+                           user_i = 0;
+                            while(user_i<2){
+                                tap_code(KC_BSPC);
+                                user_i++;
+                            }
+                        }
                         SEND_STRING("anseks ");
                         switch_cite=4;
                         cite_done=false;
                         break;
                     case 4:
+                        if(!cite_done){
+                           user_i = 0;
+                            while(user_i<3){
+                                tap_code(KC_BSPC);
+                                user_i++;
+                            }
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
-                    }
-                        tap_code(KC_BSPC);
+                        }
                         SEND_STRING("cjdrngkd ");
                         switch_cite=2;
                         cite_done=false;
                         break;
                     case 2:
+                        if(!cite_done){
+                           user_i = 0;
+                            while(user_i<4){
+                                tap_code(KC_BSPC);
+                                user_i++;
+                            }
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
