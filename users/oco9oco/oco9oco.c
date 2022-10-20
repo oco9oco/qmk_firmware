@@ -118,7 +118,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if(__PRESSED__){
                 if(!cite_done){
                     tap_code16(C(KC_BSPC));
-                    tap_code16(C(KC_BSPC));
+                //    tap_code16(C(KC_BSPC));
                 }
                 switch (switch_cite){
                     case 0:
