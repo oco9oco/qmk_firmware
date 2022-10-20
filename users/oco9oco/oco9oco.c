@@ -92,7 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (__PRESSED__) {
                 prns_pressed = false;
                 num_in_prns  = false;
-                switch_cite=0;
+                switch_cite=7;
                 cite_done = true;
             } else {
                 if (prns_pressed && num_in_prns) {
@@ -117,32 +117,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         //prns && num 상태에서는 cite_done = true, SPC_COMM
             if(__PRESSED__){
                 if(!cite_done){
-                    tap_code16(C(KC_BSPC));
-                //    tap_code16(C(KC_BSPC));
+                    user_i = 0;
+                    while(user_i<switch_cite){
+                        tap_code(KC_BSPC);
+                        user_i++;
+                    }
                 }
                 switch (switch_cite){
-                    case 0:
+                    case 7:
                         SEND_STRING("anseks ");
-                        switch_cite=1;
+                        switch_cite=9;
                         cite_done=false;
                         break;
-                    case 1:
+                    case 9:
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
                     }
                         tap_code(KC_BSPC);
                         SEND_STRING("cjdrngkd ");
-                        switch_cite=2;
+                        switch_cite=3;
                         cite_done=false;
                         break;
-                    case 2:
+                    case 3:
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
                         }
                         SEND_STRING("eh ");
-                        switch_cite=0;
+                        switch_cite=7;
                         cite_done=false;
                         break;
                 }
