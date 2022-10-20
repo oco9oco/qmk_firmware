@@ -92,7 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (__PRESSED__) {
                 prns_pressed = false;
                 num_in_prns  = false;
-                switch_cite=7;
+                switch_cite=4;
                 cite_done = true;
             } else {
                 if (prns_pressed && num_in_prns) {
@@ -124,28 +124,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     }
                 }
                 switch (switch_cite){
-                    case 7:
+                    case 3:
                         SEND_STRING("anseks ");
-                        switch_cite=9;
+                        switch_cite=4;
                         cite_done=false;
                         break;
-                    case 9:
+                    case 4:
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
                     }
                         tap_code(KC_BSPC);
                         SEND_STRING("cjdrngkd ");
-                        switch_cite=3;
+                        switch_cite=2;
                         cite_done=false;
                         break;
-                    case 3:
+                    case 2:
                         if(prns_pressed && num_in_prns){
                             SEND_STRING(", ");
                             num_in_prns = false;
                         }
                         SEND_STRING("eh ");
-                        switch_cite=7;
+                        switch_cite=3;
                         cite_done=false;
                         break;
                 }
