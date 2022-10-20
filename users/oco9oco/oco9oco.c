@@ -187,6 +187,7 @@ case NAV(Z):
                     }
                     SEND_STRING("anseks ");
                     switch_cite=1;
+                    cite_done=false;
                 case 1:
                     if(!cite_done){
                         tap_code(KC_BSPC);
@@ -204,6 +205,7 @@ case NAV(Z):
                     tap_code(KC_BSPC);
                     SEND_STRING("cjdrngkd ");
                     switch_cite=2;
+                    cite_done=false;
 
                 case 2:
                     if(!cite_done){
