@@ -92,7 +92,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (__PRESSED__) {
                 prns_pressed = false;
                 num_in_prns  = false;
-                switch_cite=3;
+                switch_cite=0;
                 cite_done = true;
             } else {
                 if (prns_pressed && num_in_prns) {
@@ -117,12 +117,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         //comma 누르면 cite_done = true
         //prns && num 상태에서는 cite_done = true, SPC_COMM
             if(__PRESSED__){
-                if(!prns_pressed){
-                    SEND_STRING("[]");
-                    tap_code(KC_LEFT);
-                    prns_pressed=true;
-                }
+
                 switch (switch_cite){
+                    case 0:
+                        if(!prns_pressed){
+                            SEND_STRING("[]");
+                            tap_code(KC_LEFT);
+                            prns_pressed=true;
+                        }
+                        switch_cite=3;
+                        break;
                     case 3:
                         if(!cite_done){
                            user_i = 0;
