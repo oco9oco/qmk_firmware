@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     PDF_HL,  HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_LBRC, KC_7,    KC_8,    KC_9,    KC_0,    KC_PLUS,
     MT_CAPS, IPC(A),  IPC(S),  IPC_MIN, IPC(F),  KC_DOT,                             KC_RBRC, KC_4,    KC_5,    KC_6,    KC_COLN, KC_DQUO,
-    KC_LANG1,IPC(Z),  BRKT,    IPC(C),  KC_EQL,  CLN_SPC,                            KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,
+    KC_LANG1,IPC(Z),  HWP_CITE,IPC(C),  KC_EQL,  CLN_SPC,                            KC_LT,   KC_1,    KC_2,    KC_3,    KC_DOT,  KC_PIPE,
                                         _______, _______, _______,          A(KC_2), LT(_NAV,KC_0), _______
     ),
   [_NUM] = LAYOUT_crkbd_wrapper(
