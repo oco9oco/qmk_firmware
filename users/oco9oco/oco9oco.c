@@ -96,14 +96,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 switch_cite=0;
                 cite_done = true;
             } else {
-                if (num_in_prns) {
-                    if(prns_pressed){
-                        SEND_STRING(")");
-                    }
-                    if(brkt_pressed){
-                        SEND_STRING("]");
-                        cite_done = true;
-                    }
+                if(prns_pressed){
+                    SEND_STRING(")");
+                }
+                if(brkt_pressed){
+                    SEND_STRING("]");
+                    cite_done = true;
                 }
             }
             break;
