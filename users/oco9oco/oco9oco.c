@@ -108,7 +108,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
         case KC_COMM:
-            if (__PRESSED__ && brkt_pressed) {
+            if (__PRESSED__ && (brkt_pressed||prns_pressed)) {
                 cite_done=true;
             }return true;
         case KC_1 ... KC_0:
