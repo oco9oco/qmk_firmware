@@ -112,7 +112,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 cite_done=true;
             }return true;
         case KC_1 ... KC_0:
-            if (__PRESSED__ && brkt_pressed) {
+            if (__PRESSED__ && (prns_pressed||brkt_pressed)) {
                 num_in_prns = true;
                 cite_done = true;
             } return true;
