@@ -202,17 +202,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 
-        case IPC(F):
-            if(__TAPPED__ && __PRESSED__){
-                SEND_STRING(", ");
-            }else if(__PRESSED__) {
-                register_code(KC_LSFT);
-            }else{
-                unregister_code(KC_LSFT);
-            }
-            return false;
-            break;
-
         case IPC(Z):
             if (__TAPPED__ && __PRESSED__) {
                 tap_code16(SCRNSHOT);
@@ -333,6 +322,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case CTLT_K:
         case GUIT_A:
         case LT(_NAV, KC_0):
+        case IPC_COMM:
         case SFT_CAPS:
         case SFTT_M:
         case CTL_CL:

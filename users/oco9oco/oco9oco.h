@@ -100,7 +100,7 @@ Z X C V B  N M , . /
 #define IPC(x)    LT(_IPC,KC_##x)
 #define NAV(x)    LT(_NAV,KC_##x)
 #define IPC_MIN  _IPC_MIN
-
+#define IPC_COMM  LSFT_T(KC_COMM)
 #define _NUM_A    LT(_NUM,KC_A)
 #define _NUM_S    LT(_NUM,KC_S)
 #define _NUM_D    LT(_NUM,KC_D)
