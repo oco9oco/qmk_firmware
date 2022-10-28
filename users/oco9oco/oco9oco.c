@@ -98,10 +98,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 if(prns_pressed){
                     SEND_STRING(")");
+                    if(!num_in_prns){tap_code(KC_LEFT);}
                 }
                 if(brkt_pressed){
                     SEND_STRING("]");
                     cite_done = true;
+                    if(!num_in_prns){tap_code(KC_LEFT);}
                 }
             }
             break;
