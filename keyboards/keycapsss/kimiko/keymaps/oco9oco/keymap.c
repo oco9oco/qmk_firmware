@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     KC_ESC,  __________________NUMROW_L_________________,                            __________________NUMROW_R_________________, KC_MINS,
-    KC_GRAVE,__________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
+    KC_TAB,  __________________QWERTY_L1________________,                            __________________QWERTY_R1________________, KC_EQL,
     SFT_CAPS,__________________QWERTY_SACS_L2___________,                            __________________QWERTY_R2________________, KC_QUOT,
     KC_LSFT, __________________QWERTY_GUIZ_L3___________, TG(_BASE_NOMOD),  KC_B,    __________________QWERTY_HOME_R3___________, RSFT_T(KC_BSLS),
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, PDF_HL,  KC_P,    KC_X,    ALT_F4,  XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS,
-    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            XXXXXXX, _________NUM_789_________, KC_RBRC, KC_PLUS,
+    _______, HAEN_B,  HAEN_C,  HAEN_E,  HAEN_D,  KC_SLSH,                            KC_GRV,  _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC_COMM,KC_DOT,                             XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, IPC(Z),  HWP_CITE,IPC(C),  KC_EQL,  KC_BSLS, XXXXXXX,          KC_LBRC, KC_RBRC, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -134,10 +134,14 @@ combo_t key_combos[] = {
 // COMBO_TERM
 
 // Key overrides
+const key_override_t GRV_override       = ko_make_basic(MOD_MASK_SHIFT, KC_ESC, KC_TILD);
+const key_override_t TLD_override       = ko_make_basic(MOD_MASK_CTRL, KC_ESC, KC_GRV);
 const key_override_t DLR_0_override     = ko_make_basic(MOD_MASK_SHIFT, KC_DLR, KC_0);
 const key_override_t DEL_override       = ko_make_basic(MOD_MASK_SHIFT, KC_DEL, KC_BSPC);
 
 const key_override_t **key_overrides = (const key_override_t *[]){                              // This globally defines all key overrides to be used
+    &GRV_override,
+    &TLD_override,
     &DLR_0_override,
     &DEL_override,
     NULL                                                                                        // Null terminate the array of overrides!
