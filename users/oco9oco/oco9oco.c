@@ -53,7 +53,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case HAEN_A:
             if (__PRESSED__) {
-                haen_keycode(KC_A);
+                haen_keycode(keycode);
             }
             break;
         case HAEN_B:
