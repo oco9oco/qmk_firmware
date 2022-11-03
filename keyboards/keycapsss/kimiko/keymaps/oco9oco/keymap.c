@@ -53,9 +53,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NUM] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     TO_BASE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    _______, XXXXXXX, A(KC_7), A(KC_8), A(KC_9), XXXXXXX,                            XXXXXXX, C(KC_7), C(KC_8), C(KC_9), XXXXXXX, XXXXXXX,
-    _______, LCA(KC_H), LCA(KC_J), LCA(KC_K),LCA(KC_L), XXXXXXX,                     XXXXXXX, C(KC_4), C(KC_5), C(KC_6), XXXXXXX, XXXXXXX,
-    _______, XXXXXXX, A(KC_4), XXXXXXX, A(KC_6), XXXXXXX, TO_BASE,          TO_BASE, XXXXXXX, C(KC_1), C(KC_2), C(KC_3), XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, C(KC_7), C(KC_8), C(KC_9), XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, C(KC_4), C(KC_5), C(KC_6), XXXXXXX, XXXXXXX,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TO_BASE,          TO_BASE, XXXXXXX, C(KC_1), C(KC_2), C(KC_3), XXXXXXX, XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       KC_TRNS, KC_TRNS, _______, _______, _______,          ENT_HOME, C(KC_0), C(KC_0), KC_LPRN, KC_RPRN
 ),
