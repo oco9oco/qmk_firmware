@@ -43,8 +43,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 kca_pressed = true;
                 return false;
             } else{
+                kca_pressed = false;
                 if(qwert){
-                    kca_pressed = false;
                     return false;
                 }else{
                     return true;
