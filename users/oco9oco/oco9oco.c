@@ -101,9 +101,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     if(!num_in_prns){tap_code(KC_LEFT);}
                 }
                 if(brkt_pressed){
-                    SEND_STRING("]");
+                    SEND_STRING("] ");
                     cite_done = true;
-                    if(!num_in_prns){tap_code(KC_LEFT);}
+                    if(!num_in_prns){tap_code(KC_LEFT);tap_code(KC_LEFT);}
                 }
             }
             break;
