@@ -41,7 +41,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_A:
             if(__PRESSED__){
                 kca_pressed = true;
-                return false;
             } else{
                 kca_pressed = false;
                 if(qwert){
