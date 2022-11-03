@@ -187,8 +187,8 @@ bool num_in_prns; // 괄호 치고 번호를 입력한 경우
 bool cite_done;
 int switch_cite;
 int user_i;
-
-
+bool kca_pressed;
+bool qwert;
 // BASE KEYMAPS [3X5 + 3 THUMB KEYS]
 
 #define __BASE_L1   __________________QWERTY_L1________________

@@ -25,6 +25,32 @@ void appcmd(uint16_t keycode){
 // process_record_user
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case KC_Q:
+        case KC_W:
+        case KC_E:
+        case KC_R:
+        case KC_T:
+            if(__PRESSED__){
+                qwert=true;
+                if(kca_pressed){
+                    tap_code16(S(keycode));
+                    return false;
+                }else{return true;}
+            }else{qwert=false;}
+            break;
+        case KC_A:
+            if(__PRESSED_){
+                kca_pressed = true;
+                return false;
+            } else{
+                if(qwert){
+                    kca_pressed = false;
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+            break;
 // appcmd function
         case JOINTBL:
             if(__PRESSED__){
