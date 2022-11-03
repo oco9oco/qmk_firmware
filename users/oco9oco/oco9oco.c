@@ -30,25 +30,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_E:
         case KC_R:
         case KC_T:
-            if(__PRESSED__){
-                qwert=true;
-                if(kca_pressed){
-                    tap_code16(S(keycode));
-                    return false;
-                }else{return true;}
-            }else{qwert=false;}
-            break;
-        case KC_A:
-            if(__PRESSED__){
-                kca_pressed = true;
-            } else{
-                kca_pressed = false;
-                if(qwert){
-                    return false;
-                }else{
-                    return true;
-                }
-            }
+            if(__PRESSED__){qwert=true;}
+                       else{qwert=false;}
+            return true;
             break;
 // appcmd function
         case JOINTBL:
@@ -326,6 +310,8 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case SFT_CAPS:
         // case SFTT_A:
             return true;
+        case SFTT_A:
+            if(qwert){return true;}else{return false;}
         default:
             return false;
     }
