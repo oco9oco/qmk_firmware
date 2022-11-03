@@ -25,15 +25,6 @@ void appcmd(uint16_t keycode){
 // process_record_user
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case KC_Q:
-        case KC_W:
-        case KC_E:
-        case KC_R:
-        case KC_T:
-            if(__PRESSED__){qwert=true;}
-                       else{qwert=false;}
-            return true;
-            break;
 // appcmd function
         case JOINTBL:
             if(__PRESSED__){
@@ -310,8 +301,6 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case SFT_CAPS:
         // case SFTT_A:
             return true;
-        case SFTT_A:
-            if(qwert){return true;}else{return false;}
         default:
             return false;
     }
