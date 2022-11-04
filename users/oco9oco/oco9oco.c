@@ -22,9 +22,82 @@ void appcmd(uint16_t keycode){
     tap_code(KC_APP);
     tap_code(keycode);
 }
+
 // process_record_user
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case LT(_IPC, KC_BSPC):
+        case LT(_NUM, KC_DEL):
+            if (__PRESSED__) {
+                prns_pressed = false;
+                brkt_pressed = false;
+                num_in_prns  = false;
+                switch_cite=0;
+                cite_done = true;
+            } else {
+                if(prns_pressed){
+                    SEND_STRING(")");
+                    if(!num_in_prns){tap_code(KC_LEFT);}
+                }
+                if(brkt_pressed){
+                    SEND_STRING("] ");
+                    cite_done = true;
+                    if(!num_in_prns){tap_code(KC_LEFT);tap_code(KC_LEFT);}
+                }
+            }
+            break;
+
+        case CLASS_A:
+            if(__PRESSED__){
+                if(!cite_done){
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                }
+                switch(switch_cite){
+                    case 0:
+                        SEND_STRING("A62B");
+                        switch_cite=1;
+                        break;
+                    case 1:
+                        SEND_STRING("A41D");
+                        switch_cite=0;
+                        break;
+                }
+            }else{
+                cite_done=false;
+            }break;
+        case CLASS_E:
+            if(__PRESSED__){
+                if(!cite_done){
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                    tap_code(KC_BSPC);
+                }
+                switch(switch_cite){
+                    case 0:
+                        SEND_STRING("E05B");
+                        switch_cite=1;
+                        break;
+                    case 1:
+                        SEND_STRING("E05C");
+                        switch_cite=2;
+                        break;
+                    case 2:
+                        SEND_STRING("E06B");
+                        switch_cite=3;
+                        break;
+                    case 3:
+                        SEND_STRING("E05F");
+                        switch_cite=0;
+                        break;
+                }
+            }else{
+                cite_done=false;
+            }break;
+
 // appcmd function
         case JOINTBL:
             if(__PRESSED__){
@@ -87,26 +160,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 // 괄호 커서이동 기능
-        case LT(_IPC, KC_BSPC):
-        case LT(_NUM, KC_DEL):
-            if (__PRESSED__) {
-                prns_pressed = false;
-                brkt_pressed = false;
-                num_in_prns  = false;
-                switch_cite=0;
-                cite_done = true;
-            } else {
-                if(prns_pressed){
-                    SEND_STRING(")");
-                    if(!num_in_prns){tap_code(KC_LEFT);}
-                }
-                if(brkt_pressed){
-                    SEND_STRING("] ");
-                    cite_done = true;
-                    if(!num_in_prns){tap_code(KC_LEFT);tap_code(KC_LEFT);}
-                }
-            }
-            break;
         case KC_COMM:
             if (__PRESSED__ && (brkt_pressed||prns_pressed)) {
                 cite_done=true;

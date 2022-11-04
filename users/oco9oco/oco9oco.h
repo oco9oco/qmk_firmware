@@ -307,8 +307,8 @@ enum custom_keycodes{
   ENT_HOME,
   AT_IPC,
   HWP_CITE,
-  CLS_A,
-  CLS_E,
+  A_CLASS,
+  E_CLASS,
 };
 
 enum layer_index{
@@ -323,6 +323,3 @@ enum layer_index{
   _ONEHAND,     //
   _SETTINGS,
 };
-
-
-
