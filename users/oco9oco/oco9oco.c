@@ -352,7 +352,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFT_CAPS:
-        LSFT_T(KC_Q):
+        case LSFT_T(KC_Q):
         // case SFTT_A:
             return true;
         default:
