@@ -366,7 +366,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case THUMB_L3:
         case THUMB_R2:
         case THUMB_R3:
-        LSFT_T(KC_Q):
+        case LSFT_T(KC_Q):
         case SFTT_A:
         case SFTT_Z:
         case GUIT_Z:
