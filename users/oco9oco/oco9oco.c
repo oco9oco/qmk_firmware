@@ -194,6 +194,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
 // 괄호 커서이동 기능
         case KC_COMM:
+        case IPC_COMM:
             if (__PRESSED__/* && (brkt_pressed||prns_pressed)*/) {
                 cite_done=true;
             }return true;
