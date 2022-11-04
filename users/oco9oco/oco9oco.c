@@ -76,6 +76,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     tap_code(KC_BSPC);
                     tap_code(KC_BSPC);
                 }
+                tap_code(KC_LANG1);
                 switch(switch_cite){
                     case 0:
                         SEND_STRING("E05B");
@@ -94,6 +95,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                         switch_cite=0;
                         break;
                 }
+                tap_code(KC_LANG1);
             }else{
                 cite_done=false;
             }break;
