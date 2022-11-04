@@ -99,8 +99,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }break;
         case ABC_ENUM:
             if(__PRESSED__){
+                    if(!cite_done){
+                        tap_code(KC_BSPC);
+                    }
                 switch(switch_cite){
-                    if(!cite_done){tap_code(KC_BSPC);}
                     case 0:
                         SEND_STRING("a");
                         switch_cite=1;
