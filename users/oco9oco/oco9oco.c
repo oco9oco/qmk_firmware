@@ -352,6 +352,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFT_CAPS:
+        LSFT_T(KC_Q):
         // case SFTT_A:
             return true;
         default:
@@ -365,6 +366,7 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case THUMB_L3:
         case THUMB_R2:
         case THUMB_R3:
+        LSFT_T(KC_Q):
         case SFTT_A:
         case SFTT_Z:
         case GUIT_Z:
