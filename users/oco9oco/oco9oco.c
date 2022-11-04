@@ -97,7 +97,37 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }else{
                 cite_done=false;
             }break;
-
+        case ABC_ENUM:
+                switch(switch_cite){
+                    if(!cite_done){tap_code(KC_BSPC);}
+                    case 0:
+                        SEND_STRING("a");
+                        switch_cite=1;
+                        break;
+                    case 1:
+                        SEND_STRING("b");
+                        switch_cite=2;
+                        break;
+                    case 2:
+                        SEND_STRING("c");
+                        switch_cite=3;
+                        break;
+                    case 3:
+                        SEND_STRING("d");
+                        switch_cite=4;
+                        break;
+                    case 4:
+                        SEND_STRING("e");
+                        switch_cite=5;
+                        break;
+                    case 5:
+                        SEND_STRING("f");
+                        switch_cite=0;
+                        break;
+                }
+            }else{
+                cite_done=false;
+            }break;
 // appcmd function
         case JOINTBL:
             if(__PRESSED__){
@@ -352,7 +382,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SFT_CAPS:
-        case LSFT_T(KC_Q):
         // case SFTT_A:
             return true;
         default:
@@ -366,7 +395,6 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
         case THUMB_L3:
         case THUMB_R2:
         case THUMB_R3:
-        case LSFT_T(KC_Q):
         case SFTT_A:
         case SFTT_Z:
         case GUIT_Z:
