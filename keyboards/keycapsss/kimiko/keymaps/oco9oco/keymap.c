@@ -42,8 +42,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_IPC] = LAYOUT_kimiko_wrapper(
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
-    _______, PDF_HL,  KC_P,    KC_X,    ALT_F4,  XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS,
-    _______, HAEN_B,  ABC_ENUM,CLASS_E, CLASS_A, KC_SLSH,                            KC_GRV,  _________NUM_789_________, KC_RBRC, KC_PLUS,
+    _______, LCA(KC_H),LCA(KC_J),LCA(KC_K),LCA(KC_L),XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS,
+    _______, XXXXXXX, ABC_ENUM,CLASS_E, CLASS_A, KC_SLSH,                            KC_GRV,  _________NUM_789_________, KC_RBRC, KC_PLUS,
     _______, IPC(A),  IPC(S),  IPC_MIN, IPC_COMM,KC_DOT,                             XXXXXXX, _________NUM_456_________, KC_COLN, KC_DQUO,
     _______, IPC(Z),  HWP_CITE,IPC(C),  KC_EQL,  KC_BSLS, XXXXXXX,          KC_LBRC, KC_RBRC, _________NUM_123_________, _______, KC_PIPE,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
@@ -64,8 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
     _______, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,   KC_F5,                             XXXXXXX, A(KC_7), A(KC_8), A(KC_9), A(KC_0), XXXXXXX,
     _______, LCA(KC_H),LCA(KC_J),LCA(KC_K),LCA(KC_L), KC_F6,                         XXXXXXX, A(KC_4), A(KC_5), A(KC_6), XXXXXXX, XXXXXXX,
-    _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,  KC_F7,                             KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
-    _______, C(KC_Z), C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          CG_TOGG, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
+    _______, KC_LSFT, KC_LALT, KC_LCTL, KC_LSFT,  KC_F7,                             KC_INS,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX,
+    _______, IPC(Z), C(KC_X), C(KC_C), C(KC_V), C(KC_B), TO_BASE,          CG_TOGG, KC_APP,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX,
 // |--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
                       _______, _______, BRKT,    KC_BSPC, KC_DEL,           _______, KC_TRNS, _______, _______, _______
 ),
