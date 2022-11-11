@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifdef  MK_KINETIC_SPEED
     #define MOUSEKEY_MOVE_DELTA 30
-    #define MOUSEKEY_INITIAL_SPEED 300
+    #define MOUSEKEY_INITIAL_SPEED 2000
 //    #define MOUSEKEY_BASE_SPEED 2000
     #define MOUSEKEY_BASE_SPEED 2000
 //    #define MOUSEKEY_DECELERATED_SPEED 300
