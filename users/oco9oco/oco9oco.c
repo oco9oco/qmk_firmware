@@ -36,13 +36,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 cite_done = true;
             } else {
                 if(prns_pressed){
-                    SEND_STRING(")");
-                    if(!num_in_prns){tap_code(KC_LEFT);}
+                    if(num_in_prns){tap_code(KC_RGHT);}
                 }
                 if(brkt_pressed){
-                    SEND_STRING("] ");
                     cite_done = true;
-                    if(!num_in_prns){tap_code(KC_LEFT);tap_code(KC_LEFT);}
+                    if(num_in_prns){tap_code(KC_RGHT);}
                 }
             }
             break;
@@ -223,7 +221,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                             }
                         }
                         if(!brkt_pressed){
-                            SEND_STRING("[");
+                            SEND_STRING("[]" SS_TAP(X_LEFT));
                             brkt_pressed=true;
                         }
                         switch_cite=3;
@@ -283,7 +281,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case IPC(S):
             if(__TAPPED__ && __PRESSED__){
-                SEND_STRING("(");
+                SEND_STRING("()" SS_TAP(X_LEFT));
                 prns_pressed = true;
             }else if(__PRESSED__) {
                 register_code(KC_LALT);
