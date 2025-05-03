@@ -513,7 +513,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case THUMB_R1:
         case THUMB_R3:
         case SFT_CAPS:
-        // case SFTT_A:
+        //case SFTT_A:
         // case SFTT_Z:
         // case GUIT_Z:
         // case SFTT_F:
@@ -556,7 +556,7 @@ case LSFT_T(KC_F):
 if (other_keycode == KC_Q) {
 return true;
 }
-else {return false;}
+
 break;
 
 }

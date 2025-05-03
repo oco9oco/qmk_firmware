@@ -15,10 +15,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Handedness. */
 // #define MASTER_LEFT
+// #undef MASTER_RIGHT
 #define MASTER_RIGHT
 
 // TAP-HOLD OPTIONS
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 #define QUICK_TAP_TERM 0
 //#define PERMISSIVE_HOLD_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
