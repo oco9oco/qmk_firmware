@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      S_D_MOD, KC_LCTL, KC_BTN2, KC_LSFT, KC_BTN1, DPI_MOD,          XXXXXXX, KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX, XXXXXXX,
      S_D_RMOD,KC_LGUI, KC_BTN3, KC_BTN4, KC_BTN5, DPI_RMOD,         C(KC_W), KC_BTN4, KC_BTN5, DRGSCRL, SNIPING, XXXXXXX,
 // ╰──────────────────────────────────────────────────────┤       ├──────────────────────────────────────────────────────╯
-                                KC_LCTL, DRGSCRL, SNIPING,/*      */_______, _______,
+                                KC_LCTL, DRGSCRL, SNIPING,/*      */THUMB_R3,THUMB_R2,
                                          _______, _______,/*      */TO(_BASE)
 //                            ╰───────────────────────────╯       ╰──────────────────╯
 ),
