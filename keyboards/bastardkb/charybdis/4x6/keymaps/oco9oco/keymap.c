@@ -44,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      SFT_CAPS,__________________QWERTY_SACS_L2___________,          __________________QWERTY_R2________________, KC_QUOT,
      KC_LGUI, __________________QWERTY_L3________________,          __________________QWERTY_HOME_R3___________, KC_BSLS,
 // ╰──────────────────────────────────────────────────────┤       ├──────────────────────────────────────────────────────╯
-                                THUMB_L1,THUMB_L2,THUMB_L3,/*      */THUMB_R3,THUMB_R2,
-                                          KC_LNG1, KC_LNG2,/*      */THUMB_R1
+                               THUMB_L1,THUMB_L2, KC_LNG1,/*      */THUMB_R3,THUMB_R2,
+                                        THUMB_L3, KC_LNG2,/*      */THUMB_R1
 //                            ╰───────────────────────────╯       ╰──────────────────╯
 ),
 
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // ╭──────────────────────────────────────────────────────╮       ╭──────────────────────────────────────────────────────╮
      XXXXXXX, CTRL_F1, KC_F2,   KC_F3,   ALT_F4,  KC_F5,            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,
      XXXXXXX, XXXXXXX, KC_WH_D, XXXXXXX, KC_WH_U, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_MAKE,
-     S_D_MOD, KC_LCTL, KC_BTN2, KC_LSFT, KC_BTN1, DPI_MOD,          XXXXXXX, KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX, XXXXXXX,
-     S_D_RMOD,KC_LGUI, KC_BTN3, KC_BTN4, KC_BTN5, DPI_RMOD,         C(KC_W), KC_BTN4, KC_BTN5, DRGSCRL, SNIPING, XXXXXXX,
+     S_D_MOD, KC_LCTL, KC_BTN2, KC_LSFT, KC_BTN1, DPI_MOD,        C(KC_TAB), KC_BTN1, KC_BTN2, KC_BTN3, XXXXXXX, XXXXXXX,
+     S_D_RMOD,KC_BTN3, KC_X,    KC_C,    KC_V,    DPI_RMOD,         C(KC_W), KC_BTN4, KC_BTN5, DRGSCRL, SNIPING, XXXXXXX,
 // ╰──────────────────────────────────────────────────────┤       ├──────────────────────────────────────────────────────╯
                                 KC_LCTL, DRGSCRL, SNIPING,/*      */THUMB_R3,THUMB_R2,
                                          _______, _______,/*      */TO(_BASE)
@@ -117,6 +117,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // checks highest layer other than target layer
     switch(get_highest_layer(remove_auto_mouse_layer(state, true))) {
         case _MOUSE:
+        case _NAV:
             // remove_auto_mouse_target must be called to adjust state *before* setting enable
             state = remove_auto_mouse_layer(state, false);
             set_auto_mouse_enable(false);
